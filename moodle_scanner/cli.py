@@ -6,8 +6,10 @@ import argparse
 import json
 import os
 import sys
+import textwrap
 import traceback
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from . import __version__
 from .httpclient import DEFAULT_MAX_BODY, DEFAULT_TIMEOUT, DEFAULT_USER_AGENT, HttpClient
@@ -24,15 +26,6 @@ from .scan import (
     ScanOptions,
     scan,
 )
-
-BANNER = r"""
-___  ___                _ _             _____
-|  \/  |               | | |           /  ___|
-| .  . | ___   ___   __| | | ___ ______\ `--.  ___ __ _ _ __  _ __   ___ _ __
-| |\/| |/ _ \ / _ \ / _` | |/ _ \______|`--. \/ __/ _` | '_ \| '_ \ / _ \ '__|
-| |  | | (_) | (_) | (_| | |  __/      /\__/ / (_| (_| | | | | | | |  __/ |
-\_|  |_/\___/ \___/ \__,_|_|\___|      \____/ \___\__,_|_| |_|_| |_|\___|_|
-"""
 
 EPILOG = """\
 exit codes:
@@ -78,6 +71,12 @@ def build_parser() -> argparse.ArgumentParser:
     out.add_argument("--schema", action="store_true", help="print the JSON Schema of the report and exit")
     out.add_argument("--no-color", action="store_true", help="disable ANSI colours in text output")
     out.add_argument("-q", "--quiet", action="store_true", help="no banner or progress output")
+    out.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="include all advisory candidates, version evidence and probe details",
+    )
 
     sc = p.add_argument_group("scan")
     sc.add_argument("--scan", action="store_true", help="accepted for compatibility; advisories are always matched")
@@ -149,64 +148,168 @@ class Printer:
         print(text, file=sys.stdout)
 
 
-def render_text(report: dict, out: Printer) -> None:
+_CHECK_LABELS = {
+    "self_registration": "Self-registration",
+    "guest_login": "Guest login",
+    "web_services": "Web services",
+    "debug_display": "Debug traces",
+    "dataroot_exposed": "Dataroot files",
+    "vcs_exposed": "VCS metadata",
+    "config_backup_exposed": "Configuration backups",
+    "dev_files_exposed": "Public development files",
+    "install_upgrade_exposed": "Installer / upgrade pages",
+}
+
+
+def _wrapped(out: Printer, text: str, indent: str = "  ") -> None:
+    for line in textwrap.wrap(
+        text, width=100, initial_indent=indent, subsequent_indent=indent, break_long_words=False, break_on_hyphens=False
+    ):
+        out(line)
+
+
+def _probe_lines(out: Printer, check: dict, *, verbose: bool) -> None:
+    for evidence in check["evidence"]:
+        url = evidence["url"]
+        if not verbose:
+            parts = urlsplit(url)
+            url = parts.path + (f"?{parts.query}" if parts.query else "")
+        status = f"HTTP {evidence['status']}" if evidence["status"] is not None else "no response"
+        _wrapped(out, f"{status}  {url}", "    ")
+        if verbose:
+            _wrapped(out, evidence["detail"], "      ")
+
+
+def render_text(report: dict, out: Printer, *, verbose: bool = False) -> None:
     target = report["target"]
     out(f"Target: {target['url']}")
+    run_status = "completed" if report["exit_code"] == 0 else "partial" if report["exit_code"] == 6 else "not completed"
+    out(f"Run: {run_status} | {report['requests']} requests | {report['duration_seconds']:.1f}s")
     if not target["reachable"]:
         for err in report["errors"]:
-            out(f"  error ({err['stage']}): {err['message']}", "high")
+            _wrapped(out, f"error ({err['stage']}): {err['message']}")
         return
     if not target["is_moodle"]:
-        out("Target does not look like Moodle.", "medium")
+        out("Moodle was not identified; no vulnerability assessment was completed.", "medium")
         return
-    v = report["version"]
-    if v["status"] == "exact":
-        out(f"Moodle version: {v['version']} (confidence {v['confidence']})", "ok")
-    elif v["status"] == "ambiguous":
-        out(f"Moodle version: one of {', '.join(v['candidates'])} (confidence {v['confidence']})", "medium")
-    elif v["status"] == "branch":
-        out(f"Moodle branch: {v['branch']} (from public signals; confidence low)", "medium")
+    version = report["version"]
+    if version["status"] == "exact":
+        out(f"Version: {version['version']} (fingerprint match; confidence {version['confidence']})")
+    elif version["status"] == "ambiguous":
+        branches = sorted(
+            {".".join(v.split(".")[:2]) for v in version["candidates"]},
+            key=lambda b: tuple(int(p) for p in b.split(".")),
+        )
+        branch_text = ", ".join(branches[:6]) + (f" and {len(branches) - 6} more" if len(branches) > 6 else "")
+        _wrapped(
+            out,
+            f"Version: unresolved; {len(version['candidates'])} candidate releases across branches "
+            f"{branch_text} (confidence {version['confidence']})",
+            "",
+        )
+        if any(e["outcome"] == "conflict" for e in version["evidence"]):
+            out("  Fingerprints conflict; none of these releases is established as the installed version.")
+    elif version["status"] == "branch":
+        out(f"Version: only branch {version['branch']} identified; patch level unknown (confidence low)")
     else:
-        out("Moodle version: unknown", "medium")
-    for note in v["notes"]:
-        out(f"  note: {note}")
+        out("Version: unknown; version-based advisory matching unavailable.", "medium")
+
+    checks = report["misconfigurations"]
+    observations = report["observations"]
+    findings = [c for c in checks if c["status"] == "detected"]
+    observed = [c for c in observations if c["status"] == "detected"]
+    unresolved = [c for c in checks + observations if c["status"] == "inconclusive"]
     advisories = report["advisories"]
+    plugins = report["plugins"]
+    out("\nSUMMARY")
+    out(f"  Observed exposure findings: {len(findings)}" if checks else "  Exposure checks: not run")
+    out(f"  Checks without a verdict:  {len(unresolved)} / {len(checks) + len(observations)}")
+    out(f"  Configuration observations: {len(observed)} (not vulnerabilities)")
+    out(f"  Advisory hypotheses:       {len(advisories)} (not verified on the target)")
+    out(
+        f"  Plugins corroborated:      {len(plugins['found'])}"
+        if plugins
+        else "  Plugin enumeration:        not requested"
+    )
+
+    out("\nOBSERVED EXPOSURES")
+    if not findings:
+        out("  None confirmed by these checks." if checks else "  Not checked.")
+    for check in sorted(findings, key=lambda c: ("critical", "high", "medium", "low", "info").index(c["severity"])):
+        _wrapped(out, f"[{check['severity'].upper()}] {check['title']}")
+        _probe_lines(out, check, verbose=True)
+        _wrapped(out, f"Action: {check['recommendation']}", "    ")
+
+    if observed:
+        out("\nCONFIGURATION OBSERVATIONS (not vulnerabilities)")
+        for check in observed:
+            out(f"  {_CHECK_LABELS.get(check['id'], check['title'])}")
+            _probe_lines(out, check, verbose=verbose)
+            if verbose:
+                _wrapped(out, check["recommendation"], "    ")
+
+    if unresolved:
+        out("\nCHECKS WITHOUT A VERDICT (not findings, not proof of safety)")
+        for check in unresolved:
+            reasons = list(dict.fromkeys(e["detail"] for e in check["evidence"]))
+            codes = sorted({e["status"] for e in check["evidence"] if e["status"] is not None})
+            status = "HTTP " + "/".join(str(c) for c in codes) if codes else "no response"
+            _wrapped(
+                out,
+                f"{_CHECK_LABELS.get(check['id'], check['title'])}: {status}; "
+                + ("; ".join(reasons) or "insufficient evidence"),
+            )
+            if verbose:
+                _probe_lines(out, check, verbose=True)
+
+    if plugins:
+        out(f"\nPLUGINS ({len(plugins['found'])} corroborated; {plugins['probed']} probes)")
+        for item in plugins["found"]:
+            hint = item.get("version_hint")
+            out(f"  {item['component']}" + (f" (release hint: {hint['release']})" if hint else ""))
+        if plugins["notes"]:
+            if verbose:
+                for note in plugins["notes"]:
+                    _wrapped(out, note)
+            else:
+                out("  Coverage is incomplete; missing from the list does not prove absence. Details: --verbose.")
+
     if advisories:
-        out(f"\nVersion-only advisory candidates ({len(advisories)}; target vulnerability NOT verified):")
+        certain = sum(a["match"] == "version_match" for a in advisories)
+        out("\nVERSION-ONLY ADVISORIES")
+        out(f"  {certain} version matches; {len(advisories) - certain} possible matches.")
+        if not verbose:
+            out("  Candidate list omitted from the summary. Use --verbose or --json for every record.")
+
+    if verbose:
+        out("\nVERSION EVIDENCE")
+        if version["candidates"]:
+            _wrapped(out, "Candidates: " + ", ".join(version["candidates"]))
+        for note in version["notes"]:
+            _wrapped(out, note)
+        for ev in version["evidence"]:
+            _wrapped(
+                out,
+                f"{ev['path']}: {ev['outcome']} (HTTP {ev['status']}); "
+                + ev.get("matched_versions", ev.get("error", "")),
+            )
         for adv in advisories:
             cves = ", ".join(adv["cves"]) or "no CVE"
             flag = "version match" if adv["match"] == "version_match" else "possible version match"
-            out(f"- {adv['id']} [{flag}; advisory severity {adv['severity_level']}] {adv['title']} ({cves})")
-            out(f"    {adv['reason']}; {adv['url']}")
-    elif v["status"] != "unknown":
-        out("\nNo matching advisories in the bundled data.", "ok")
-    checks = report["misconfigurations"]
-    detected = [c for c in checks if c["status"] == "detected"]
-    if checks:
-        out(f"\nMisconfigurations ({len(detected)} detected, {len(checks)} checked):")
-        for c in detected:
-            out(f"- [{c['severity']}] {c['title']}", c["severity"])
-            for ev in c["evidence"]:
-                out(f"    {ev['url']} -> {ev['status']}: {ev['detail']}")
-        for c in checks:
-            if c["status"] == "inconclusive":
-                out(f"- [inconclusive] {c['title']}", "medium")
-    observations = report["observations"]
-    if observations:
-        out("\nConfiguration observations (not vulnerability findings):")
-        for item in observations:
-            if item["status"] != "not_detected":
-                out(f"- [{item['status']}] {item['title']}")
-                for ev in item["evidence"]:
-                    out(f"    {ev['url']} -> {ev['status']}: {ev['detail']}")
-    plugins = report["plugins"]
-    if plugins:
-        out(f"\nPlugins: {len(plugins['found'])} found of {plugins['probed']} probed")
-        for item in plugins["found"]:
-            hint = item.get("version_hint")
-            out(f"- {item['component']}" + (f" {hint['release']}" if hint else ""))
-    for item in report["limitations"]:
-        out(f"\nlimitation: {item}")
+            _wrapped(out, f"{adv['id']} | {cves} | {flag} | advisory severity: {adv['severity_level']}", "")
+            _wrapped(out, adv["title"])
+            _wrapped(out, f"{adv['reason']}; {adv['url']}")
+
+    if report["errors"]:
+        out("\nERRORS")
+        for error in report["errors"]:
+            _wrapped(out, f"{error['stage']}: {error['message']}")
+    if report["limitations"]:
+        out("\nLIMITATIONS")
+        for limitation in report["limitations"]:
+            _wrapped(out, limitation)
+    if not verbose:
+        out("\nFull details: --verbose | Full structured report: --json or -o FILE")
 
 
 def run_update(args: argparse.Namespace, out: Printer) -> int:
@@ -259,7 +362,7 @@ def main(argv: list[str] | None = None) -> int:
     if not updating and not args.url:
         parser.print_help()
         return EXIT_USAGE
-    progress(BANNER)
+    progress(f"Moodle-Scanner {__version__}")
     if updating:
         code = run_update(args, progress)
         if code != EXIT_OK or not args.url:
@@ -293,5 +396,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.json:
         sys.stdout.write(payload)
     else:
-        render_text(report, results)
+        render_text(report, results, verbose=args.verbose)
+        if args.output:
+            results(f"JSON report saved: {args.output}")
     return report["exit_code"]

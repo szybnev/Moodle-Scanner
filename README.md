@@ -63,6 +63,7 @@ Common options (full list: `moodle-scanner --help`):
 | Option | Purpose |
 |---|---|
 | `--json` / `-o FILE` | JSON report to stdout / to a file (both allowed) |
+| `-v` / `--verbose` | full text report: all advisory candidates, version evidence and probe details |
 | `--schema` | print the report JSON Schema |
 | `--no-checks` | skip misconfiguration checks |
 | `--plugins [--plugins-limit N]` | enumerate plugins, most recently released first (default 200, `0` = all) |
@@ -77,6 +78,13 @@ URLs are also accepted: `https://host/moodle/login/index.php?loginredirect=1`
 becomes `https://host/moodle/`. Query strings and fragments are not part of
 the scan base. For other application pages, pass the installation root instead.
 Redirects are followed only within the target origin.
+
+The default terminal report starts with a short summary, then observed exposures,
+configuration observations and unresolved checks. It does not print hundreds of
+version-only advisory candidates before the actual findings. `--verbose` expands
+all candidates and evidence. `--json` and `-o FILE` always keep the complete report;
+the text summary does not filter or change the underlying scan results.
+An unresolved check is neither a finding nor proof of safety.
 
 ## JSON report
 

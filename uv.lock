@@ -75,7 +75,7 @@ wheels = [
 
 [[package]]
 name = "moodle-scanner"
-version = "3.0.1"
+version = "3.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "truststore" },

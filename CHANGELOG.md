@@ -2,6 +2,19 @@
 
 All notable changes to this fork. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [3.1.0] - 2026-10-18
+
+### Changed
+
+- Summary-first terminal output: observed exposures, configuration observations
+  and unresolved checks appear before advisory details. Removed the ASCII banner.
+- Ambiguous versions are summarized by candidate count and branches rather than
+  an unbounded list of releases. Unresolved checks use neutral labels instead
+  of vulnerability titles such as "metadata is exposed".
+- Added `-v` / `--verbose` for all advisory candidates, version evidence and probe
+  details. JSON schema, complete JSON records and detection behavior are unchanged.
+- Display request count, duration, scan completion and the saved JSON path.
+
 ## [3.0.1] - 2026-10-18
 
 ### Fixed
