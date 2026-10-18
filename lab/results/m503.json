@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "scanner": {
+    "name": "moodle-scanner",
+    "version": "2.0.0"
+  },
+  "target": {
+    "url": "http://127.0.0.1:8503/",
+    "reachable": true,
+    "is_moodle": true,
+    "markers": [
+      "moodle-session-cookie",
+      "m-cfg-script",
+      "moodle-asset-urls",
+      "moodle-keywords-meta"
+    ]
+  },
+  "started_at": "2026-10-18T19:10:26+00:00",
+  "data": {
+    "fingerprints_latest_tag": "v5.3.0",
+    "fingerprint_tags": 590,
+    "fingerprint_files": 243,
+    "advisories_count": 733,
+    "advisories_latest_published": "2026-10-15"
+  },
+  "version": {
+    "status": "exact",
+    "version": "5.3.0",
+    "candidates": [
+      "5.3.0-rc2",
+      "5.3.0"
+    ],
+    "range": {
+      "min": "5.3.0-rc2",
+      "max": "5.3.0"
+    },
+    "branch": "5.3",
+    "confidence": "medium",
+    "method": "file-fingerprint",
+    "evidence": [
+      {
+        "path": "/lib/javascript-static.js",
+        "status": 200,
+        "outcome": "match",
+        "sha1": "951b84123fb531baec8eb95da36666e21be0b6ed",
+        "matched_versions": "5.2.0-beta .. 5.3.0 (12 tags)"
+      },
+      {
+        "path": "/theme/boost/style/moodle.css",
+        "status": 200,
+        "outcome": "match",
+        "sha1": "16fdab3f76f4c00fe3718048f846243ada4f0f3b",
+        "matched_versions": "5.3.0-rc2, 5.3.0"
+      },
+      {
+        "path": "/badges/UPGRADING.md",
+        "status": 403,
+        "outcome": "not_found"
+      },
+      {
+        "path": "/lib/UPGRADING.md",
+        "status": 403,
+        "outcome": "not_found"
+      },
+      {
+        "path": "/user/UPGRADING.md",
+        "status": 403,
+        "outcome": "not_found"
+      }
+    ],
+    "signals": [],
+    "notes": [
+      "5.3.0 is indistinguishable from its pre-release(s) 5.3.0-rc2 by public files; reporting the final release"
+    ]
+  },
+  "advisories": [],
+  "misconfigurations": [
+    {
+      "id": "self_registration",
+      "title": "Email-based self-registration is enabled",
+      "severity": "medium",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Disable self-registration (Site administration > Plugins > Authentication > Self registration) unless required."
+    },
+    {
+      "id": "guest_login",
+      "title": "Guest login button is shown",
+      "severity": "low",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Hide the guest login button (guestloginbutton) and disable guest access unless content is meant to be public."
+    },
+    {
+      "id": "web_services",
+      "title": "Web services token endpoint is enabled",
+      "severity": "low",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Enable web services and the mobile service only if used; enforce strong passwords and rate limiting on /login/token.php."
+    },
+    {
+      "id": "debug_display",
+      "title": "Debug messages are displayed to visitors",
+      "severity": "medium",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Set debug to NONE/MINIMAL and disable debugdisplay on production sites."
+    },
+    {
+      "id": "dataroot_exposed",
+      "title": "Moodle data directory (dataroot) is reachable over HTTP",
+      "severity": "high",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Move the dataroot outside the web root; it holds uploaded files, sessions and caches."
+    },
+    {
+      "id": "vcs_exposed",
+      "title": "Version control metadata is exposed",
+      "severity": "high",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Deny access to dot directories (.git, .svn, .hg) in the web server configuration."
+    },
+    {
+      "id": "config_backup_exposed",
+      "title": "Backup or editor copy of config.php is downloadable",
+      "severity": "critical",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Delete the file, rotate the database password and salts it contains, and deny backup extensions in the web server."
+    },
+    {
+      "id": "dev_files_exposed",
+      "title": "Developer, test or upgrade-notes files are downloadable",
+      "severity": "low",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Deny access to composer/npm manifests, upgrade notes, tests and fixtures as recommended by the Moodle security docs (or serve only the public/ directory on Moodle 5.1+)."
+    },
+    {
+      "id": "install_upgrade_exposed",
+      "title": "Installer or upgrade page is reachable",
+      "severity": "critical",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Complete the installation/upgrade, set $CFG->upgradekey, and block install.php once installed."
+    }
+  ],
+  "plugins": {
+    "enabled": true,
+    "probed": 3086,
+    "found": [],
+    "notes": [
+      "unknown plugin type for customcertelement_assignfeedbackcomments",
+      "unknown plugin type for certificateelement_activity",
+      "unknown plugin type for lifecycletrigger_customfieldsemester",
+      "unknown plugin type for customcertelement_textreplace",
+      "unknown plugin type for lifecyclestep_adminapprove",
+      "plugin advisories are not matched: no structured, redistributable plugin advisory source is bundled"
+    ]
+  },
+  "errors": [],
+  "limitations": [
+    "15 advisories (pre-2017, Moodle <= 3.0 era) have no machine-readable version range",
+    "detected version is at or beyond the newest release in the bundled data (5.3.0); advisories published after the data refresh are not known"
+  ],
+  "finished_at": "2026-10-18T19:10:30+00:00",
+  "duration_seconds": 4.536,
+  "requests": 3132,
+  "exit_code": 0
+}

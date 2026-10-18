@@ -1,0 +1,21 @@
+{
+  "auth": "email",
+  "debug": "0",
+  "debugdisplay": "0",
+  "enablemobilewebservice": "1",
+  "enablewebservices": "1",
+  "guestloginbutton": "1",
+  "hardened": false,
+  "plugins": [
+    "local_staticpage",
+    "block_xp"
+  ],
+  "registerauth": "",
+  "seeds": [
+    "guestlogin",
+    "webservices",
+    "configbackup",
+    "moodledata"
+  ],
+  "tag": "v4.5.1"
+}

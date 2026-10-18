@@ -1,0 +1,5675 @@
+{
+  "schema_version": "1.0",
+  "scanner": {
+    "name": "moodle-scanner",
+    "version": "2.0.0"
+  },
+  "target": {
+    "url": "http://127.0.0.1:8311/",
+    "reachable": true,
+    "is_moodle": true,
+    "markers": [
+      "moodle-session-cookie",
+      "m-cfg-script",
+      "moodle-asset-urls",
+      "moodle-keywords-meta"
+    ]
+  },
+  "started_at": "2026-10-18T19:10:09+00:00",
+  "data": {
+    "fingerprints_latest_tag": "v5.3.0",
+    "fingerprint_tags": 590,
+    "fingerprint_files": 243,
+    "advisories_count": 733,
+    "advisories_latest_published": "2026-10-15"
+  },
+  "version": {
+    "status": "exact",
+    "version": "3.11.8",
+    "candidates": [
+      "3.11.8"
+    ],
+    "range": {
+      "min": "3.11.8",
+      "max": "3.11.8"
+    },
+    "branch": "3.11",
+    "confidence": "high",
+    "method": "file-fingerprint",
+    "evidence": [
+      {
+        "path": "/lib/javascript-static.js",
+        "status": 200,
+        "outcome": "match",
+        "sha1": "a4296ee3aca9a51693371947a0c25cdfe8bb356b",
+        "matched_versions": "3.4.6 .. 3.11.18 (127 tags)"
+      },
+      {
+        "path": "/lib/amd/build/form-autocomplete.min.js",
+        "status": 200,
+        "outcome": "match",
+        "sha1": "a5668cb63502740f44feabce24cb8ab1d1e016fd",
+        "matched_versions": "3.11.6 .. 3.11.18 (13 tags)"
+      },
+      {
+        "path": "/security.txt",
+        "status": 200,
+        "outcome": "match",
+        "sha1": "9c694bbd34f3d7c14cc0748994eb314cc7eaca1e",
+        "matched_versions": "3.9.14 .. 4.0.4 (18 tags)"
+      },
+      {
+        "path": "/lib/editor/atto/yui/build/moodle-editor_atto-editor/moodle-editor_atto-editor-debug.js",
+        "status": 200,
+        "outcome": "match",
+        "sha1": "9b5fe59fb2207c98cd75f5bd058295556bddca1d",
+        "matched_versions": "3.10.5 .. 3.11.8 (15 tags)"
+      },
+      {
+        "path": "/lib/yui/build/moodle-core-notification-dialogue/moodle-core-notification-dialogue-debug.js",
+        "status": 200,
+        "outcome": "match",
+        "sha1": "4d1712207ae108a8737e3f8b678458fdbd19d4d5",
+        "matched_versions": "3.11.8 .. 3.11.18 (11 tags)"
+      },
+      {
+        "path": "/theme/boost/scss/moodle/core.scss",
+        "status": 200,
+        "outcome": "match",
+        "sha1": "af67bed728d01f0bff532894e0562112f4f41b3c",
+        "matched_versions": "3.11.8, 3.11.9, 3.11.10"
+      },
+      {
+        "path": "/theme/boost/style/moodle.css",
+        "status": 200,
+        "outcome": "match",
+        "sha1": "df2d7c2afaf2b3561339fdd852eaac37f2083671",
+        "matched_versions": "3.11.8, 3.11.9, 3.11.10"
+      }
+    ],
+    "signals": [
+      {
+        "source": "http://127.0.0.1:8311/lib/upgrade.txt",
+        "kind": "upgrade-notes",
+        "branch": "3.11"
+      }
+    ],
+    "notes": []
+  },
+  "advisories": [
+    {
+      "id": "MSA-22-0021",
+      "title": "Upgrade Mustache to latest version (upstream)",
+      "published": "2022-08-29",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2022-0323"
+      ],
+      "trackers": [
+        "MDL-75388"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=437684",
+      "affected": [
+        "4.0.0 to 4.0.2",
+        "3.11.0 to 3.11.8",
+        "3.9.0 to 3.9.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.0.3",
+        "3.11.9",
+        "3.9.16"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.8 (fixed in 3.11.9)"
+    },
+    {
+      "id": "MSA-22-0024",
+      "title": "Remote code execution risk when restoring malformed backup file from Moodle 1.9",
+      "published": "2022-09-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2022-40314"
+      ],
+      "trackers": [
+        "MDL-75405"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=438393",
+      "affected": [
+        "4.0.0 to 4.0.3",
+        "3.11.0 to 3.11.9",
+        "3.9.0 to 3.9.16"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.0.4",
+        "3.11.10",
+        "3.9.17"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.9 (fixed in 3.11.10)"
+    },
+    {
+      "id": "MSA-22-0023",
+      "title": "Stored XSS and page denial of service risks due to recursive rendering in Mustache template helpers",
+      "published": "2022-09-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2022-40313"
+      ],
+      "trackers": [
+        "MDL-68066"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=438392",
+      "affected": [
+        "4.0.0 to 4.0.3",
+        "3.11.0 to 3.11.9",
+        "3.9.0 to 3.9.16"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.0.4",
+        "3.11.10",
+        "3.9.17"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.9 (fixed in 3.11.10)"
+    },
+    {
+      "id": "MSA-22-0032",
+      "title": "Blind SSRF risk in LTI provider library",
+      "published": "2022-11-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2022-45152"
+      ],
+      "trackers": [
+        "MDL-71920"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=440772",
+      "affected": [
+        "4.0.0 to 4.0.4",
+        "3.11.0 to 3.11.10",
+        "3.9.0 to 3.9.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.0.5",
+        "3.11.11",
+        "3.9.18"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.10 (fixed in 3.11.11)"
+    },
+    {
+      "id": "MSA-22-0031",
+      "title": "Stored XSS possible in some \"social\" user profile fields",
+      "published": "2022-11-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2022-45151"
+      ],
+      "trackers": [
+        "MDL-76131"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=440771",
+      "affected": [
+        "4.0.0 to 4.0.4",
+        "3.11.0 to 3.11.10"
+      ],
+      "earlier_unsupported": false,
+      "fixed": [
+        "4.0.5",
+        "3.11.11"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.10 (fixed in 3.11.11)"
+    },
+    {
+      "id": "MSA-22-0030",
+      "title": "Reflected XSS risk in policy tool",
+      "published": "2022-11-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2022-45150"
+      ],
+      "trackers": [
+        "MDL-76091"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=440770",
+      "affected": [
+        "4.0.0 to 4.0.4",
+        "3.11.0 to 3.11.10",
+        "3.9.0 to 3.9.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.0.5",
+        "3.11.11",
+        "3.9.18"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.10 (fixed in 3.11.11)"
+    },
+    {
+      "id": "MSA-22-0028",
+      "title": "Apply upstream security fix to VideoJS library to remove XSS risk",
+      "published": "2022-11-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2021-23414"
+      ],
+      "trackers": [
+        "MDL-75278"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=440767",
+      "affected": [
+        "3.11.0 to 3.11.10",
+        "3.9.0 to 3.9.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "3.11.11",
+        "3.9.18"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.10 (fixed in 3.11.11)"
+    },
+    {
+      "id": "MSA-23-0001",
+      "title": "Reflected XSS risk in some returnurl parameters",
+      "published": "2023-01-24",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-23921"
+      ],
+      "trackers": [
+        "MDL-76810"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=443272",
+      "affected": [
+        "4.1.0 to 4.1.x",
+        "4.0.0 to 4.0.5",
+        "3.11.0 to 3.11.11",
+        "3.9.0 to 3.9.18"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.1.1",
+        "4.0.6",
+        "3.11.12",
+        "3.9.19"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.11 (fixed in 3.11.12)"
+    },
+    {
+      "id": "MSA-23-0006",
+      "title": "XSS risk when outputting database activity filter data",
+      "published": "2023-03-20",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-28331"
+      ],
+      "trackers": [
+        "MDL-76645"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=445063",
+      "affected": [
+        "4.1.0 to 4.1.1",
+        "4.0.0 to 4.0.6",
+        "3.11.0 to 3.11.12",
+        "3.9.0 to 3.9.19"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.1.2",
+        "4.0.7",
+        "3.11.13",
+        "3.9.20"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
+    },
+    {
+      "id": "MSA-23-0005",
+      "title": "Authenticated arbitrary file read through malformed backup file",
+      "published": "2023-03-20",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-28330"
+      ],
+      "trackers": [
+        "MDL-77204"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=445062",
+      "affected": [
+        "4.1.0 to 4.1.1",
+        "4.0.0 to 4.0.6",
+        "3.11.0 to 3.11.12",
+        "3.9.0 to 3.9.19"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.1.2",
+        "4.0.7",
+        "3.11.13",
+        "3.9.20"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
+    },
+    {
+      "id": "MSA-23-0004",
+      "title": "Authenticated SQL injection via availability check",
+      "published": "2023-03-20",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-28329"
+      ],
+      "trackers": [
+        "MDL-77046"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=445061",
+      "affected": [
+        "4.1.0 to 4.1.1",
+        "4.0.0 to 4.0.6",
+        "3.11.0 to 3.11.12",
+        "3.9.0 to 3.9.19"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.1.2",
+        "4.0.7",
+        "3.11.13",
+        "3.9.20"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
+    },
+    {
+      "id": "MSA-23-0018",
+      "title": "SSRF risk due to insufficient check on the cURL blocked hosts list",
+      "published": "2023-06-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-35133"
+      ],
+      "trackers": [
+        "MDL-78215"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=447831",
+      "affected": [
+        "4.2.0 to 4.2.x",
+        "4.1.0 to 4.1.3",
+        "4.0.0 to 4.0.8",
+        "3.11.0 to 3.11.14",
+        "3.9.0 to 3.9.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.1",
+        "4.1.4",
+        "4.0.9",
+        "3.11.15",
+        "3.9.22"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.14 (fixed in 3.11.15)"
+    },
+    {
+      "id": "MSA-23-0025",
+      "title": "phpCAS library upgraded to 1.6.0 (upstream)",
+      "published": "2023-08-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2022-39369"
+      ],
+      "trackers": [
+        "MDL-78620"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=449646",
+      "affected": [
+        "4.0.0 to 4.0.9",
+        "3.11.0 to 3.11.15",
+        "3.9.0 to 3.9.22"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.0.10",
+        "3.11.16",
+        "3.9.23"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
+    },
+    {
+      "id": "MSA-23-0023",
+      "title": "Stored self-XSS escalated to stored XSS via OAuth 2 login",
+      "published": "2023-08-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-40320"
+      ],
+      "trackers": [
+        "MDL-78685"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=449644",
+      "affected": [
+        "4.2.0 to 4.2.1",
+        "4.1.0 to 4.1.4",
+        "4.0.0 to 4.0.9",
+        "3.11.0 to 3.11.15",
+        "3.9.0 to 3.9.22"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.2",
+        "4.1.5",
+        "4.0.10",
+        "3.11.16",
+        "3.9.23"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
+    },
+    {
+      "id": "MSA-23-0020",
+      "title": "Remote code execution risk when parsing malformed file repository reference",
+      "published": "2023-08-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-40317"
+      ],
+      "trackers": [
+        "MDL-78647"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=449641",
+      "affected": [
+        "4.2.0 to 4.2.1",
+        "4.1.0 to 4.1.4",
+        "4.0.0 to 4.0.9",
+        "3.11.0 to 3.11.15",
+        "3.9.0 to 3.9.22"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.2",
+        "4.1.5",
+        "4.0.10",
+        "3.11.16",
+        "3.9.23"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
+    },
+    {
+      "id": "MSA-23-0019",
+      "title": "Proxy bypass risk due to insufficient validation",
+      "published": "2023-08-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-40316"
+      ],
+      "trackers": [
+        "MDL-74289"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=449640",
+      "affected": [
+        "4.2.0 to 4.2.1",
+        "4.1.0 to 4.1.4",
+        "4.0.0 to 4.0.9",
+        "3.11.0 to 3.11.15",
+        "3.9.0 to 3.9.22"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.2",
+        "4.1.5",
+        "4.0.10",
+        "3.11.16",
+        "3.9.23"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
+    },
+    {
+      "id": "MSA-23-0042",
+      "title": "RCE due to LFI risk in some misconfigured shared hosting environments",
+      "published": "2023-10-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-5550"
+      ],
+      "trackers": [
+        "MDL-72249"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451591",
+      "affected": [
+        "4.2.0 to 4.2.2",
+        "4.1.0 to 4.1.5",
+        "4.0.0 to 4.0.10",
+        "3.11.0 to 3.11.16",
+        "3.9.0 to 3.9.23"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.3",
+        "4.1.6",
+        "4.0.11",
+        "3.11.17",
+        "3.9.24"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
+    },
+    {
+      "id": "MSA-23-0036",
+      "title": "Stored XSS and potential IDOR risk in Wiki comments",
+      "published": "2023-10-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-5544"
+      ],
+      "trackers": [
+        "MDL-79509"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451585",
+      "affected": [
+        "4.2.0 to 4.2.2",
+        "4.1.0 to 4.1.5",
+        "4.0.0 to 4.0.10",
+        "3.11.0 to 3.11.16",
+        "3.9.0 to 3.9.23"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.3",
+        "4.1.6",
+        "4.0.11",
+        "3.11.17",
+        "3.9.24"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
+    },
+    {
+      "id": "MSA-23-0032",
+      "title": "Authenticated remote code execution risk in IMSCP",
+      "published": "2023-10-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-5540"
+      ],
+      "trackers": [
+        "MDL-79409"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451581",
+      "affected": [
+        "4.2.0 to 4.2.2",
+        "4.1.0 to 4.1.5",
+        "4.0.0 to 4.0.10",
+        "3.11.0 to 3.11.16",
+        "3.9.0 to 3.9.23"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.3",
+        "4.1.6",
+        "4.0.11",
+        "3.11.17",
+        "3.9.24"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
+    },
+    {
+      "id": "MSA-23-0031",
+      "title": "Authenticated remote code execution risk in Lesson",
+      "published": "2023-10-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-5539"
+      ],
+      "trackers": [
+        "MDL-79408"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451580",
+      "affected": [
+        "4.2.0 to 4.2.2",
+        "4.1.0 to 4.1.5",
+        "4.0.0 to 4.0.10",
+        "3.11.0 to 3.11.16",
+        "3.9.0 to 3.9.23"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.3",
+        "4.1.6",
+        "4.0.11",
+        "3.11.17",
+        "3.9.24"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
+    },
+    {
+      "id": "MSA-23-0046",
+      "title": "Authenticated remote code execution risk in course blocks",
+      "published": "2023-12-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-6663"
+      ],
+      "trackers": [
+        "MDL-79797"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=453760",
+      "affected": [
+        "4.3.0 to 4.3.x",
+        "4.2.0 to 4.2.3",
+        "4.1.0 to 4.1.6",
+        "4.0.0 to 4.0.11",
+        "3.11.0 to 3.11.17",
+        "3.9.0 to 3.9.24"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.1",
+        "4.2.4",
+        "4.1.7",
+        "4.0.12",
+        "3.11.18",
+        "3.9.25"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
+    },
+    {
+      "id": "MSA-23-0045",
+      "title": "DOS risk in URL downloader",
+      "published": "2023-12-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-6662"
+      ],
+      "trackers": [
+        "MDL-79759"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=453759",
+      "affected": [
+        "4.3.0 to 4.3.x",
+        "4.2.0 to 4.2.3",
+        "4.1.0 to 4.1.6",
+        "4.0.0 to 4.0.11",
+        "3.11.0 to 3.11.17",
+        "3.9.0 to 3.9.24"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.1",
+        "4.2.4",
+        "4.1.7",
+        "4.0.12",
+        "3.11.18",
+        "3.9.25"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
+    },
+    {
+      "id": "MSA-23-0044",
+      "title": "Authenticated remote code execution risk in logstore as manager",
+      "published": "2023-12-21",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2023-6661"
+      ],
+      "trackers": [
+        "MDL-80174"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=453758",
+      "affected": [
+        "4.3.0 to 4.3.x",
+        "4.2.0 to 4.2.3",
+        "4.1.0 to 4.1.6",
+        "4.0.0 to 4.0.11",
+        "3.11.0 to 3.11.17",
+        "3.9.0 to 3.9.24"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.1",
+        "4.2.4",
+        "4.1.7",
+        "4.0.12",
+        "3.11.18",
+        "3.9.25"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
+    },
+    {
+      "id": "MSA-24-0001",
+      "title": "Denial of service risk in file picker unzip functionality",
+      "published": "2024-02-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-25978"
+      ],
+      "trackers": [
+        "MDL-74641"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=455634",
+      "affected": [
+        "4.3.0 to 4.3.2",
+        "4.2.0 to 4.2.5",
+        "4.1.0 to 4.1.8"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.3",
+        "4.2.6",
+        "4.1.9"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0016",
+      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_data backup",
+      "published": "2024-05-13",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-34005"
+      ],
+      "trackers": [
+        "MDL-81267"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458394",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0015",
+      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_wiki backup",
+      "published": "2024-05-13",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-34004"
+      ],
+      "trackers": [
+        "MDL-81284"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458393",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0014",
+      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_workshop backup",
+      "published": "2024-05-13",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-34003"
+      ],
+      "trackers": [
+        "MDL-80712"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458391",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0013",
+      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_feedback backup",
+      "published": "2024-05-13",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-34002"
+      ],
+      "trackers": [
+        "MDL-81135"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458390",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0007",
+      "title": "Broken access control when setting calendar event type",
+      "published": "2024-05-13",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-33996"
+      ],
+      "trackers": [
+        "MDL-81247"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458384",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0024",
+      "title": "CSRF risks due to misuse of confirm_sesskey",
+      "published": "2024-06-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-38276"
+      ],
+      "trackers": [
+        "MDL-81890"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=459501",
+      "affected": [
+        "4.4.0 to 4.4.x",
+        "4.3.0 to 4.3.4",
+        "4.2.0 to 4.2.7",
+        "4.1.0 to 4.1.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.1",
+        "4.3.5",
+        "4.2.8",
+        "4.1.11"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0041",
+      "title": "LFI vulnerability when restoring malformed block backups",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43440"
+      ],
+      "trackers": [
+        "MDL-82392"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461210",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0040",
+      "title": "Reflected XSS via H5P error message",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43439"
+      ],
+      "trackers": [
+        "MDL-82558"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461209",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0037",
+      "title": "Site administration SQL injection via XMLDB editor",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43436"
+      ],
+      "trackers": [
+        "MDL-82395"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461206",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0035",
+      "title": "CSRF risk in Feedback non-respondents report",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43434"
+      ],
+      "trackers": [
+        "MDL-82262"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461203",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0032",
+      "title": "IDOR in badges allows deletion of arbitrary badges",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43431"
+      ],
+      "trackers": [
+        "MDL-82390"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461199",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0029",
+      "title": "Cache poisoning via injection into storage",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43428"
+      ],
+      "trackers": [
+        "MDL-81718"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461196",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0027",
+      "title": "Arbitrary file read risk through pdfTeX",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43426"
+      ],
+      "trackers": [
+        "MDL-82745"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461194",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0026",
+      "title": "Remote code execution via calculated question types",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43425"
+      ],
+      "trackers": [
+        "MDL-82576"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461193",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0042",
+      "title": "Unprotected access to sensitive information via dynamic tables",
+      "published": "2024-09-10",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-45689"
+      ],
+      "trackers": [
+        "MDL-82567"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461894",
+      "affected": [
+        "4.4.0 to 4.4.2",
+        "4.3.0 to 4.3.6",
+        "4.2.0 to 4.2.9",
+        "4.1.0 to 4.1.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.3",
+        "4.3.7",
+        "4.2.10",
+        "4.1.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0056",
+      "title": "Potential denial of service risk due to guest sessions' longer timeout period",
+      "published": "2024-12-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-55648"
+      ],
+      "trackers": [
+        "MDL-61316"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=464559",
+      "affected": [
+        "4.5.0 to 4.5.x",
+        "4.4.0 to 4.4.4",
+        "4.3.0 to 4.3.8",
+        "4.1.0 to 4.1.14"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.1",
+        "4.4.5",
+        "4.3.9",
+        "4.1.15"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0051",
+      "title": "Unprotected access to sensitive information via learning plan web service",
+      "published": "2024-12-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-55643"
+      ],
+      "trackers": [
+        "MDL-83921"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=464554",
+      "affected": [
+        "4.5.0 to 4.5.x",
+        "4.4.0 to 4.4.4",
+        "4.3.0 to 4.3.8",
+        "4.1.0 to 4.1.14"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.1",
+        "4.4.5",
+        "4.3.9",
+        "4.1.15"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0010",
+      "title": "SQL injection risk in course search module list filter",
+      "published": "2025-02-18",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-26533"
+      ],
+      "trackers": [
+        "MDL-84271"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466150",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0005",
+      "title": "Stored XSS risk in admin live log",
+      "published": "2025-02-18",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-26529"
+      ],
+      "trackers": [
+        "MDL-84145"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466145",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0001",
+      "title": "Arbitrary file read risk through pdfTeX",
+      "published": "2025-02-18",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-26525"
+      ],
+      "trackers": [
+        "MDL-84136"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466141",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0025",
+      "title": "Reflected XSS risk in policy tool",
+      "published": "2025-04-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-3643"
+      ],
+      "trackers": [
+        "MDL-85104"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467604",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0024",
+      "title": "Authenticated remote code execution risk in the Moodle LMS EQUELLA repository",
+      "published": "2025-04-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-3642"
+      ],
+      "trackers": [
+        "MDL-84473"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467603",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0023",
+      "title": "Authenticated remote code execution risk in the Moodle LMS Dropbox repository",
+      "published": "2025-04-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-3641"
+      ],
+      "trackers": [
+        "MDL-84475"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467602",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0013",
+      "title": "Remote code execution risk via MimeTeX command (upstream)",
+      "published": "2025-04-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-40446"
+      ],
+      "trackers": [
+        "MDL-85152"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467592",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0035",
+      "title": "Missing authorisation checks in BigBlueButton view page",
+      "published": "2025-06-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-49517"
+      ],
+      "trackers": [
+        "MDL-84706"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468506",
+      "affected": [
+        "5.0.0 to 5.0.x",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0033",
+      "title": "Course visibility not honoured consistently",
+      "published": "2025-06-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-49515"
+      ],
+      "trackers": [
+        "MDL-84518"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468504",
+      "affected": [
+        "5.0.0 to 5.0.x",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0032",
+      "title": "SSRF risk via DNS rebind",
+      "published": "2025-06-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-49514"
+      ],
+      "trackers": [
+        "MDL-83762"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468503",
+      "affected": [
+        "5.0.0 to 5.0.x",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0031",
+      "title": "Upgrade ADOdb including security fix (upstream)",
+      "published": "2025-06-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-46337"
+      ],
+      "trackers": [
+        "MDL-85375"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468502",
+      "affected": [
+        "5.0.0 to 5.0.x",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0042",
+      "title": "Upgrade FPDI including security fix (upstream)",
+      "published": "2025-10-14",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-54869"
+      ],
+      "trackers": [
+        "MDL-86353"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=470382",
+      "affected": [
+        "5.0.0 to 5.0.2",
+        "4.5.0 to 4.5.6",
+        "4.4.0 to 4.4.10",
+        "4.1.0 to 4.1.20"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.3",
+        "4.5.7",
+        "4.4.11",
+        "4.1.21"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0059",
+      "title": "Reflected XSS risk in policy tool",
+      "published": "2025-12-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-67855"
+      ],
+      "trackers": [
+        "MDL-86544"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471305",
+      "affected": [
+        "5.1.0 to 5.1.x",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0055",
+      "title": "Formula injection risk when exporting data to CSV / Excel",
+      "published": "2025-12-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-67851"
+      ],
+      "trackers": [
+        "MDL-72744"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471301",
+      "affected": [
+        "5.1.0 to 5.1.x",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0054",
+      "title": "XSS risk in formula editor",
+      "published": "2025-12-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-67850"
+      ],
+      "trackers": [
+        "MDL-85557"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471300",
+      "affected": [
+        "5.1.0 to 5.1.x",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0052",
+      "title": "Authentication via LTI Provider available to suspended users",
+      "published": "2025-12-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-67848"
+      ],
+      "trackers": [
+        "MDL-87286"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471298",
+      "affected": [
+        "5.1.0 to 5.1.x",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0051",
+      "title": "Remote code execution risk via file restore",
+      "published": "2025-12-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-67847"
+      ],
+      "trackers": [
+        "MDL-87353"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471297",
+      "affected": [
+        "5.1.0 to 5.1.x",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0003",
+      "title": "Denial of service risk in TeX formula editor",
+      "published": "2026-02-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-26047"
+      ],
+      "trackers": [
+        "MDL-86785"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=473316",
+      "affected": [
+        "5.1.0 to 5.1.1",
+        "5.0.0 to 5.0.4",
+        "4.5.0 to 4.5.8"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.2",
+        "5.0.5",
+        "4.5.9"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0002",
+      "title": "Remote code execution risk in TeX filter admin setting",
+      "published": "2026-02-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-26046"
+      ],
+      "trackers": [
+        "MDL-87843",
+        "MDL-87870"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=473315",
+      "affected": [
+        "5.1.0 to 5.1.1",
+        "5.0.0 to 5.0.4",
+        "4.5.0 to 4.5.8"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.2",
+        "5.0.5",
+        "4.5.9"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0001",
+      "title": "Remote code execution risk via file restore",
+      "published": "2026-02-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-26045"
+      ],
+      "trackers": [
+        "MDL-87612"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=473314",
+      "affected": [
+        "5.1.0 to 5.1.1",
+        "5.0.0 to 5.0.4",
+        "4.5.0 to 4.5.8"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.2",
+        "5.0.5",
+        "4.5.9"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0006",
+      "title": "RCE risk via Moodle's Google Drive repository plugin",
+      "published": "2026-04-29",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-7275"
+      ],
+      "trackers": [
+        "MDL-88423"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=474064",
+      "affected": [
+        "5.1.0 to 5.1.3",
+        "5.0.0 to 5.0.6",
+        "4.5.0 to 4.5.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.4",
+        "5.0.7",
+        "4.5.11"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0005",
+      "title": "SQL injection risk in external database authentication plugin",
+      "published": "2026-04-29",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-7274"
+      ],
+      "trackers": [
+        "MDL-88138"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=474063",
+      "affected": [
+        "5.1.0 to 5.1.3",
+        "5.0.0 to 5.0.6",
+        "4.5.0 to 4.5.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.4",
+        "5.0.7",
+        "4.5.11"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0028",
+      "title": "DoS risk via user profile description",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58347"
+      ],
+      "trackers": [
+        "MDL-87898"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481830",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0026",
+      "title": "Missing capability check in Assignment marker allocation",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58345"
+      ],
+      "trackers": [
+        "MDL-88529"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481827",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0025",
+      "title": "CSRF risk in quiz attempt regrading",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58344"
+      ],
+      "trackers": [
+        "MDL-88531"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481826",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0021",
+      "title": "CSRF and XSS in grade item idnumber editing",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58340"
+      ],
+      "trackers": [
+        "MDL-88542"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481821",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0017",
+      "title": "IDOR allows arbitrary comment deletion",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58336"
+      ],
+      "trackers": [
+        "MDL-88619"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481817",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.3",
+        "5.0.0 to 5.0.6",
+        "4.5.0 to 4.5.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0015",
+      "title": "RCE risk via admin presets import",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58334"
+      ],
+      "trackers": [
+        "MDL-88735"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481813",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0014",
+      "title": "Arbitrary file read risk in backup restore",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58333"
+      ],
+      "trackers": [
+        "MDL-88736"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481812",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0013",
+      "title": "Email-based MFA bypass",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58332"
+      ],
+      "trackers": [
+        "MDL-88767"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481811",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0012",
+      "title": "Arbitrary file read risk in Database activity module",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58331"
+      ],
+      "trackers": [
+        "MDL-88595"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481810",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0041",
+      "title": "CSRF risk in XML grade imports",
+      "published": "2026-09-09",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-84545"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482507",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0032",
+      "title": "User profile information disclosure via grade web service",
+      "published": "2026-09-09",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-89381"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482497",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0031",
+      "title": "SQL injection risk in question bank web service",
+      "published": "2026-09-09",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-89383"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482496",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0030",
+      "title": "SSRF risk in URL downloader (bypass some blocked hosts)",
+      "published": "2026-09-09",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-88779"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482495",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0042",
+      "title": "Blind SQL injection risk in profile availability condition check",
+      "published": "2026-09-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-89484"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482607",
+      "affected": [
+        "5.2.0 to 5.2.2",
+        "5.1.0 to 5.1.6",
+        "5.0.0 to 5.0.9",
+        "4.5.0 to 4.5.13"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.3",
+        "5.1.7",
+        "5.0.10",
+        "4.5.14"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0044",
+      "title": "Missing access checks on H5P content files",
+      "published": "2026-10-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-89547"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482830",
+      "affected": [
+        "5.2.0 to 5.2.3",
+        "5.1.0 to 5.1.7",
+        "5.0.0 to 5.0.10",
+        "4.5.0 to 4.5.14"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.4",
+        "5.1.8",
+        "5.0.11",
+        "4.5.15"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-22-0022",
+      "title": "CSRF risk in enabling/disabling installed H5P libraries",
+      "published": "2022-08-29",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2022-2986"
+      ],
+      "trackers": [
+        "MDL-75326"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=437685",
+      "affected": [
+        "4.0.0 to 4.0.2",
+        "3.11.0 to 3.11.8"
+      ],
+      "earlier_unsupported": false,
+      "fixed": [
+        "4.0.3",
+        "3.11.9"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.8 (fixed in 3.11.9)"
+    },
+    {
+      "id": "MSA-22-0026",
+      "title": "No groups filtering in H5P activity attempts report",
+      "published": "2022-09-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2022-40316"
+      ],
+      "trackers": [
+        "MDL-71662",
+        "MDL-72012"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=438395",
+      "affected": [
+        "4.0.0 to 4.0.3",
+        "3.11.0 to 3.11.9",
+        "3.9.0 to 3.9.16"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.0.4",
+        "3.11.10",
+        "3.9.17"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.9 (fixed in 3.11.10)"
+    },
+    {
+      "id": "MSA-22-0025",
+      "title": "Minor SQL injection risk in admin user browsing",
+      "published": "2022-09-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2022-40315"
+      ],
+      "trackers": [
+        "MDL-75283"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=438394",
+      "affected": [
+        "4.0.0 to 4.0.3",
+        "3.11.0 to 3.11.9",
+        "3.9.0 to 3.9.16"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.0.4",
+        "3.11.10",
+        "3.9.17"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.9 (fixed in 3.11.10)"
+    },
+    {
+      "id": "MSA-22-0027",
+      "title": "Quiz sequential navigation bypass using web services",
+      "published": "2022-09-27",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2022-40208"
+      ],
+      "trackers": [
+        "MDL-75210"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=438761",
+      "affected": [
+        "4.0.0 to 4.0.2",
+        "3.11.0 to 3.11.8",
+        "3.9.0 to 3.9.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.0.3",
+        "3.11.9",
+        "3.9.16"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.8 (fixed in 3.11.9)"
+    },
+    {
+      "id": "MSA-22-0029",
+      "title": "Course restore - CSRF token passed in course redirect URL",
+      "published": "2022-11-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2022-45149"
+      ],
+      "trackers": [
+        "MDL-75862"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=440769",
+      "affected": [
+        "4.0.0 to 4.0.4",
+        "3.11.0 to 3.11.10",
+        "3.9.0 to 3.9.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.0.5",
+        "3.11.11",
+        "3.9.18"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.10 (fixed in 3.11.11)"
+    },
+    {
+      "id": "MSA-23-0003",
+      "title": "Possible to set the preferred \"start page\" of other users",
+      "published": "2023-01-24",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-23923"
+      ],
+      "trackers": [
+        "MDL-76862"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=443274",
+      "affected": [
+        "4.1.0 to 4.1.x",
+        "4.0.0 to 4.0.5",
+        "3.11.0 to 3.11.11",
+        "3.9.0 to 3.9.18"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.1.1",
+        "4.0.6",
+        "3.11.12",
+        "3.9.19"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.11 (fixed in 3.11.12)"
+    },
+    {
+      "id": "MSA-23-0012",
+      "title": "Course participation report shows roles the user should not see",
+      "published": "2023-03-20",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-1402"
+      ],
+      "trackers": [
+        "MDL-75517"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=445069",
+      "affected": [
+        "4.1.0 to 4.1.1",
+        "4.0.0 to 4.0.6",
+        "3.11.0 to 3.11.12",
+        "3.9.0 to 3.9.19"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.1.2",
+        "4.0.7",
+        "3.11.13",
+        "3.9.20"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
+    },
+    {
+      "id": "MSA-23-0011",
+      "title": "Teacher can access names of users they do not have permission to access",
+      "published": "2023-03-20",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-28336"
+      ],
+      "trackers": [
+        "MDL-76809"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=445068",
+      "affected": [
+        "4.1.0 to 4.1.1",
+        "4.0.0 to 4.0.6",
+        "3.11.0 to 3.11.12",
+        "3.9.0 to 3.9.19"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.1.2",
+        "4.0.7",
+        "3.11.13",
+        "3.9.20"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
+    },
+    {
+      "id": "MSA-23-0008",
+      "title": "Pix helper potential Mustache code injection risk",
+      "published": "2023-03-20",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-28333"
+      ],
+      "trackers": [
+        "MDL-75659"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=445065",
+      "affected": [
+        "4.1.0 to 4.1.1",
+        "4.0.0 to 4.0.6",
+        "3.11.0 to 3.11.12",
+        "3.9.0 to 3.9.19"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.1.2",
+        "4.0.7",
+        "3.11.13",
+        "3.9.20"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
+    },
+    {
+      "id": "MSA-23-0007",
+      "title": "Algebra filter XSS when filter is misconfigured",
+      "published": "2023-03-20",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-28332"
+      ],
+      "trackers": [
+        "MDL-77524"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=445064",
+      "affected": [
+        "4.1.0 to 4.1.1",
+        "4.0.0 to 4.0.6",
+        "3.11.0 to 3.11.12",
+        "3.9.0 to 3.9.19"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.1.2",
+        "4.0.7",
+        "3.11.13",
+        "3.9.20"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
+    },
+    {
+      "id": "MSA-23-0015",
+      "title": "Minor SQL injection risk in external Wiki method for listing pages",
+      "published": "2023-05-01",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-30944"
+      ],
+      "trackers": [
+        "MDL-77187"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=446286",
+      "affected": [
+        "4.1.0 to 4.1.2",
+        "4.0.0 to 4.0.7",
+        "3.11.0 to 3.11.13",
+        "3.9.0 to 3.9.20"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.1.3",
+        "4.0.8",
+        "3.11.14",
+        "3.9.21"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.13 (fixed in 3.11.14)"
+    },
+    {
+      "id": "MSA-23-0017",
+      "title": "Minor SQL injection risk on Mnet SSO access control page",
+      "published": "2023-06-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-35132"
+      ],
+      "trackers": [
+        "MDL-77193"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=447830",
+      "affected": [
+        "4.2.0 to 4.2.x",
+        "4.1.0 to 4.1.3",
+        "4.0.0 to 4.0.8",
+        "3.11.0 to 3.11.14",
+        "3.9.0 to 3.9.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.1",
+        "4.1.4",
+        "4.0.9",
+        "3.11.15",
+        "3.9.22"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.14 (fixed in 3.11.15)"
+    },
+    {
+      "id": "MSA-23-0016",
+      "title": "XSS risk on groups page",
+      "published": "2023-06-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-35131"
+      ],
+      "trackers": [
+        "MDL-76683"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=447829",
+      "affected": [
+        "4.2.0 to 4.2.x",
+        "4.1.0 to 4.1.3",
+        "4.0.0 to 4.0.8",
+        "3.11.0 to 3.11.14"
+      ],
+      "earlier_unsupported": false,
+      "fixed": [
+        "4.2.1",
+        "4.1.4",
+        "4.0.9",
+        "3.11.15"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.14 (fixed in 3.11.15)"
+    },
+    {
+      "id": "MSA-23-0030",
+      "title": "Quiz sequential navigation bypass possible",
+      "published": "2023-08-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-40325"
+      ],
+      "trackers": [
+        "MDL-71728"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=449651",
+      "affected": [
+        "4.2.0 to 4.2.1",
+        "4.1.0 to 4.1.4",
+        "4.0.0 to 4.0.9",
+        "3.11.0 to 3.11.15",
+        "3.9.0 to 3.9.22"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.2",
+        "4.1.5",
+        "4.0.10",
+        "3.11.16",
+        "3.9.23"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
+    },
+    {
+      "id": "MSA-23-0029",
+      "title": "Competency framework tools are not restricted as intended",
+      "published": "2023-08-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-40324"
+      ],
+      "trackers": [
+        "MDL-66212"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=449650",
+      "affected": [
+        "4.2.0 to 4.2.1",
+        "4.1.0 to 4.1.4",
+        "4.0.0 to 4.0.9",
+        "3.11.0 to 3.11.15",
+        "3.9.0 to 3.9.22"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.2",
+        "4.1.5",
+        "4.0.10",
+        "3.11.16",
+        "3.9.23"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
+    },
+    {
+      "id": "MSA-23-0028",
+      "title": "Open redirect risk on admin view all policies page",
+      "published": "2023-08-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-40323"
+      ],
+      "trackers": [
+        "MDL-78763"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=449649",
+      "affected": [
+        "4.2.0 to 4.2.1",
+        "4.1.0 to 4.1.4",
+        "4.0.0 to 4.0.9",
+        "3.11.0 to 3.11.15",
+        "3.9.0 to 3.9.22"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.2",
+        "4.1.5",
+        "4.0.10",
+        "3.11.16",
+        "3.9.23"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
+    },
+    {
+      "id": "MSA-23-0027",
+      "title": "JQuery UI library upgraded to 1.13.2 (upstream)",
+      "published": "2023-08-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2021-41182",
+        "CVE-2021-41183",
+        "CVE-2021-41184",
+        "CVE-2022-31160"
+      ],
+      "trackers": [
+        "MDL-74544"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=449648",
+      "affected": [
+        "3.11.0 to 3.11.15",
+        "3.9.0 to 3.9.22"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "3.11.16",
+        "3.9.23"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
+    },
+    {
+      "id": "MSA-23-0026",
+      "title": "IDOR in message processor fragments allows fetching of other users' data",
+      "published": "2023-08-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-40322"
+      ],
+      "trackers": [
+        "MDL-78792"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=449647",
+      "affected": [
+        "4.2.0 to 4.2.1",
+        "4.1.0 to 4.1.4",
+        "4.0.0 to 4.0.9",
+        "3.11.0 to 3.11.15",
+        "3.9.0 to 3.9.22"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.2",
+        "4.1.5",
+        "4.0.10",
+        "3.11.16",
+        "3.9.23"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
+    },
+    {
+      "id": "MSA-23-0021",
+      "title": "Some block permissions on Dashboard not respected",
+      "published": "2023-08-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-40318"
+      ],
+      "trackers": [
+        "MDL-78340"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=449642",
+      "affected": [
+        "4.2.0 to 4.2.1",
+        "4.1.0 to 4.1.4",
+        "4.0.0 to 4.0.9",
+        "3.11.0 to 3.11.15",
+        "3.9.0 to 3.9.22"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.2",
+        "4.1.5",
+        "4.0.10",
+        "3.11.16",
+        "3.9.23"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
+    },
+    {
+      "id": "MSA-23-0043",
+      "title": "Forum summary report shows students from other groups when in Separate Groups mode",
+      "published": "2023-10-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-5551"
+      ],
+      "trackers": [
+        "MDL-79310"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451592",
+      "affected": [
+        "4.2.0 to 4.2.2",
+        "4.1.0 to 4.1.5",
+        "4.0.0 to 4.0.10",
+        "3.11.0 to 3.11.16",
+        "3.9.0 to 3.9.23"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.3",
+        "4.1.6",
+        "4.0.11",
+        "3.11.17",
+        "3.9.24"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
+    },
+    {
+      "id": "MSA-23-0041",
+      "title": "Insufficient capability checks when updating the parent of a course category",
+      "published": "2023-10-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-5549"
+      ],
+      "trackers": [
+        "MDL-66730"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451590",
+      "affected": [
+        "4.2.0 to 4.2.2",
+        "4.1.0 to 4.1.5",
+        "4.0.0 to 4.0.10",
+        "3.11.0 to 3.11.16",
+        "3.9.0 to 3.9.23"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.3",
+        "4.1.6",
+        "4.0.11",
+        "3.11.17",
+        "3.9.24"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
+    },
+    {
+      "id": "MSA-23-0040",
+      "title": "Make file serving endpoints revision control stricter",
+      "published": "2023-10-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-5548"
+      ],
+      "trackers": [
+        "MDL-77846"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451589",
+      "affected": [
+        "4.2.0 to 4.2.2",
+        "4.1.0 to 4.1.5",
+        "4.0.0 to 4.0.10",
+        "3.11.0 to 3.11.16",
+        "3.9.0 to 3.9.23"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.3",
+        "4.1.6",
+        "4.0.11",
+        "3.11.17",
+        "3.9.24"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
+    },
+    {
+      "id": "MSA-23-0039",
+      "title": "XSS risk when previewing data in course upload tool",
+      "published": "2023-10-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-5547"
+      ],
+      "trackers": [
+        "MDL-79455"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451588",
+      "affected": [
+        "4.2.0 to 4.2.2",
+        "4.1.0 to 4.1.5",
+        "4.0.0 to 4.0.10",
+        "3.11.0 to 3.11.16",
+        "3.9.0 to 3.9.23"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.3",
+        "4.1.6",
+        "4.0.11",
+        "3.11.17",
+        "3.9.24"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
+    },
+    {
+      "id": "MSA-23-0037",
+      "title": "Auto-populated H5P author name causes a potential information leak",
+      "published": "2023-10-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-5545"
+      ],
+      "trackers": [
+        "MDL-78820"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451586",
+      "affected": [
+        "4.2.0 to 4.2.2",
+        "4.1.0 to 4.1.5",
+        "4.0.0 to 4.0.10",
+        "3.11.0 to 3.11.16",
+        "3.9.0 to 3.9.23"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.3",
+        "4.1.6",
+        "4.0.11",
+        "3.11.17",
+        "3.9.24"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
+    },
+    {
+      "id": "MSA-23-0033",
+      "title": "XSS risk when using CSV grade import method",
+      "published": "2023-10-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-5541"
+      ],
+      "trackers": [
+        "MDL-79426"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451582",
+      "affected": [
+        "4.2.0 to 4.2.2",
+        "4.1.0 to 4.1.5",
+        "4.0.0 to 4.0.10",
+        "3.11.0 to 3.11.16",
+        "3.9.0 to 3.9.23"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.2.3",
+        "4.1.6",
+        "4.0.11",
+        "3.11.17",
+        "3.9.24"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
+    },
+    {
+      "id": "MSA-23-0052",
+      "title": "XSS risk when manually running a task in the admin UI",
+      "published": "2023-12-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-6669"
+      ],
+      "trackers": [
+        "MDL-80309"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=453766",
+      "affected": [
+        "4.3.0 to 4.3.x",
+        "4.2.0 to 4.2.3",
+        "4.1.0 to 4.1.6",
+        "4.0.0 to 4.0.11",
+        "3.11.0 to 3.11.17",
+        "3.9.0 to 3.9.24"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.1",
+        "4.2.4",
+        "4.1.7",
+        "4.0.12",
+        "3.11.18",
+        "3.9.25"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
+    },
+    {
+      "id": "MSA-23-0051",
+      "title": "Badge recipients are available to all users",
+      "published": "2023-12-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-6668"
+      ],
+      "trackers": [
+        "MDL-80268"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=453765",
+      "affected": [
+        "4.3.0 to 4.3.x",
+        "4.2.0 to 4.2.3",
+        "4.1.0 to 4.1.6",
+        "4.0.0 to 4.0.11",
+        "3.11.0 to 3.11.17",
+        "3.9.0 to 3.9.24"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.1",
+        "4.2.4",
+        "4.1.7",
+        "4.0.12",
+        "3.11.18",
+        "3.9.25"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
+    },
+    {
+      "id": "MSA-23-0050",
+      "title": "Survey responses did not respect group settings",
+      "published": "2023-12-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-6667"
+      ],
+      "trackers": [
+        "MDL-79980"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=453764",
+      "affected": [
+        "4.3.0 to 4.3.x",
+        "4.2.0 to 4.2.3",
+        "4.1.0 to 4.1.6",
+        "4.0.0 to 4.0.11",
+        "3.11.0 to 3.11.17",
+        "3.9.0 to 3.9.24"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.1",
+        "4.2.4",
+        "4.1.7",
+        "4.0.12",
+        "3.11.18",
+        "3.9.25"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
+    },
+    {
+      "id": "MSA-23-0047",
+      "title": "Logs and Live logs course reports did not respect activity group settings",
+      "published": "2023-12-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2023-6664"
+      ],
+      "trackers": [
+        "MDL-41465"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=453761",
+      "affected": [
+        "4.3.0 to 4.3.x",
+        "4.2.0 to 4.2.3",
+        "4.1.0 to 4.1.6",
+        "4.0.0 to 4.0.11",
+        "3.11.0 to 3.11.17",
+        "3.9.0 to 3.9.24"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.1",
+        "4.2.4",
+        "4.1.7",
+        "4.0.12",
+        "3.11.18",
+        "3.9.25"
+      ],
+      "match": "affected",
+      "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
+    },
+    {
+      "id": "MSA-24-0006",
+      "title": "IDOR on dashboard comments block",
+      "published": "2024-02-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-25983"
+      ],
+      "trackers": [
+        "MDL-78300"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=455641",
+      "affected": [
+        "4.3.0 to 4.3.2",
+        "4.2.0 to 4.2.5",
+        "4.1.0 to 4.1.8"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.3",
+        "4.2.6",
+        "4.1.9"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0005",
+      "title": "CSRF risk in Language import utility",
+      "published": "2024-02-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-25982"
+      ],
+      "trackers": [
+        "MDL-54749"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=455638",
+      "affected": [
+        "4.3.0 to 4.3.2",
+        "4.2.0 to 4.2.5",
+        "4.1.0 to 4.1.8"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.3",
+        "4.2.6",
+        "4.1.9"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0004",
+      "title": "Forum export did not respect activity group settings",
+      "published": "2024-02-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-25981"
+      ],
+      "trackers": [
+        "MDL-80504"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=455637",
+      "affected": [
+        "4.3.0 to 4.3.2",
+        "4.2.0 to 4.2.5",
+        "4.1.0 to 4.1.8"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.3",
+        "4.2.6",
+        "4.1.9"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0003",
+      "title": "H5P attempts report did not respect activity group settings",
+      "published": "2024-02-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-25980"
+      ],
+      "trackers": [
+        "MDL-80501"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=455636",
+      "affected": [
+        "4.3.0 to 4.3.2",
+        "4.2.0 to 4.2.5",
+        "4.1.0 to 4.1.8"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.3",
+        "4.2.6",
+        "4.1.9"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0002",
+      "title": "Forum search accepted random parameters in its URL",
+      "published": "2024-02-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-25979"
+      ],
+      "trackers": [
+        "MDL-69774"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=455635",
+      "affected": [
+        "4.3.0 to 4.3.2",
+        "4.2.0 to 4.2.5",
+        "4.1.0 to 4.1.8"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.3",
+        "4.2.6",
+        "4.1.9"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0019",
+      "title": "CSRF risk in analytics management of models",
+      "published": "2024-05-13",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-34008"
+      ],
+      "trackers": [
+        "MDL-81059"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458397",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0017",
+      "title": "Unsanitized HTML in site log for config_log_created",
+      "published": "2024-05-13",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-34006"
+      ],
+      "trackers": [
+        "MDL-80585"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458395",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0012",
+      "title": "CSRF risk in admin preset tool management of presets",
+      "published": "2024-05-13",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-34001"
+      ],
+      "trackers": [
+        "MDL-81058"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458389",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0011",
+      "title": "Stored XSS in lesson overview report via user ID number",
+      "published": "2024-05-13",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-34000"
+      ],
+      "trackers": [
+        "MDL-81062"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458388",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0009",
+      "title": "Stored XSS via user's name on participants page when opening some options",
+      "published": "2024-05-13",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-33998"
+      ],
+      "trackers": [
+        "MDL-81354"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458386",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0008",
+      "title": "Stored XSS risk when editing another user's equation in equation editor",
+      "published": "2024-05-13",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-33997"
+      ],
+      "trackers": [
+        "MDL-81352"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458385",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0025",
+      "title": "QR login key and auto-login key for the Moodle mobile app should be generated as separate keys",
+      "published": "2024-06-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-38277"
+      ],
+      "trackers": [
+        "MDL-80959"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=459502",
+      "affected": [
+        "4.4.0 to 4.4.x",
+        "4.3.0 to 4.3.4",
+        "4.2.0 to 4.2.7",
+        "4.1.0 to 4.1.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.1",
+        "4.3.5",
+        "4.2.8",
+        "4.1.11"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0023",
+      "title": "HTTP authorization header is preserved between \"emulated redirects\"",
+      "published": "2024-06-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-38275"
+      ],
+      "trackers": [
+        "MDL-81774"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=459500",
+      "affected": [
+        "4.4.0 to 4.4.x",
+        "4.3.0 to 4.3.4",
+        "4.2.0 to 4.2.7",
+        "4.1.0 to 4.1.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.1",
+        "4.3.5",
+        "4.2.8",
+        "4.1.11"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0022",
+      "title": "Stored XSS via calendar's event title when deleting the event",
+      "published": "2024-06-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-38274"
+      ],
+      "trackers": [
+        "MDL-81412"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=459499",
+      "affected": [
+        "4.4.0 to 4.4.x",
+        "4.3.0 to 4.3.4",
+        "4.2.0 to 4.2.7",
+        "4.1.0 to 4.1.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.1",
+        "4.3.5",
+        "4.2.8",
+        "4.1.11"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0021",
+      "title": "BigBlueButton web service leaks meeting joining information to users who should not have access",
+      "published": "2024-06-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-38273"
+      ],
+      "trackers": [
+        "MDL-81778"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=459498",
+      "affected": [
+        "4.4.0 to 4.4.x",
+        "4.3.0 to 4.3.4",
+        "4.2.0 to 4.2.7",
+        "4.1.0 to 4.1.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.1",
+        "4.3.5",
+        "4.2.8",
+        "4.1.11"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0039",
+      "title": "IDOR in Feedback non-respondents report allows messaging arbitrary site users",
+      "published": "2024-08-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-43438"
+      ],
+      "trackers": [
+        "MDL-82261"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461208",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0038",
+      "title": "XSS risk when restoring malicious course backup file",
+      "published": "2024-08-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-43437"
+      ],
+      "trackers": [
+        "MDL-81394"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461207",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0036",
+      "title": "Can create global glossary without being admin",
+      "published": "2024-08-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-43435"
+      ],
+      "trackers": [
+        "MDL-64984"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461205",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0033",
+      "title": "Authorization headers preserved between \"emulated redirects\"",
+      "published": "2024-08-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-43432"
+      ],
+      "trackers": [
+        "MDL-82136"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461200",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0030",
+      "title": "User information visibility control issues in gradebook reports",
+      "published": "2024-08-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-43429"
+      ],
+      "trackers": [
+        "MDL-79541"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461197",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0028",
+      "title": "Admin presets export tool includes some secrets that should not be exported",
+      "published": "2024-08-19",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-43427"
+      ],
+      "trackers": [
+        "MDL-79373"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461195",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0044",
+      "title": "Lesson activity password bypass through PHP loose comparison",
+      "published": "2024-09-10",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-45691"
+      ],
+      "trackers": [
+        "MDL-82365"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461897",
+      "affected": [
+        "4.4.0 to 4.4.2",
+        "4.3.0 to 4.3.6",
+        "4.2.0 to 4.2.9",
+        "4.1.0 to 4.1.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.3",
+        "4.3.7",
+        "4.2.10",
+        "4.1.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0043",
+      "title": "IDOR when deleting OAuth2 linked accounts",
+      "published": "2024-09-10",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-45690"
+      ],
+      "trackers": [
+        "MDL-76962"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461895",
+      "affected": [
+        "4.4.0 to 4.4.2",
+        "4.3.0 to 4.3.6",
+        "4.2.0 to 4.2.9",
+        "4.1.0 to 4.1.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.3",
+        "4.3.7",
+        "4.2.10",
+        "4.1.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0050",
+      "title": "IDOR when fetching report schedules",
+      "published": "2024-10-14",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-48901"
+      ],
+      "trackers": [
+        "MDL-83180"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=462880",
+      "affected": [
+        "4.4.0 to 4.4.3",
+        "4.3.0 to 4.3.7",
+        "4.2.0 to 4.2.10",
+        "4.1.0 to 4.1.13"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.4",
+        "4.3.8",
+        "4.2.11",
+        "4.1.14"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0047",
+      "title": "Some users can delete audiences of other reports",
+      "published": "2024-10-14",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-48898"
+      ],
+      "trackers": [
+        "MDL-83181"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=462877",
+      "affected": [
+        "4.4.0 to 4.4.3",
+        "4.3.0 to 4.3.7",
+        "4.2.0 to 4.2.10",
+        "4.1.0 to 4.1.13"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.4",
+        "4.3.8",
+        "4.2.11",
+        "4.1.14"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0046",
+      "title": "IDOR in edit/delete RSS feed",
+      "published": "2024-10-14",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-48897"
+      ],
+      "trackers": [
+        "MDL-82386"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=462876",
+      "affected": [
+        "4.4.0 to 4.4.3",
+        "4.3.0 to 4.3.7",
+        "4.2.0 to 4.2.10",
+        "4.1.0 to 4.1.13"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.4",
+        "4.3.8",
+        "4.2.11",
+        "4.1.14"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0045",
+      "title": "Users' names returned in messaging error message",
+      "published": "2024-10-14",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-48896"
+      ],
+      "trackers": [
+        "MDL-83352"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=462874",
+      "affected": [
+        "4.4.0 to 4.4.3",
+        "4.3.0 to 4.3.7",
+        "4.2.0 to 4.2.10",
+        "4.1.0 to 4.1.13"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.4",
+        "4.3.8",
+        "4.2.11",
+        "4.1.14"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0054",
+      "title": "Database activity issue in separate groups mode, for users not in a group",
+      "published": "2024-12-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-55646"
+      ],
+      "trackers": [
+        "MDL-82757"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=464557",
+      "affected": [
+        "4.5.0 to 4.5.x",
+        "4.4.0 to 4.4.4",
+        "4.3.0 to 4.3.8",
+        "4.1.0 to 4.1.14"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.1",
+        "4.4.5",
+        "4.3.9",
+        "4.1.15"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0053",
+      "title": "Email change confirmation token available via preference",
+      "published": "2024-12-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-55645"
+      ],
+      "trackers": [
+        "MDL-82379"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=464556",
+      "affected": [
+        "4.5.0 to 4.5.x",
+        "4.4.0 to 4.4.4",
+        "4.3.0 to 4.3.8",
+        "4.1.0 to 4.1.14"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.1",
+        "4.4.5",
+        "4.3.9",
+        "4.1.15"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-24-0052",
+      "title": "Tag index page displays other users tagged with the selected tag",
+      "published": "2024-12-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-55644"
+      ],
+      "trackers": [
+        "MDL-82963"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=464555",
+      "affected": [
+        "4.5.0 to 4.5.x",
+        "4.4.0 to 4.4.4",
+        "4.3.0 to 4.3.8",
+        "4.1.0 to 4.1.14"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.1",
+        "4.4.5",
+        "4.3.9",
+        "4.1.15"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0009",
+      "title": "Teachers can evade trusttext config when restoring glossary entries",
+      "published": "2025-02-18",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-26532"
+      ],
+      "trackers": [
+        "MDL-84003"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466149",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0008",
+      "title": "IDOR in badges allows disabling of arbitrary badges",
+      "published": "2025-02-18",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-26531"
+      ],
+      "trackers": [
+        "MDL-84239"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466148",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0007",
+      "title": "Upgrade RequireJS including security fix (upstream)",
+      "published": "2025-02-18",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2024-38999"
+      ],
+      "trackers": [
+        "MDL-84023"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466147",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0004",
+      "title": "Stored XSS in ddimageortext question type",
+      "published": "2025-02-18",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-26528"
+      ],
+      "trackers": [
+        "MDL-82896"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466144",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0003",
+      "title": "Non-searchable tags can still be discovered on the tag search page and in the tags block",
+      "published": "2025-02-18",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-26527"
+      ],
+      "trackers": [
+        "MDL-83941"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466143",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0002",
+      "title": "Feedback response viewing and deletions did not respect Separate Groups mode",
+      "published": "2025-02-18",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-26526"
+      ],
+      "trackers": [
+        "MDL-79976"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466142",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0012",
+      "title": "Hidden grades are shown to users without permission on some grade reports",
+      "published": "2025-03-26",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-32045"
+      ],
+      "trackers": [
+        "MDL-81945"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467086",
+      "affected": [
+        "4.5.0 to 4.5.2",
+        "4.4.0 to 4.4.6",
+        "4.3.0 to 4.3.10",
+        "4.1.0 to 4.1.16"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.3",
+        "4.4.7",
+        "4.3.11",
+        "4.1.17"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0028",
+      "title": "IDOR when accessing the cohorts report",
+      "published": "2025-04-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-3647"
+      ],
+      "trackers": [
+        "MDL-84865"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467607",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0027",
+      "title": "IDOR in messaging web service allows access to some user details",
+      "published": "2025-04-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-3645"
+      ],
+      "trackers": [
+        "MDL-72704"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467606",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0026",
+      "title": "AJAX section delete does not respect course_can_delete_section()",
+      "published": "2025-04-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-3644"
+      ],
+      "trackers": [
+        "MDL-83994"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467605",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0022",
+      "title": "IDOR in web service allows users enrolled in a course to access some details of other users",
+      "published": "2025-04-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-3640"
+      ],
+      "trackers": [
+        "MDL-84750"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467601",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0021",
+      "title": "CSRF risk in Brickfield tool's analysis request action",
+      "published": "2025-04-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-3638"
+      ],
+      "trackers": [
+        "MDL-84478"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467600",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0020",
+      "title": "mod_data edit/delete pages pass CSRF token in GET parameter",
+      "published": "2025-04-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-3637"
+      ],
+      "trackers": [
+        "MDL-65356"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467599",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0019",
+      "title": "IDOR in RSS block allows access to additional RSS feeds",
+      "published": "2025-04-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-3636"
+      ],
+      "trackers": [
+        "MDL-84499"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467598",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0018",
+      "title": "CSRF risk in user tours manager allows tour duplication",
+      "published": "2025-04-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-3635"
+      ],
+      "trackers": [
+        "MDL-84479"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467597",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0036",
+      "title": "IDOR allows fetching of recently accessed courses for other users via web service",
+      "published": "2025-06-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-49518"
+      ],
+      "trackers": [
+        "MDL-79993"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468507",
+      "affected": [
+        "5.0.0 to 5.0.x",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0034",
+      "title": "CSRF risk in badges backpack management",
+      "published": "2025-06-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-49516"
+      ],
+      "trackers": [
+        "MDL-84497"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468505",
+      "affected": [
+        "5.0.0 to 5.0.x",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0030",
+      "title": "Password can be revealed in login page after log out due to caching",
+      "published": "2025-06-17",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-49513"
+      ],
+      "trackers": [
+        "MDL-85323"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468501",
+      "affected": [
+        "5.0.0 to 5.0.x",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0040",
+      "title": "Capabilities and callback that control access to profiles not working in some web services",
+      "published": "2025-08-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-62438"
+      ],
+      "trackers": [
+        "MDL-63395"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=469493",
+      "affected": [
+        "5.0.0 to 5.0.1",
+        "4.5.0 to 4.5.5",
+        "4.4.0 to 4.4.9",
+        "4.1.0 to 4.1.19"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.2",
+        "4.5.6",
+        "4.4.10",
+        "4.1.20"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0039",
+      "title": "Feedback activity results did not always respect Separate Groups mode",
+      "published": "2025-08-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-62437"
+      ],
+      "trackers": [
+        "MDL-84463"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=469492",
+      "affected": [
+        "5.0.0 to 5.0.1",
+        "4.5.0 to 4.5.5",
+        "4.4.0 to 4.4.9",
+        "4.1.0 to 4.1.19"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.2",
+        "4.5.6",
+        "4.4.10",
+        "4.1.20"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0038",
+      "title": "Course Logs report did not respect Separate Groups mode",
+      "published": "2025-08-21",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-62436"
+      ],
+      "trackers": [
+        "MDL-84464"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=469491",
+      "affected": [
+        "5.0.0 to 5.0.1",
+        "4.5.0 to 4.5.5",
+        "4.4.0 to 4.4.9",
+        "4.1.0 to 4.1.19"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.2",
+        "4.5.6",
+        "4.4.10",
+        "4.1.20"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0050",
+      "title": "Possible to bypass timer in timed assignments",
+      "published": "2025-10-14",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-62401"
+      ],
+      "trackers": [
+        "MDL-75087"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=470390",
+      "affected": [
+        "5.0.0 to 5.0.2",
+        "4.5.0 to 4.5.6",
+        "4.4.0 to 4.4.10",
+        "4.1.0 to 4.1.20"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.3",
+        "4.5.7",
+        "4.4.11",
+        "4.1.21"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0049",
+      "title": "Names of hidden groups are visible to users with access to create group calendar events",
+      "published": "2025-10-14",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-62400"
+      ],
+      "trackers": [
+        "MDL-86261"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=470389",
+      "affected": [
+        "5.0.0 to 5.0.2",
+        "4.5.0 to 4.5.6",
+        "4.4.0 to 4.4.10",
+        "4.1.0 to 4.1.20"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.3",
+        "4.5.7",
+        "4.4.11",
+        "4.1.21"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0048",
+      "title": "Password brute force risk when mobile/web services enabled",
+      "published": "2025-10-14",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-62399"
+      ],
+      "trackers": [
+        "MDL-86327"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=470388",
+      "affected": [
+        "5.0.0 to 5.0.2",
+        "4.5.0 to 4.5.6",
+        "4.4.0 to 4.4.10",
+        "4.1.0 to 4.1.20"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.3",
+        "4.5.7",
+        "4.4.11",
+        "4.1.21"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0044",
+      "title": "External cohort search service method leaks system cohort data",
+      "published": "2025-10-14",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-62395"
+      ],
+      "trackers": [
+        "MDL-85421"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=470384",
+      "affected": [
+        "5.0.0 to 5.0.2",
+        "4.5.0 to 4.5.6",
+        "4.4.0 to 4.4.10",
+        "4.1.0 to 4.1.20"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.3",
+        "4.5.7",
+        "4.4.11",
+        "4.1.21"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0061",
+      "title": "User IDs exposed in URLs when using anonymous submissions in assignment",
+      "published": "2025-12-15",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-67857"
+      ],
+      "trackers": [
+        "MDL-82808"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471307",
+      "affected": [
+        "5.1.0 to 5.1.x",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0060",
+      "title": "Badges with a role criterion could be awarded to users who do not hold the role",
+      "published": "2025-12-15",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-67856"
+      ],
+      "trackers": [
+        "MDL-86507"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471306",
+      "affected": [
+        "5.1.0 to 5.1.x",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0058",
+      "title": "Participants can access forum ratings without permission",
+      "published": "2025-12-15",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-67854"
+      ],
+      "trackers": [
+        "MDL-86960"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471304",
+      "affected": [
+        "5.1.0 to 5.1.x",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0057",
+      "title": "Password brute force risk from confirmation email web service",
+      "published": "2025-12-15",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-67853"
+      ],
+      "trackers": [
+        "MDL-86326"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471303",
+      "affected": [
+        "5.1.0 to 5.1.x",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-25-0056",
+      "title": "Open redirect in OAuth login",
+      "published": "2025-12-15",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-67852"
+      ],
+      "trackers": [
+        "MDL-80317"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471302",
+      "affected": [
+        "5.1.0 to 5.1.x",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0011",
+      "title": "CSRF and missing capability check in admin/mnet/peers.php",
+      "published": "2026-04-29",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-7278"
+      ],
+      "trackers": [
+        "MDL-84495"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=474069",
+      "affected": [
+        "5.1.0 to 5.1.3",
+        "5.0.0 to 5.0.6",
+        "4.5.0 to 4.5.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.4",
+        "5.0.7",
+        "4.5.11"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0010",
+      "title": "Upgrade AWS SDK for PHP including security fix (upstream)",
+      "published": "2026-04-29",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2025-14761"
+      ],
+      "trackers": [
+        "MDL-87598"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=474068",
+      "affected": [
+        "5.1.0 to 5.1.3",
+        "5.0.0 to 5.0.6",
+        "4.5.0 to 4.5.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.4",
+        "5.0.7",
+        "4.5.11"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0007",
+      "title": "Message panel breaks with messages from deleted users (messaging DoS risk)",
+      "published": "2026-04-29",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-7276"
+      ],
+      "trackers": [
+        "MDL-87760"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=474065",
+      "affected": [
+        "5.1.0 to 5.1.3",
+        "5.0.0 to 5.0.6",
+        "4.5.0 to 4.5.10"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.4",
+        "5.0.7",
+        "4.5.11"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0029",
+      "title": "Missing capability checks in report builder fragment callbacks",
+      "published": "2026-06-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-58348"
+      ],
+      "trackers": [
+        "MDL-84535"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481831",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0027",
+      "title": "Blind SSRF risk in MNet peers function",
+      "published": "2026-06-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-58346"
+      ],
+      "trackers": [
+        "MDL-87911"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481829",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0024",
+      "title": "Missing capability checks in AI placement web services",
+      "published": "2026-06-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-58343"
+      ],
+      "trackers": [
+        "MDL-88533"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481825",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0023",
+      "title": "CSRF risk when adding quiz section headings",
+      "published": "2026-06-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-58342"
+      ],
+      "trackers": [
+        "MDL-88540"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481824",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0022",
+      "title": "CSRF risk in group messaging state toggle",
+      "published": "2026-06-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-58341"
+      ],
+      "trackers": [
+        "MDL-88541"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481823",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0020",
+      "title": "Reflected XSS via Feedback import error message",
+      "published": "2026-06-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-58339"
+      ],
+      "trackers": [
+        "MDL-88543"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481820",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0019",
+      "title": "CSRF risk in user profile page reset",
+      "published": "2026-06-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-58338"
+      ],
+      "trackers": [
+        "MDL-88545"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481819",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0018",
+      "title": "CSRF risk in user homepage preference setting",
+      "published": "2026-06-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-58337"
+      ],
+      "trackers": [
+        "MDL-88609"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481818",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0016",
+      "title": "Missing group access checks in grade web services",
+      "published": "2026-06-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [
+        "CVE-2026-58335"
+      ],
+      "trackers": [
+        "MDL-88667"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481814",
+      "affected": [
+        "5.2.0 to 5.2.x",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0040",
+      "title": "User list filters do not respect user profile field visibility",
+      "published": "2026-09-09",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [],
+      "trackers": [
+        "MDL-87518"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482506",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0039",
+      "title": "Minor XSS risk via password reset link",
+      "published": "2026-09-09",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [],
+      "trackers": [
+        "MDL-88335"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482504",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0036",
+      "title": "Incorrect capability check in AI editor placement \"generate image\" service",
+      "published": "2026-09-09",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [],
+      "trackers": [
+        "MDL-88587"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482501",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0035",
+      "title": "Manual enrolment does not correctly observe disabled state of plugin",
+      "published": "2026-09-09",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [],
+      "trackers": [
+        "MDL-88593"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482500",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0034",
+      "title": "XSS risk in forum post templates",
+      "published": "2026-09-09",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [],
+      "trackers": [
+        "MDL-88981"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482499",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0033",
+      "title": "Arbitrary class instantiation via audience classname in core_reportbuilder",
+      "published": "2026-09-09",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [],
+      "trackers": [
+        "MDL-89078"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482498",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    },
+    {
+      "id": "MSA-26-0043",
+      "title": "Possible to bypass the login notification mechanism",
+      "published": "2026-09-22",
+      "severity": "Minor",
+      "severity_level": "medium",
+      "cves": [],
+      "trackers": [
+        "MDL-87817"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482608",
+      "affected": [
+        "5.2.0 to 5.2.2",
+        "5.1.0 to 5.1.6",
+        "5.0.0 to 5.0.9",
+        "4.5.0 to 4.5.13"
+      ],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.3",
+        "5.1.7",
+        "5.0.10",
+        "4.5.14"
+      ],
+      "match": "affected",
+      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+    }
+  ],
+  "misconfigurations": [
+    {
+      "id": "self_registration",
+      "title": "Email-based self-registration is enabled",
+      "severity": "medium",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/login/signup.php",
+          "status": 200,
+          "detail": "account sign-up form is served to anonymous users"
+        }
+      ],
+      "recommendation": "Disable self-registration (Site administration > Plugins > Authentication > Self registration) unless required."
+    },
+    {
+      "id": "guest_login",
+      "title": "Guest login button is shown",
+      "severity": "low",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/login/index.php",
+          "status": 200,
+          "detail": "login page offers 'Log in as a guest'"
+        }
+      ],
+      "recommendation": "Hide the guest login button (guestloginbutton) and disable guest access unless content is meant to be public."
+    },
+    {
+      "id": "web_services",
+      "title": "Web services token endpoint is enabled",
+      "severity": "low",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/login/token.php",
+          "status": 200,
+          "detail": "token endpoint is active (errorcode=missingparam); web services are enabled"
+        }
+      ],
+      "recommendation": "Enable web services and the mobile service only if used; enforce strong passwords and rate limiting on /login/token.php."
+    },
+    {
+      "id": "debug_display",
+      "title": "Debug messages are displayed to visitors",
+      "severity": "medium",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/login/token.php",
+          "status": 200,
+          "detail": "JSON error includes stacktrace/debuginfo"
+        },
+        {
+          "url": "http://127.0.0.1:8311/course/view.php?id=-1",
+          "status": 404,
+          "detail": "error page shows developer debugging output (Debug info:)"
+        }
+      ],
+      "recommendation": "Set debug to NONE/MINIMAL and disable debugdisplay on production sites."
+    },
+    {
+      "id": "dataroot_exposed",
+      "title": "Moodle data directory (dataroot) is reachable over HTTP",
+      "severity": "high",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/moodledata/filedir/warning.txt",
+          "status": 200,
+          "detail": "Moodle dataroot file store marker is downloadable"
+        }
+      ],
+      "recommendation": "Move the dataroot outside the web root; it holds uploaded files, sessions and caches."
+    },
+    {
+      "id": "vcs_exposed",
+      "title": "Version control metadata is exposed",
+      "severity": "high",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/.git/HEAD",
+          "status": 200,
+          "detail": "git HEAD is downloadable"
+        },
+        {
+          "url": "http://127.0.0.1:8311/.git/config",
+          "status": 200,
+          "detail": "git config is downloadable"
+        }
+      ],
+      "recommendation": "Deny access to dot directories (.git, .svn, .hg) in the web server configuration."
+    },
+    {
+      "id": "config_backup_exposed",
+      "title": "Backup or editor copy of config.php is downloadable",
+      "severity": "critical",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/config.php.bak",
+          "status": 200,
+          "detail": "Moodle config source exposed; contains settings: dataroot, dbhost, dbname, dbpass, dbtype, dbuser, prefix, wwwroot"
+        }
+      ],
+      "recommendation": "Delete the file, rotate the database password and salts it contains, and deny backup extensions in the web server."
+    },
+    {
+      "id": "dev_files_exposed",
+      "title": "Developer, test or upgrade-notes files are downloadable",
+      "severity": "low",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/composer.json",
+          "status": 200,
+          "detail": "developer file is downloadable"
+        },
+        {
+          "url": "http://127.0.0.1:8311/composer.lock",
+          "status": 200,
+          "detail": "developer file is downloadable"
+        },
+        {
+          "url": "http://127.0.0.1:8311/package.json",
+          "status": 200,
+          "detail": "developer file is downloadable"
+        },
+        {
+          "url": "http://127.0.0.1:8311/Gruntfile.js",
+          "status": 200,
+          "detail": "developer file is downloadable"
+        },
+        {
+          "url": "http://127.0.0.1:8311/phpunit.xml.dist",
+          "status": 200,
+          "detail": "developer file is downloadable"
+        },
+        {
+          "url": "http://127.0.0.1:8311/behat.yml.dist",
+          "status": 200,
+          "detail": "developer file is downloadable"
+        },
+        {
+          "url": "http://127.0.0.1:8311/lib/upgrade.txt",
+          "status": 200,
+          "detail": "developer file is downloadable (leaks version 3.11.8)"
+        },
+        {
+          "url": "http://127.0.0.1:8311/admin/environment.xml",
+          "status": 200,
+          "detail": "developer file is downloadable"
+        },
+        {
+          "url": "http://127.0.0.1:8311/lib/tests/fixtures/empty.txt",
+          "status": 200,
+          "detail": "developer file is downloadable"
+        }
+      ],
+      "recommendation": "Deny access to composer/npm manifests, upgrade notes, tests and fixtures as recommended by the Moodle security docs (or serve only the public/ directory on Moodle 5.1+)."
+    },
+    {
+      "id": "install_upgrade_exposed",
+      "title": "Installer or upgrade page is reachable",
+      "severity": "critical",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Complete the installation/upgrade, set $CFG->upgradekey, and block install.php once installed."
+    }
+  ],
+  "plugins": {
+    "enabled": true,
+    "probed": 3080,
+    "found": [
+      {
+        "component": "mod_customcert",
+        "path": "/mod/customcert/",
+        "evidence": "http://127.0.0.1:8311/mod/customcert/version.php"
+      }
+    ],
+    "notes": [
+      "unknown plugin type for customcertelement_assignfeedbackcomments",
+      "unknown plugin type for certificateelement_activity",
+      "unknown plugin type for lifecycletrigger_customfieldsemester",
+      "unknown plugin type for customcertelement_textreplace",
+      "unknown plugin type for lifecyclestep_adminapprove",
+      "plugin advisories are not matched: no structured, redistributable plugin advisory source is bundled"
+    ]
+  },
+  "errors": [],
+  "limitations": [
+    "15 advisories (pre-2017, Moodle <= 3.0 era) have no machine-readable version range"
+  ],
+  "finished_at": "2026-10-18T19:10:12+00:00",
+  "duration_seconds": 2.81,
+  "requests": 3130,
+  "exit_code": 0
+}

@@ -1,0 +1,15 @@
+{
+  "auth": "email",
+  "debug": "0",
+  "debugdisplay": "0",
+  "enablemobilewebservice": "0",
+  "enablewebservices": "0",
+  "guestloginbutton": "1",
+  "hardened": false,
+  "plugins": [
+    "mod_attendance"
+  ],
+  "registerauth": "",
+  "seeds": [],
+  "tag": "v5.0.2"
+}

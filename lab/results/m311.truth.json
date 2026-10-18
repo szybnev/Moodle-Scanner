@@ -1,0 +1,23 @@
+{
+  "auth": "email",
+  "debug": "32767",
+  "debugdisplay": "1",
+  "enablemobilewebservice": "1",
+  "enablewebservices": "1",
+  "guestloginbutton": "1",
+  "hardened": false,
+  "plugins": [
+    "mod_customcert"
+  ],
+  "registerauth": "email",
+  "seeds": [
+    "selfregistration",
+    "guestlogin",
+    "webservices",
+    "debugdisplay",
+    "git",
+    "configbackup",
+    "moodledata"
+  ],
+  "tag": "v3.11.8"
+}

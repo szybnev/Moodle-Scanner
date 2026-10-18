@@ -1,0 +1,13 @@
+{
+  "auth": "email",
+  "debug": "0",
+  "debugdisplay": "0",
+  "enablemobilewebservice": "0",
+  "enablewebservices": "0",
+  "guestloginbutton": "0",
+  "hardened": true,
+  "plugins": [],
+  "registerauth": "",
+  "seeds": [],
+  "tag": "v5.3.0"
+}

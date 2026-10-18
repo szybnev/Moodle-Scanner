@@ -1,0 +1,17 @@
+{
+  "auth": "email",
+  "debug": "32767",
+  "debugdisplay": "1",
+  "enablemobilewebservice": "0",
+  "enablewebservices": "0",
+  "guestloginbutton": "1",
+  "hardened": false,
+  "plugins": [],
+  "registerauth": "email",
+  "seeds": [
+    "selfregistration",
+    "debugdisplay",
+    "git"
+  ],
+  "tag": "v4.1.2"
+}

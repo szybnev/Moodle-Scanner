@@ -35,7 +35,9 @@ Seeds (applied with `admin/cli/cfg.php` or files in the web root):
 
 The hardened instance switches all of the above off and mounts
 [`hardened.conf`](../lab/apache/hardened.conf), which denies dot files,
-manifests, upgrade notes, tests and backup extensions.
+manifests, upgrade notes, tests and backup extensions, plus
+[`50-enable-rewrite.sh`](../lab/apache/50-enable-rewrite.sh), which enables
+`mod_rewrite` from the image entrypoint before Apache starts.
 
 After seeding, `lab.py` reads the settings back and writes
 `lab/results/<name>.truth.json`; the matrix compares against that, not against
@@ -67,3 +69,10 @@ plugins found versus installed, JSON Schema validity and exit code.
 Ports in use, a stuck install, or a failed download: `down --purge` and `up`
 again. Container logs: `docker compose -p moodle-scanner-lab -f lab/.work/compose.yaml logs <name>`
 (Apache logs go to stdout; reading files under `/var/log/apache2` blocks).
+
+## Public lab
+
+The same instances, without the scanner-specific `scan`/`matrix` steps and with
+a scanner-agnostic answer key (`scenarios.json`) and `verify` command, are
+published as [szybnev/moodle-vuln-lab](https://github.com/szybnev/moodle-vuln-lab).
+Both use ports 8311–8503, so run one at a time.
