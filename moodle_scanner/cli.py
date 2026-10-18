@@ -172,11 +172,11 @@ def render_text(report: dict, out: Printer) -> None:
         out(f"  note: {note}")
     advisories = report["advisories"]
     if advisories:
-        out(f"\nAdvisories ({len(advisories)}):")
+        out(f"\nVersion-only advisory candidates ({len(advisories)}; target vulnerability NOT verified):")
         for adv in advisories:
             cves = ", ".join(adv["cves"]) or "no CVE"
-            flag = "" if adv["match"] == "affected" else " [possible]"
-            out(f"- {adv['id']} [{adv['severity_level']}] {adv['title']} ({cves}){flag}", adv["severity_level"])
+            flag = "version match" if adv["match"] == "version_match" else "possible version match"
+            out(f"- {adv['id']} [{flag}; advisory severity {adv['severity_level']}] {adv['title']} ({cves})")
             out(f"    {adv['reason']}; {adv['url']}")
     elif v["status"] != "unknown":
         out("\nNo matching advisories in the bundled data.", "ok")
@@ -191,6 +191,14 @@ def render_text(report: dict, out: Printer) -> None:
         for c in checks:
             if c["status"] == "inconclusive":
                 out(f"- [inconclusive] {c['title']}", "medium")
+    observations = report["observations"]
+    if observations:
+        out("\nConfiguration observations (not vulnerability findings):")
+        for item in observations:
+            if item["status"] != "not_detected":
+                out(f"- [{item['status']}] {item['title']}")
+                for ev in item["evidence"]:
+                    out(f"    {ev['url']} -> {ev['status']}: {ev['detail']}")
     plugins = report["plugins"]
     if plugins:
         out(f"\nPlugins: {len(plugins['found'])} found of {plugins['probed']} probed")

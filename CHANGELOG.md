@@ -2,6 +2,37 @@
 
 All notable changes to this fork. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [3.0.0] - 2026-10-18
+
+### Fixed
+
+- False-positive developer-file detection from any HTTP 200 on an empty fixture
+  path; removed the status-only probe. Exposure checks now require structured
+  endpoint evidence and missing-path controls.
+- Configuration options (signup, guest login, web-service availability, public
+  development manifests) are observations, not vulnerabilities. Generic token
+  error codes do not establish service availability.
+- Empty/guarded plugin PHP responses no longer prove installation. Require
+  component-specific public artifacts and differential controls.
+- Contradictory fingerprints no longer select a majority release. RC/final
+  twins, single-file hints and modified builds preserve uncertainty.
+- Advisory parsing honors exclusive bounds and exclusions, does not widen
+  a bare initial release into its entire branch, and does not fill branch gaps
+  using an unspecified unsupported-version clause. Old custom data is reparsed
+  from source fields when loaded.
+
+### Changed
+
+- **Breaking JSON schema 2.0:** `observations` is separate from `misconfigurations`;
+  each check has `kind`. Advisory states are `version_match` or
+  `possible_version_match`, always with `evidence_level: version_only`.
+  Neither state confirms target exploitability.
+- Replaced the misleading lab advisory-count oracle with seeded exposure checks,
+  explicit unknowns and a manually reviewed CNA release-range control. The
+  previous matrix did not prove that advisory matches were true vulnerabilities.
+- Negative controls cover soft-404 HTML, empty 200 responses, redirects,
+  documentation markers, unavailable responses and patched/ambiguous versions.
+
 ## [2.0.0] - 2026-10-18
 
 First release of the szybnev fork; the single `scanner.py` became the

@@ -30,7 +30,8 @@
    "fixed": [
     "5.2.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0044",
@@ -69,7 +70,8 @@
     "5.0.11",
     "4.5.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0043",
@@ -108,7 +110,8 @@
     "5.0.10",
     "4.5.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0042",
@@ -147,7 +150,8 @@
     "5.0.10",
     "4.5.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0041",
@@ -186,7 +190,8 @@
     "5.0.9",
     "4.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0040",
@@ -225,7 +230,8 @@
     "5.0.9",
     "4.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0039",
@@ -264,7 +270,8 @@
     "5.0.9",
     "4.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0038",
@@ -293,7 +300,8 @@
     "5.2.2",
     "5.1.6"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0037",
@@ -327,7 +335,8 @@
     "5.1.6",
     "5.0.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0036",
@@ -366,7 +375,8 @@
     "5.0.9",
     "4.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0035",
@@ -405,7 +415,8 @@
     "5.0.9",
     "4.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0034",
@@ -444,7 +455,8 @@
     "5.0.9",
     "4.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0033",
@@ -483,7 +495,8 @@
     "5.0.9",
     "4.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0032",
@@ -522,7 +535,8 @@
     "5.0.9",
     "4.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0031",
@@ -561,7 +575,8 @@
     "5.0.9",
     "4.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0030",
@@ -600,7 +615,8 @@
     "5.0.9",
     "4.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0029",
@@ -619,7 +635,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -641,7 +657,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0028",
@@ -660,7 +677,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -682,7 +699,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0027",
@@ -701,7 +719,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -723,7 +741,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0026",
@@ -742,7 +761,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -764,7 +783,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0025",
@@ -783,7 +803,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -805,7 +825,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0024",
@@ -824,7 +845,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -846,7 +867,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0023",
@@ -865,7 +887,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -887,7 +909,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0022",
@@ -906,7 +929,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -928,7 +951,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0021",
@@ -947,7 +971,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -969,7 +993,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0020",
@@ -988,7 +1013,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -1010,7 +1035,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0019",
@@ -1029,7 +1055,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -1051,7 +1077,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0018",
@@ -1070,7 +1097,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -1092,7 +1119,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0017",
@@ -1111,7 +1139,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -1133,7 +1161,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0016",
@@ -1152,7 +1181,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -1174,7 +1203,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0015",
@@ -1193,7 +1223,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -1215,7 +1245,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0014",
@@ -1234,7 +1265,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -1256,7 +1287,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0013",
@@ -1275,7 +1307,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -1297,7 +1329,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0012",
@@ -1316,7 +1349,7 @@
    "affected": [
     {
      "from": "5.2.0",
-     "to": "5.2.x"
+     "to": "5.2.0"
     },
     {
      "from": "5.1.0",
@@ -1338,7 +1371,8 @@
     "5.0.8",
     "4.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0011",
@@ -1374,7 +1408,8 @@
     "5.0.7",
     "4.5.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0010",
@@ -1410,7 +1445,8 @@
     "5.0.7",
     "4.5.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0009",
@@ -1441,7 +1477,8 @@
     "5.1.4",
     "5.0.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0008",
@@ -1467,7 +1504,8 @@
    "fixed": [
     "4.5.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0007",
@@ -1503,7 +1541,8 @@
     "5.0.7",
     "4.5.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0006",
@@ -1539,7 +1578,8 @@
     "5.0.7",
     "4.5.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0005",
@@ -1575,7 +1615,8 @@
     "5.0.7",
     "4.5.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0004",
@@ -1601,7 +1642,8 @@
    "fixed": [
     "4.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0003",
@@ -1637,7 +1679,8 @@
     "5.0.5",
     "4.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0002",
@@ -1674,7 +1717,8 @@
     "5.0.5",
     "4.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-26-0001",
@@ -1710,7 +1754,8 @@
     "5.0.5",
     "4.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0061",
@@ -1729,7 +1774,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -1756,7 +1801,8 @@
     "4.4.12",
     "4.1.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0060",
@@ -1775,7 +1821,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -1802,7 +1848,8 @@
     "4.4.12",
     "4.1.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0059",
@@ -1821,7 +1868,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -1848,7 +1895,8 @@
     "4.4.12",
     "4.1.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0058",
@@ -1867,7 +1915,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -1894,7 +1942,8 @@
     "4.4.12",
     "4.1.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0057",
@@ -1913,7 +1962,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -1940,7 +1989,8 @@
     "4.4.12",
     "4.1.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0056",
@@ -1959,7 +2009,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -1986,7 +2036,8 @@
     "4.4.12",
     "4.1.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0055",
@@ -2005,7 +2056,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -2032,7 +2083,8 @@
     "4.4.12",
     "4.1.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0054",
@@ -2051,7 +2103,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -2078,7 +2130,8 @@
     "4.4.12",
     "4.1.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0053",
@@ -2097,7 +2150,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -2114,7 +2167,8 @@
     "5.0.4",
     "4.5.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0052",
@@ -2133,7 +2187,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -2160,7 +2214,8 @@
     "4.4.12",
     "4.1.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0051",
@@ -2179,7 +2234,7 @@
    "affected": [
     {
      "from": "5.1.0",
-     "to": "5.1.x"
+     "to": "5.1.0"
     },
     {
      "from": "5.0.0",
@@ -2206,7 +2261,8 @@
     "4.4.12",
     "4.1.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0050",
@@ -2247,7 +2303,8 @@
     "4.4.11",
     "4.1.21"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0049",
@@ -2288,7 +2345,8 @@
     "4.4.11",
     "4.1.21"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0048",
@@ -2329,7 +2387,8 @@
     "4.4.11",
     "4.1.21"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0047",
@@ -2365,7 +2424,8 @@
     "4.5.7",
     "4.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0046",
@@ -2391,7 +2451,8 @@
    "fixed": [
     "5.0.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0045",
@@ -2422,7 +2483,8 @@
     "5.0.3",
     "4.5.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0044",
@@ -2463,7 +2525,8 @@
     "4.4.11",
     "4.1.21"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0043",
@@ -2494,7 +2557,8 @@
     "5.0.3",
     "4.5.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0042",
@@ -2535,7 +2599,8 @@
     "4.4.11",
     "4.1.21"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0041",
@@ -2561,7 +2626,8 @@
    "fixed": [
     "5.0.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0040",
@@ -2602,7 +2668,8 @@
     "4.4.10",
     "4.1.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0039",
@@ -2643,7 +2710,8 @@
     "4.4.10",
     "4.1.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0038",
@@ -2684,7 +2752,8 @@
     "4.4.10",
     "4.1.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0037",
@@ -2725,7 +2794,8 @@
     "4.4.10",
     "4.1.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0036",
@@ -2744,7 +2814,7 @@
    "affected": [
     {
      "from": "5.0.0",
-     "to": "5.0.x"
+     "to": "5.0.0"
     },
     {
      "from": "4.5.0",
@@ -2766,7 +2836,8 @@
     "4.4.9",
     "4.1.19"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0035",
@@ -2785,7 +2856,7 @@
    "affected": [
     {
      "from": "5.0.0",
-     "to": "5.0.x"
+     "to": "5.0.0"
     },
     {
      "from": "4.5.0",
@@ -2807,7 +2878,8 @@
     "4.4.9",
     "4.1.19"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0034",
@@ -2826,7 +2898,7 @@
    "affected": [
     {
      "from": "5.0.0",
-     "to": "5.0.x"
+     "to": "5.0.0"
     },
     {
      "from": "4.5.0",
@@ -2848,7 +2920,8 @@
     "4.4.9",
     "4.1.19"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0033",
@@ -2867,7 +2940,7 @@
    "affected": [
     {
      "from": "5.0.0",
-     "to": "5.0.x"
+     "to": "5.0.0"
     },
     {
      "from": "4.5.0",
@@ -2889,7 +2962,8 @@
     "4.4.9",
     "4.1.19"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0032",
@@ -2908,7 +2982,7 @@
    "affected": [
     {
      "from": "5.0.0",
-     "to": "5.0.x"
+     "to": "5.0.0"
     },
     {
      "from": "4.5.0",
@@ -2930,7 +3004,8 @@
     "4.4.9",
     "4.1.19"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0031",
@@ -2949,7 +3024,7 @@
    "affected": [
     {
      "from": "5.0.0",
-     "to": "5.0.x"
+     "to": "5.0.0"
     },
     {
      "from": "4.5.0",
@@ -2971,7 +3046,8 @@
     "4.4.9",
     "4.1.19"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0030",
@@ -2990,7 +3066,7 @@
    "affected": [
     {
      "from": "5.0.0",
-     "to": "5.0.x"
+     "to": "5.0.0"
     },
     {
      "from": "4.5.0",
@@ -3012,7 +3088,8 @@
     "4.4.9",
     "4.1.19"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0029",
@@ -3031,14 +3108,15 @@
    "affected": [
     {
      "from": "5.0.0",
-     "to": "5.0.x"
+     "to": "5.0.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "5.0.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0028",
@@ -3079,7 +3157,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0027",
@@ -3120,7 +3199,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0026",
@@ -3161,7 +3241,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0025",
@@ -3202,7 +3283,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0024",
@@ -3243,7 +3325,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0023",
@@ -3284,7 +3367,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0022",
@@ -3325,7 +3409,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0021",
@@ -3366,7 +3451,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0020",
@@ -3407,7 +3493,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0019",
@@ -3448,7 +3535,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0018",
@@ -3489,7 +3577,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0017",
@@ -3525,7 +3614,8 @@
     "4.4.8",
     "4.3.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0016",
@@ -3551,7 +3641,8 @@
    "fixed": [
     "4.5.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0015",
@@ -3587,7 +3678,8 @@
     "4.4.8",
     "4.3.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0014",
@@ -3623,7 +3715,8 @@
     "4.4.8",
     "4.3.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0013",
@@ -3664,7 +3757,8 @@
     "4.3.12",
     "4.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0012",
@@ -3705,7 +3799,8 @@
     "4.3.11",
     "4.1.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0011",
@@ -3731,7 +3826,8 @@
    "fixed": [
     "4.5.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0010",
@@ -3772,7 +3868,8 @@
     "4.3.10",
     "4.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0009",
@@ -3813,7 +3910,8 @@
     "4.3.10",
     "4.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0008",
@@ -3854,7 +3952,8 @@
     "4.3.10",
     "4.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0007",
@@ -3895,7 +3994,8 @@
     "4.3.10",
     "4.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0006",
@@ -3931,7 +4031,8 @@
     "4.4.6",
     "4.3.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0005",
@@ -3972,7 +4073,8 @@
     "4.3.10",
     "4.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0004",
@@ -4013,7 +4115,8 @@
     "4.3.10",
     "4.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0003",
@@ -4054,7 +4157,8 @@
     "4.3.10",
     "4.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0002",
@@ -4095,7 +4199,8 @@
     "4.3.10",
     "4.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-25-0001",
@@ -4136,7 +4241,8 @@
     "4.3.10",
     "4.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0056",
@@ -4155,7 +4261,7 @@
    "affected": [
     {
      "from": "4.5.0",
-     "to": "4.5.x"
+     "to": "4.5.0"
     },
     {
      "from": "4.4.0",
@@ -4177,7 +4283,8 @@
     "4.3.9",
     "4.1.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0055",
@@ -4196,7 +4303,7 @@
    "affected": [
     {
      "from": "4.5.0",
-     "to": "4.5.x"
+     "to": "4.5.0"
     },
     {
      "from": "4.4.0",
@@ -4213,7 +4320,8 @@
     "4.4.5",
     "4.3.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0054",
@@ -4232,7 +4340,7 @@
    "affected": [
     {
      "from": "4.5.0",
-     "to": "4.5.x"
+     "to": "4.5.0"
     },
     {
      "from": "4.4.0",
@@ -4254,7 +4362,8 @@
     "4.3.9",
     "4.1.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0053",
@@ -4273,7 +4382,7 @@
    "affected": [
     {
      "from": "4.5.0",
-     "to": "4.5.x"
+     "to": "4.5.0"
     },
     {
      "from": "4.4.0",
@@ -4295,7 +4404,8 @@
     "4.3.9",
     "4.1.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0052",
@@ -4314,7 +4424,7 @@
    "affected": [
     {
      "from": "4.5.0",
-     "to": "4.5.x"
+     "to": "4.5.0"
     },
     {
      "from": "4.4.0",
@@ -4336,7 +4446,8 @@
     "4.3.9",
     "4.1.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0051",
@@ -4355,7 +4466,7 @@
    "affected": [
     {
      "from": "4.5.0",
-     "to": "4.5.x"
+     "to": "4.5.0"
     },
     {
      "from": "4.4.0",
@@ -4377,7 +4488,8 @@
     "4.3.9",
     "4.1.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0050",
@@ -4418,7 +4530,8 @@
     "4.2.11",
     "4.1.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0049",
@@ -4444,7 +4557,8 @@
    "fixed": [
     "4.4.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0048",
@@ -4470,7 +4584,8 @@
    "fixed": [
     "4.4.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0047",
@@ -4511,7 +4626,8 @@
     "4.2.11",
     "4.1.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0046",
@@ -4552,7 +4668,8 @@
     "4.2.11",
     "4.1.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0045",
@@ -4593,7 +4710,8 @@
     "4.2.11",
     "4.1.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0044",
@@ -4634,7 +4752,8 @@
     "4.2.10",
     "4.1.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0043",
@@ -4675,7 +4794,8 @@
     "4.2.10",
     "4.1.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0042",
@@ -4716,7 +4836,8 @@
     "4.2.10",
     "4.1.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0041",
@@ -4757,7 +4878,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0040",
@@ -4798,7 +4920,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0039",
@@ -4839,7 +4962,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0038",
@@ -4880,7 +5004,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0037",
@@ -4921,7 +5046,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0036",
@@ -4962,7 +5088,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0035",
@@ -5003,7 +5130,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0034",
@@ -5034,7 +5162,8 @@
     "4.4.2",
     "4.3.6"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0033",
@@ -5075,7 +5204,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0032",
@@ -5116,7 +5246,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0031",
@@ -5135,7 +5266,7 @@
    "affected": [
     {
      "from": "4.4.0",
-     "to": "4.4.x"
+     "to": "4.4.0"
     },
     {
      "from": "4.4.1",
@@ -5146,7 +5277,8 @@
    "fixed": [
     "4.4.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0030",
@@ -5187,7 +5319,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0029",
@@ -5228,7 +5361,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0028",
@@ -5269,7 +5403,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0027",
@@ -5310,7 +5445,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0026",
@@ -5351,7 +5487,8 @@
     "4.2.9",
     "4.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0025",
@@ -5370,7 +5507,7 @@
    "affected": [
     {
      "from": "4.4.0",
-     "to": "4.4.x"
+     "to": "4.4.0"
     },
     {
      "from": "4.3.0",
@@ -5392,7 +5529,8 @@
     "4.2.8",
     "4.1.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0024",
@@ -5411,7 +5549,7 @@
    "affected": [
     {
      "from": "4.4.0",
-     "to": "4.4.x"
+     "to": "4.4.0"
     },
     {
      "from": "4.3.0",
@@ -5433,7 +5571,8 @@
     "4.2.8",
     "4.1.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0023",
@@ -5452,7 +5591,7 @@
    "affected": [
     {
      "from": "4.4.0",
-     "to": "4.4.x"
+     "to": "4.4.0"
     },
     {
      "from": "4.3.0",
@@ -5474,7 +5613,8 @@
     "4.2.8",
     "4.1.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0022",
@@ -5493,7 +5633,7 @@
    "affected": [
     {
      "from": "4.4.0",
-     "to": "4.4.x"
+     "to": "4.4.0"
     },
     {
      "from": "4.3.0",
@@ -5515,7 +5655,8 @@
     "4.2.8",
     "4.1.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0021",
@@ -5534,7 +5675,7 @@
    "affected": [
     {
      "from": "4.4.0",
-     "to": "4.4.x"
+     "to": "4.4.0"
     },
     {
      "from": "4.3.0",
@@ -5556,7 +5697,8 @@
     "4.2.8",
     "4.1.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0020",
@@ -5582,7 +5724,8 @@
    "fixed": [
     "4.3.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0019",
@@ -5618,7 +5761,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0018",
@@ -5644,7 +5788,8 @@
    "fixed": [
     "4.3.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0017",
@@ -5680,7 +5825,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0016",
@@ -5716,7 +5862,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0015",
@@ -5752,7 +5899,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0014",
@@ -5788,7 +5936,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0013",
@@ -5824,7 +5973,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0012",
@@ -5860,7 +6010,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0011",
@@ -5896,7 +6047,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0010",
@@ -5922,7 +6074,8 @@
    "fixed": [
     "4.3.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0009",
@@ -5958,7 +6111,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0008",
@@ -5994,7 +6148,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0007",
@@ -6030,7 +6185,8 @@
     "4.2.7",
     "4.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0006",
@@ -6066,7 +6222,8 @@
     "4.2.6",
     "4.1.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0005",
@@ -6102,7 +6259,8 @@
     "4.2.6",
     "4.1.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0004",
@@ -6138,7 +6296,8 @@
     "4.2.6",
     "4.1.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0003",
@@ -6174,7 +6333,8 @@
     "4.2.6",
     "4.1.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0002",
@@ -6210,7 +6370,8 @@
     "4.2.6",
     "4.1.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-24-0001",
@@ -6246,7 +6407,8 @@
     "4.2.6",
     "4.1.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0053",
@@ -6265,7 +6427,7 @@
    "affected": [
     {
      "from": "4.3.0",
-     "to": "4.3.x"
+     "to": "4.3.0"
     },
     {
      "from": "4.2.0",
@@ -6277,7 +6439,8 @@
     "4.3.1",
     "4.2.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0052",
@@ -6296,7 +6459,7 @@
    "affected": [
     {
      "from": "4.3.0",
-     "to": "4.3.x"
+     "to": "4.3.0"
     },
     {
      "from": "4.2.0",
@@ -6328,7 +6491,8 @@
     "3.11.18",
     "3.9.25"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0051",
@@ -6347,7 +6511,7 @@
    "affected": [
     {
      "from": "4.3.0",
-     "to": "4.3.x"
+     "to": "4.3.0"
     },
     {
      "from": "4.2.0",
@@ -6379,7 +6543,8 @@
     "3.11.18",
     "3.9.25"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0050",
@@ -6398,7 +6563,7 @@
    "affected": [
     {
      "from": "4.3.0",
-     "to": "4.3.x"
+     "to": "4.3.0"
     },
     {
      "from": "4.2.0",
@@ -6430,7 +6595,8 @@
     "3.11.18",
     "3.9.25"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0049",
@@ -6449,7 +6615,7 @@
    "affected": [
     {
      "from": "4.3.0",
-     "to": "4.3.x"
+     "to": "4.3.0"
     },
     {
      "from": "4.2.0",
@@ -6461,7 +6627,8 @@
     "4.3.1",
     "4.2.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0048",
@@ -6480,7 +6647,7 @@
    "affected": [
     {
      "from": "4.3.0",
-     "to": "4.3.x"
+     "to": "4.3.0"
     },
     {
      "from": "4.2.0",
@@ -6492,7 +6659,8 @@
     "4.3.1",
     "4.2.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0047",
@@ -6511,7 +6679,7 @@
    "affected": [
     {
      "from": "4.3.0",
-     "to": "4.3.x"
+     "to": "4.3.0"
     },
     {
      "from": "4.2.0",
@@ -6543,7 +6711,8 @@
     "3.11.18",
     "3.9.25"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0046",
@@ -6562,7 +6731,7 @@
    "affected": [
     {
      "from": "4.3.0",
-     "to": "4.3.x"
+     "to": "4.3.0"
     },
     {
      "from": "4.2.0",
@@ -6594,7 +6763,8 @@
     "3.11.18",
     "3.9.25"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0045",
@@ -6613,7 +6783,7 @@
    "affected": [
     {
      "from": "4.3.0",
-     "to": "4.3.x"
+     "to": "4.3.0"
     },
     {
      "from": "4.2.0",
@@ -6645,7 +6815,8 @@
     "3.11.18",
     "3.9.25"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0044",
@@ -6664,7 +6835,7 @@
    "affected": [
     {
      "from": "4.3.0",
-     "to": "4.3.x"
+     "to": "4.3.0"
     },
     {
      "from": "4.2.0",
@@ -6696,7 +6867,8 @@
     "3.11.18",
     "3.9.25"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0043",
@@ -6742,7 +6914,8 @@
     "3.11.17",
     "3.9.24"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0042",
@@ -6788,7 +6961,8 @@
     "3.11.17",
     "3.9.24"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0041",
@@ -6834,7 +7008,8 @@
     "3.11.17",
     "3.9.24"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0040",
@@ -6880,7 +7055,8 @@
     "3.11.17",
     "3.9.24"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0039",
@@ -6926,7 +7102,8 @@
     "3.11.17",
     "3.9.24"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0038",
@@ -6962,7 +7139,8 @@
     "4.1.6",
     "4.0.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0037",
@@ -7008,7 +7186,8 @@
     "3.11.17",
     "3.9.24"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0036",
@@ -7054,7 +7233,8 @@
     "3.11.17",
     "3.9.24"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0035",
@@ -7090,7 +7270,8 @@
     "4.1.6",
     "4.0.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0034",
@@ -7116,7 +7297,8 @@
    "fixed": [
     "4.2.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0033",
@@ -7162,7 +7344,8 @@
     "3.11.17",
     "3.9.24"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0032",
@@ -7208,7 +7391,8 @@
     "3.11.17",
     "3.9.24"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0031",
@@ -7254,7 +7438,8 @@
     "3.11.17",
     "3.9.24"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0030",
@@ -7300,7 +7485,8 @@
     "3.11.16",
     "3.9.23"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0029",
@@ -7346,7 +7532,8 @@
     "3.11.16",
     "3.9.23"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0028",
@@ -7392,7 +7579,8 @@
     "3.11.16",
     "3.9.23"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0027",
@@ -7426,7 +7614,8 @@
     "3.11.16",
     "3.9.23"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0026",
@@ -7472,7 +7661,8 @@
     "3.11.16",
     "3.9.23"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0025",
@@ -7508,7 +7698,8 @@
     "3.11.16",
     "3.9.23"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0024",
@@ -7534,7 +7725,8 @@
    "fixed": [
     "4.2.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0023",
@@ -7580,7 +7772,8 @@
     "3.11.16",
     "3.9.23"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0022",
@@ -7606,7 +7799,8 @@
    "fixed": [
     "4.2.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0021",
@@ -7652,7 +7846,8 @@
     "3.11.16",
     "3.9.23"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0020",
@@ -7698,7 +7893,8 @@
     "3.11.16",
     "3.9.23"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0019",
@@ -7744,7 +7940,8 @@
     "3.11.16",
     "3.9.23"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0018",
@@ -7763,7 +7960,7 @@
    "affected": [
     {
      "from": "4.2.0",
-     "to": "4.2.x"
+     "to": "4.2.0"
     },
     {
      "from": "4.1.0",
@@ -7790,7 +7987,8 @@
     "3.11.15",
     "3.9.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0017",
@@ -7809,7 +8007,7 @@
    "affected": [
     {
      "from": "4.2.0",
-     "to": "4.2.x"
+     "to": "4.2.0"
     },
     {
      "from": "4.1.0",
@@ -7836,7 +8034,8 @@
     "3.11.15",
     "3.9.22"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0016",
@@ -7855,7 +8054,7 @@
    "affected": [
     {
      "from": "4.2.0",
-     "to": "4.2.x"
+     "to": "4.2.0"
     },
     {
      "from": "4.1.0",
@@ -7877,7 +8076,8 @@
     "4.0.9",
     "3.11.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0015",
@@ -7918,7 +8118,8 @@
     "3.11.14",
     "3.9.21"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0014",
@@ -7944,7 +8145,8 @@
    "fixed": [
     "4.1.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0013",
@@ -7970,7 +8172,8 @@
    "fixed": [
     "4.1.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0012",
@@ -8011,7 +8214,8 @@
     "3.11.13",
     "3.9.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0011",
@@ -8052,7 +8256,8 @@
     "3.11.13",
     "3.9.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0010",
@@ -8078,7 +8283,8 @@
    "fixed": [
     "4.1.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0009",
@@ -8109,7 +8315,8 @@
     "4.1.2",
     "4.0.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0008",
@@ -8150,7 +8357,8 @@
     "3.11.13",
     "3.9.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0007",
@@ -8191,7 +8399,8 @@
     "3.11.13",
     "3.9.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0006",
@@ -8232,7 +8441,8 @@
     "3.11.13",
     "3.9.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0005",
@@ -8273,7 +8483,8 @@
     "3.11.13",
     "3.9.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0004",
@@ -8314,7 +8525,8 @@
     "3.11.13",
     "3.9.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0003",
@@ -8333,7 +8545,7 @@
    "affected": [
     {
      "from": "4.1.0",
-     "to": "4.1.x"
+     "to": "4.1.0"
     },
     {
      "from": "4.0.0",
@@ -8355,7 +8567,8 @@
     "3.11.12",
     "3.9.19"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0002",
@@ -8374,7 +8587,7 @@
    "affected": [
     {
      "from": "4.1.0",
-     "to": "4.1.x"
+     "to": "4.1.0"
     },
     {
      "from": "4.0.0",
@@ -8386,7 +8599,8 @@
     "4.1.1",
     "4.0.6"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-23-0001",
@@ -8405,7 +8619,7 @@
    "affected": [
     {
      "from": "4.1.0",
-     "to": "4.1.x"
+     "to": "4.1.0"
     },
     {
      "from": "4.0.0",
@@ -8427,7 +8641,8 @@
     "3.11.12",
     "3.9.19"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0032",
@@ -8463,7 +8678,8 @@
     "3.11.11",
     "3.9.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0031",
@@ -8494,7 +8710,8 @@
     "4.0.5",
     "3.11.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0030",
@@ -8530,7 +8747,8 @@
     "3.11.11",
     "3.9.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0029",
@@ -8566,7 +8784,8 @@
     "3.11.11",
     "3.9.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0028",
@@ -8597,7 +8816,8 @@
     "3.11.11",
     "3.9.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0027",
@@ -8633,7 +8853,8 @@
     "3.11.9",
     "3.9.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0026",
@@ -8670,7 +8891,8 @@
     "3.11.10",
     "3.9.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0025",
@@ -8706,7 +8928,8 @@
     "3.11.10",
     "3.9.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0024",
@@ -8742,7 +8965,8 @@
     "3.11.10",
     "3.9.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0023",
@@ -8778,7 +9002,8 @@
     "3.11.10",
     "3.9.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0022",
@@ -8809,7 +9034,8 @@
     "4.0.3",
     "3.11.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0021",
@@ -8845,7 +9071,8 @@
     "3.11.9",
     "3.9.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0020",
@@ -8879,7 +9106,8 @@
     "3.11.8",
     "3.9.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0019",
@@ -8915,7 +9143,8 @@
     "3.11.8",
     "3.9.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0018",
@@ -8951,7 +9180,8 @@
     "3.11.8",
     "3.9.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0017",
@@ -8987,7 +9217,8 @@
     "3.11.8",
     "3.9.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0016",
@@ -9023,7 +9254,8 @@
     "3.11.8",
     "3.9.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0015",
@@ -9059,7 +9291,8 @@
     "3.11.8",
     "3.9.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0014",
@@ -9078,7 +9311,7 @@
    "affected": [
     {
      "from": "4.0.0",
-     "to": "4.0.x"
+     "to": "4.0.0"
     },
     {
      "from": "3.11.0",
@@ -9100,7 +9333,8 @@
     "3.10.11",
     "3.9.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0013",
@@ -9119,7 +9353,7 @@
    "affected": [
     {
      "from": "4.0.0",
-     "to": "4.0.x"
+     "to": "4.0.0"
     },
     {
      "from": "3.11.0",
@@ -9141,7 +9375,8 @@
     "3.10.11",
     "3.9.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0012",
@@ -9160,7 +9395,7 @@
    "affected": [
     {
      "from": "4.0.0",
-     "to": "4.0.x"
+     "to": "4.0.0"
     },
     {
      "from": "3.11.0",
@@ -9182,7 +9417,8 @@
     "3.10.11",
     "3.9.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0011",
@@ -9201,7 +9437,7 @@
    "affected": [
     {
      "from": "4.0.0",
-     "to": "4.0.x"
+     "to": "4.0.0"
     },
     {
      "from": "3.11.0",
@@ -9223,7 +9459,8 @@
     "3.10.11",
     "3.9.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0010",
@@ -9242,7 +9479,7 @@
    "affected": [
     {
      "from": "4.0.0",
-     "to": "4.0.x"
+     "to": "4.0.0"
     },
     {
      "from": "3.11.0",
@@ -9264,7 +9501,8 @@
     "3.10.11",
     "3.9.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0009",
@@ -9298,7 +9536,8 @@
     "3.10.10",
     "3.9.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0008",
@@ -9332,7 +9571,8 @@
     "3.10.10",
     "3.9.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0007",
@@ -9368,7 +9608,8 @@
     "3.10.10",
     "3.9.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0006",
@@ -9404,7 +9645,8 @@
     "3.10.10",
     "3.9.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0005",
@@ -9440,7 +9682,8 @@
     "3.10.10",
     "3.9.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0004",
@@ -9476,7 +9719,8 @@
     "3.10.9",
     "3.9.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0003",
@@ -9512,7 +9756,8 @@
     "3.10.9",
     "3.9.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0002",
@@ -9548,7 +9793,8 @@
     "3.10.9",
     "3.9.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-22-0001",
@@ -9574,7 +9820,8 @@
    "fixed": [
     "3.11.5"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0042",
@@ -9610,7 +9857,8 @@
     "3.10.8",
     "3.9.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0041",
@@ -9646,7 +9894,8 @@
     "3.10.8",
     "3.9.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0040",
@@ -9682,7 +9931,8 @@
     "3.10.8",
     "3.9.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0039",
@@ -9716,7 +9966,8 @@
     "3.10.8",
     "3.9.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0038",
@@ -9752,7 +10003,8 @@
     "3.10.8",
     "3.9.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0036",
@@ -9788,7 +10040,8 @@
     "3.10.7",
     "3.9.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0035",
@@ -9824,7 +10077,8 @@
     "3.10.7",
     "3.9.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0034",
@@ -9860,7 +10114,8 @@
     "3.10.7",
     "3.9.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0033",
@@ -9896,7 +10151,8 @@
     "3.10.7",
     "3.9.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0032",
@@ -9932,7 +10188,8 @@
     "3.10.7",
     "3.9.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0031",
@@ -9951,7 +10208,7 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     },
     {
      "from": "3.10.0",
@@ -9968,7 +10225,8 @@
     "3.10.5",
     "3.9.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0030",
@@ -9987,7 +10245,7 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     },
     {
      "from": "3.10.0",
@@ -10004,7 +10262,8 @@
     "3.10.5",
     "3.9.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0029",
@@ -10023,7 +10282,7 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     },
     {
      "from": "3.10.0",
@@ -10040,7 +10299,8 @@
     "3.10.5",
     "3.9.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0028",
@@ -10059,7 +10319,7 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     },
     {
      "from": "3.10.0",
@@ -10076,7 +10336,8 @@
     "3.10.5",
     "3.9.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0027",
@@ -10095,14 +10356,15 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "3.11.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0026",
@@ -10121,14 +10383,15 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "3.11.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0025",
@@ -10147,7 +10410,7 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     },
     {
      "from": "3.10.0",
@@ -10164,7 +10427,8 @@
     "3.10.5",
     "3.9.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0024",
@@ -10183,7 +10447,7 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     },
     {
      "from": "3.10.0",
@@ -10200,7 +10464,8 @@
     "3.10.5",
     "3.9.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0023",
@@ -10219,7 +10484,7 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     },
     {
      "from": "3.10.0",
@@ -10236,7 +10501,8 @@
     "3.10.5",
     "3.9.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0022",
@@ -10255,7 +10521,7 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     },
     {
      "from": "3.10.0",
@@ -10272,7 +10538,8 @@
     "3.10.5",
     "3.9.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0021",
@@ -10291,7 +10558,7 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     },
     {
      "from": "3.10.0",
@@ -10308,7 +10575,8 @@
     "3.10.5",
     "3.9.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0020",
@@ -10327,7 +10595,7 @@
    "affected": [
     {
      "from": "3.11.0",
-     "to": "3.11.x"
+     "to": "3.11.0"
     },
     {
      "from": "3.10.0",
@@ -10344,7 +10612,8 @@
     "3.10.5",
     "3.9.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0019",
@@ -10379,7 +10648,8 @@
     "3.9.7",
     "3.8.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0018",
@@ -10416,7 +10686,8 @@
     "3.9.7",
     "3.8.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0017",
@@ -10443,7 +10714,8 @@
     "3.11.0",
     "3.10.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0016",
@@ -10485,7 +10757,8 @@
     "3.8.9",
     "3.5.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0015",
@@ -10527,7 +10800,8 @@
     "3.8.9",
     "3.5.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0014",
@@ -10569,7 +10843,8 @@
     "3.8.9",
     "3.5.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0013",
@@ -10611,7 +10886,8 @@
     "3.8.9",
     "3.5.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0012",
@@ -10648,7 +10924,8 @@
     "3.9.7",
     "3.8.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0011",
@@ -10690,7 +10967,8 @@
     "3.8.8",
     "3.5.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0010",
@@ -10731,7 +11009,8 @@
     "3.8.8",
     "3.5.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0009",
@@ -10772,7 +11051,8 @@
     "3.8.8",
     "3.5.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0008",
@@ -10813,7 +11093,8 @@
     "3.8.8",
     "3.5.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0007",
@@ -10854,7 +11135,8 @@
     "3.8.8",
     "3.5.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0006",
@@ -10895,7 +11177,8 @@
     "3.8.8",
     "3.5.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0005",
@@ -10914,7 +11197,7 @@
    "affected": [
     {
      "from": "3.10.0",
-     "to": "3.10.x"
+     "to": "3.10.0"
     },
     {
      "from": "3.9.0",
@@ -10936,7 +11219,8 @@
     "3.8.7",
     "3.5.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0004",
@@ -10955,7 +11239,7 @@
    "affected": [
     {
      "from": "3.10.0",
-     "to": "3.10.x"
+     "to": "3.10.0"
     },
     {
      "from": "3.9.0",
@@ -10977,7 +11261,8 @@
     "3.8.7",
     "3.5.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0003",
@@ -10996,7 +11281,7 @@
    "affected": [
     {
      "from": "3.10.0",
-     "to": "3.10.x"
+     "to": "3.10.0"
     },
     {
      "from": "3.9.0",
@@ -11018,7 +11303,8 @@
     "3.8.7",
     "3.5.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0002",
@@ -11037,7 +11323,7 @@
    "affected": [
     {
      "from": "3.10.0",
-     "to": "3.10.x"
+     "to": "3.10.0"
     },
     {
      "from": "3.9.0",
@@ -11054,7 +11340,8 @@
     "3.9.4",
     "3.8.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-21-0001",
@@ -11073,14 +11360,15 @@
    "affected": [
     {
      "from": "3.10.0",
-     "to": "3.10.x"
+     "to": "3.10.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "3.10.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0021",
@@ -11117,7 +11405,8 @@
     "3.8.6",
     "3.7.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0020",
@@ -11144,7 +11433,8 @@
     "3.10.0",
     "3.9.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0019",
@@ -11186,7 +11476,8 @@
     "3.7.9",
     "3.5.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0018",
@@ -11228,7 +11519,8 @@
     "3.7.9",
     "3.5.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0017",
@@ -11270,7 +11562,8 @@
     "3.7.9",
     "3.5.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0016",
@@ -11312,7 +11605,8 @@
     "3.7.9",
     "3.5.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0015",
@@ -11348,7 +11642,8 @@
     "3.8.5",
     "3.7.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0014",
@@ -11389,7 +11684,8 @@
     "3.7.8",
     "3.5.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0013",
@@ -11430,7 +11726,8 @@
     "3.7.8",
     "3.5.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0012",
@@ -11471,7 +11768,8 @@
     "3.7.8",
     "3.5.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0011",
@@ -11497,7 +11795,8 @@
    "fixed": [
     "3.9.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0010",
@@ -11516,7 +11815,7 @@
    "affected": [
     {
      "from": "3.9.0",
-     "to": "3.9.x"
+     "to": "3.9.0"
     },
     {
      "from": "3.8.0",
@@ -11538,7 +11837,8 @@
     "3.7.7",
     "3.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0009",
@@ -11557,7 +11857,7 @@
    "affected": [
     {
      "from": "3.9.0",
-     "to": "3.9.x"
+     "to": "3.9.0"
     },
     {
      "from": "3.8.0",
@@ -11579,7 +11879,8 @@
     "3.7.7",
     "3.5.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0008",
@@ -11598,7 +11899,7 @@
    "affected": [
     {
      "from": "3.9.0",
-     "to": "3.9.x"
+     "to": "3.9.0"
     },
     {
      "from": "3.8.0",
@@ -11615,7 +11916,8 @@
     "3.8.4",
     "3.7.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0007",
@@ -11642,7 +11944,8 @@
     "3.9.0",
     "3.8.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0006",
@@ -11683,7 +11986,8 @@
     "3.6.10",
     "3.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0005",
@@ -11724,7 +12028,8 @@
     "3.6.10",
     "3.5.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0004",
@@ -11765,7 +12070,8 @@
     "3.6.9",
     "3.5.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0003",
@@ -11806,7 +12112,8 @@
     "3.6.9",
     "3.5.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0002",
@@ -11847,7 +12154,8 @@
     "3.6.9",
     "3.5.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-20-0001",
@@ -11866,14 +12174,15 @@
    "affected": [
     {
      "from": "3.8.0",
-     "to": "3.8.x"
+     "to": "3.8.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "3.8.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0029",
@@ -11909,7 +12218,8 @@
     "3.6.7",
     "3.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0028",
@@ -11940,7 +12250,8 @@
     "3.7.3",
     "3.6.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0027",
@@ -11976,7 +12287,8 @@
     "3.6.7",
     "3.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0026",
@@ -12002,7 +12314,8 @@
    "fixed": [
     "3.7.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0025",
@@ -12038,7 +12351,8 @@
     "3.6.7",
     "3.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0024",
@@ -12074,7 +12388,8 @@
     "3.6.7",
     "3.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0023",
@@ -12110,7 +12425,8 @@
     "3.6.6",
     "3.5.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0022",
@@ -12146,7 +12462,8 @@
     "3.6.6",
     "3.5.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0021",
@@ -12182,7 +12499,8 @@
     "3.6.6",
     "3.5.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0020",
@@ -12216,7 +12534,8 @@
     "3.6.6",
     "3.5.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0019",
@@ -12252,7 +12571,8 @@
     "3.6.6",
     "3.5.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0018",
@@ -12288,7 +12608,8 @@
     "3.6.6",
     "3.5.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0017",
@@ -12307,7 +12628,7 @@
    "affected": [
     {
      "from": "3.7.0",
-     "to": "3.7.x"
+     "to": "3.7.0"
     },
     {
      "from": "3.6.0",
@@ -12324,7 +12645,8 @@
     "3.6.5",
     "3.5.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0016",
@@ -12343,7 +12665,7 @@
    "affected": [
     {
      "from": "3.7.0",
-     "to": "3.7.x"
+     "to": "3.7.0"
     },
     {
      "from": "3.6.0",
@@ -12360,7 +12682,8 @@
     "3.6.5",
     "3.5.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0015",
@@ -12379,7 +12702,7 @@
    "affected": [
     {
      "from": "3.7.0",
-     "to": "3.7.x"
+     "to": "3.7.0"
     },
     {
      "from": "3.6.0",
@@ -12396,7 +12719,8 @@
     "3.6.5",
     "3.5.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0014",
@@ -12415,7 +12739,7 @@
    "affected": [
     {
      "from": "3.7.0",
-     "to": "3.7.x"
+     "to": "3.7.0"
     },
     {
      "from": "3.6.0",
@@ -12432,7 +12756,8 @@
     "3.6.5",
     "3.5.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0013",
@@ -12451,7 +12776,7 @@
    "affected": [
     {
      "from": "3.7.0",
-     "to": "3.7.x"
+     "to": "3.7.0"
     },
     {
      "from": "3.6.0",
@@ -12468,7 +12793,8 @@
     "3.6.5",
     "3.5.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0012",
@@ -12510,7 +12836,8 @@
     "3.4.9",
     "3.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0011",
@@ -12552,7 +12879,8 @@
     "3.4.9",
     "3.1.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0010",
@@ -12579,7 +12907,8 @@
     "3.7.0",
     "3.6.4"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0009",
@@ -12605,7 +12934,8 @@
    "fixed": [
     "3.6.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0008",
@@ -12636,7 +12966,8 @@
     "3.6.3",
     "3.5.5"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0007",
@@ -12677,7 +13008,8 @@
     "3.4.8",
     "3.1.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0006",
@@ -12713,7 +13045,8 @@
     "3.5.5",
     "3.4.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0005",
@@ -12749,7 +13082,8 @@
     "3.5.5",
     "3.4.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0004",
@@ -12790,7 +13124,8 @@
     "3.4.8",
     "3.1.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0003",
@@ -12831,7 +13166,8 @@
     "3.4.7",
     "3.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0002",
@@ -12857,7 +13193,8 @@
    "fixed": [
     "3.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-19-0001",
@@ -12898,7 +13235,8 @@
     "3.4.7",
     "3.1.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0020",
@@ -12940,7 +13278,8 @@
     "3.3.9",
     "3.1.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0019",
@@ -12976,7 +13315,8 @@
     "3.4.5",
     "3.3.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0018",
@@ -13017,7 +13357,8 @@
     "3.3.8",
     "3.1.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0017",
@@ -13054,7 +13395,8 @@
     "3.3.8",
     "3.1.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0016",
@@ -13073,7 +13415,7 @@
    "affected": [
     {
      "from": "3.5.0",
-     "to": "3.5.x"
+     "to": "3.5.0"
     },
     {
      "from": "3.4.0",
@@ -13099,7 +13441,8 @@
     "3.3.7",
     "3.1.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0015",
@@ -13118,7 +13461,7 @@
    "affected": [
     {
      "from": "3.5.0",
-     "to": "3.5.x"
+     "to": "3.5.0"
     },
     {
      "from": "3.4.0",
@@ -13144,7 +13487,8 @@
     "3.3.7",
     "3.1.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0014",
@@ -13163,7 +13507,7 @@
    "affected": [
     {
      "from": "3.5.0",
-     "to": "3.5.x"
+     "to": "3.5.0"
     },
     {
      "from": "3.4.3",
@@ -13180,7 +13524,8 @@
     "3.4.4",
     "3.3.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0012",
@@ -13222,7 +13567,8 @@
     "3.2.9",
     "3.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0011",
@@ -13262,7 +13608,8 @@
     "3.2.9",
     "3.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0010",
@@ -13304,7 +13651,8 @@
     "3.2.9",
     "3.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0009",
@@ -13346,7 +13694,8 @@
     "3.2.9",
     "3.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0008",
@@ -13388,7 +13737,8 @@
     "3.2.9",
     "3.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0007",
@@ -13431,7 +13781,8 @@
     "3.2.9",
     "3.1.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0006",
@@ -13462,7 +13813,8 @@
     "3.4.2",
     "3.3.5"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0005",
@@ -13503,7 +13855,8 @@
     "3.2.8",
     "3.1.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0004",
@@ -13539,7 +13892,8 @@
     "3.2.7",
     "3.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0003",
@@ -13558,7 +13912,7 @@
    "affected": [
     {
      "from": "3.4.0",
-     "to": "3.4.x"
+     "to": "3.4.0"
     },
     {
      "from": "3.3.0",
@@ -13580,7 +13934,8 @@
     "3.2.7",
     "3.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0002",
@@ -13599,7 +13954,7 @@
    "affected": [
     {
      "from": "3.4.0",
-     "to": "3.4.x"
+     "to": "3.4.0"
     },
     {
      "from": "3.3.0",
@@ -13616,7 +13971,8 @@
     "3.3.4",
     "3.2.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-18-0001",
@@ -13635,7 +13991,7 @@
    "affected": [
     {
      "from": "3.4.0",
-     "to": "3.4.x"
+     "to": "3.4.0"
     },
     {
      "from": "3.3.0",
@@ -13657,7 +14013,8 @@
     "3.2.7",
     "3.1.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0021",
@@ -13694,7 +14051,8 @@
     "3.2.6",
     "3.1.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0020",
@@ -13730,7 +14088,8 @@
     "3.2.5",
     "3.1.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0019",
@@ -13764,7 +14123,8 @@
     "3.2.5",
     "3.1.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0018",
@@ -13800,7 +14160,8 @@
     "3.2.5",
     "3.1.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0017",
@@ -13836,7 +14197,8 @@
     "3.2.5",
     "3.1.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0016",
@@ -13855,7 +14217,7 @@
    "affected": [
     {
      "from": "3.3.0",
-     "to": "3.3.x"
+     "to": "3.3.0"
     },
     {
      "from": "3.2.0",
@@ -13872,7 +14234,8 @@
     "3.2.4",
     "3.1.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0015",
@@ -13891,7 +14254,7 @@
    "affected": [
     {
      "from": "3.3.0",
-     "to": "3.3.x"
+     "to": "3.3.0"
     },
     {
      "from": "3.2.0",
@@ -13908,7 +14271,8 @@
     "3.2.4",
     "3.1.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0014",
@@ -13927,14 +14291,15 @@
    "affected": [
     {
      "from": "3.3.0",
-     "to": "3.3.x"
+     "to": "3.3.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "3.3.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0006",
@@ -13953,7 +14318,7 @@
    "affected": [
     {
      "from": "3.3.0",
-     "to": "3.3.x"
+     "to": "3.3.0"
     },
     {
      "from": "3.2.0",
@@ -13970,7 +14335,8 @@
     "3.2.4",
     "3.1.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0013",
@@ -13999,7 +14365,8 @@
     "3.2.3",
     "3.1.6"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0012",
@@ -14040,7 +14407,8 @@
     "3.0.10",
     "2.7.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0011",
@@ -14081,7 +14449,8 @@
     "3.0.10",
     "2.7.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0010",
@@ -14122,7 +14491,8 @@
     "3.0.10",
     "2.7.20"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0009",
@@ -14151,7 +14521,8 @@
     "3.2.2",
     "3.1.5"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0008",
@@ -14180,7 +14551,8 @@
     "3.2.2",
     "3.1.5"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0007",
@@ -14204,7 +14576,8 @@
    "fixed": [
     "3.2.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0005",
@@ -14243,7 +14616,8 @@
     "3.0.9",
     "2.7.19"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0004",
@@ -14260,7 +14634,7 @@
    "affected": [
     {
      "from": "3.2.0",
-     "to": "3.2.x"
+     "to": "3.2.0"
     },
     {
      "from": "3.1.0",
@@ -14274,7 +14648,8 @@
     "3.0.8",
     "2.7.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0003",
@@ -14291,7 +14666,7 @@
    "affected": [
     {
      "from": "3.2.0",
-     "to": "3.2.x"
+     "to": "3.2.0"
     },
     {
      "from": "3.1.0",
@@ -14321,7 +14696,8 @@
     "3.0.8",
     "2.7.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0002",
@@ -14338,7 +14714,7 @@
    "affected": [
     {
      "from": "3.2.0",
-     "to": "3.2.x"
+     "to": "3.2.0"
     },
     {
      "from": "3.1.0",
@@ -14368,7 +14744,8 @@
     "3.0.8",
     "2.7.18"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-17-0001",
@@ -14383,14 +14760,15 @@
    "affected": [
     {
      "from": "3.2.0",
-     "to": "3.2.x"
+     "to": "3.2.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "3.2.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0026",
@@ -14422,7 +14800,8 @@
     "3.0.7",
     "2.9.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0025",
@@ -14465,7 +14844,8 @@
     "2.9.9",
     "2.7.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0024",
@@ -14508,7 +14888,8 @@
     "2.9.9",
     "2.7.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0023",
@@ -14551,7 +14932,8 @@
     "2.9.9",
     "2.7.17"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0022",
@@ -14594,7 +14976,8 @@
     "2.9.8",
     "2.7.16"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0021",
@@ -14611,7 +14994,7 @@
    "affected": [
     {
      "from": "3.1.0",
-     "to": "3.1.x"
+     "to": "3.1.0"
     },
     {
      "from": "3.0.0",
@@ -14632,7 +15015,8 @@
     "3.0.5",
     "2.9.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0020",
@@ -14649,7 +15033,7 @@
    "affected": [
     {
      "from": "3.1.0",
-     "to": "3.1.x"
+     "to": "3.1.0"
     },
     {
      "from": "3.0.0",
@@ -14675,7 +15059,8 @@
     "2.9.7",
     "2.7.15"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0019",
@@ -14692,14 +15077,15 @@
    "affected": [
     {
      "from": "3.1.0",
-     "to": "3.1.x"
+     "to": "3.1.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "3.1.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0018",
@@ -14738,7 +15124,8 @@
     "2.8.12",
     "2.7.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0017",
@@ -14777,7 +15164,8 @@
     "2.8.12",
     "2.7.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0016",
@@ -14815,7 +15203,8 @@
     "2.9.6",
     "2.8.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0015",
@@ -14849,7 +15238,8 @@
     "2.9.6",
     "2.8.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0014",
@@ -14864,7 +15254,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-16-0013",
@@ -14903,7 +15294,8 @@
     "2.8.12",
     "2.7.14"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0012",
@@ -14942,7 +15334,8 @@
     "2.8.11",
     "2.7.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0011",
@@ -14981,7 +15374,8 @@
     "2.8.11",
     "2.7.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0010",
@@ -15020,7 +15414,8 @@
     "2.8.11",
     "2.7.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0009",
@@ -15059,7 +15454,8 @@
     "2.8.11",
     "2.7.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0008",
@@ -15098,7 +15494,8 @@
     "2.8.11",
     "2.7.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0007",
@@ -15132,7 +15529,8 @@
     "2.9.5",
     "2.8.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0006",
@@ -15166,7 +15564,8 @@
     "2.9.5",
     "2.8.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0005",
@@ -15205,7 +15604,8 @@
     "2.8.11",
     "2.7.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0004",
@@ -15244,7 +15644,8 @@
     "2.8.11",
     "2.7.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0003",
@@ -15283,7 +15684,8 @@
     "2.8.11",
     "2.7.13"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0002",
@@ -15317,7 +15719,8 @@
     "2.9.4",
     "2.8.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-16-0001",
@@ -15356,7 +15759,8 @@
     "2.8.10",
     "2.7.12"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0046",
@@ -15390,7 +15794,8 @@
     "2.8.9",
     "2.7.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0045",
@@ -15424,7 +15829,8 @@
     "2.8.9",
     "2.7.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0044",
@@ -15458,7 +15864,8 @@
     "2.8.9",
     "2.7.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0043",
@@ -15492,7 +15899,8 @@
     "2.8.9",
     "2.7.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0042",
@@ -15526,7 +15934,8 @@
     "2.8.9",
     "2.7.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0041",
@@ -15560,7 +15969,8 @@
     "2.8.9",
     "2.7.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0040",
@@ -15594,7 +16004,8 @@
     "2.8.9",
     "2.7.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0039",
@@ -15628,7 +16039,8 @@
     "2.8.9",
     "2.7.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0038",
@@ -15657,7 +16069,8 @@
     "2.9.3",
     "2.8.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0037",
@@ -15681,7 +16094,8 @@
    "fixed": [
     "2.9.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0036",
@@ -15715,7 +16129,8 @@
     "2.8.8",
     "2.7.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0035",
@@ -15749,7 +16164,8 @@
     "2.8.8",
     "2.7.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0034",
@@ -15783,7 +16199,8 @@
     "2.8.8",
     "2.7.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0033",
@@ -15817,7 +16234,8 @@
     "2.8.8",
     "2.7.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0032",
@@ -15851,7 +16269,8 @@
     "2.8.8",
     "2.7.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0031",
@@ -15875,7 +16294,8 @@
    "fixed": [
     "2.7.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0030",
@@ -15909,7 +16329,8 @@
     "2.8.8",
     "2.7.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0029",
@@ -15926,7 +16347,7 @@
    "affected": [
     {
      "from": "2.9.0",
-     "to": "2.9.x"
+     "to": "2.9.0"
     },
     {
      "from": "2.8.0",
@@ -15943,7 +16364,8 @@
     "2.8.7",
     "2.7.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0028",
@@ -15960,7 +16382,7 @@
    "affected": [
     {
      "from": "2.9.0",
-     "to": "2.9.x"
+     "to": "2.9.0"
     },
     {
      "from": "2.8.0",
@@ -15977,7 +16399,8 @@
     "2.8.7",
     "2.7.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0027",
@@ -15994,14 +16417,15 @@
    "affected": [
     {
      "from": "2.9.0",
-     "to": "2.9.x"
+     "to": "2.9.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "2.9.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0026",
@@ -16018,7 +16442,7 @@
    "affected": [
     {
      "from": "2.9.0",
-     "to": "2.9.x"
+     "to": "2.9.0"
     },
     {
      "from": "2.8.0",
@@ -16035,7 +16459,8 @@
     "2.8.7",
     "2.7.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0025",
@@ -16070,7 +16495,8 @@
     "2.7.8",
     "2.6.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0024",
@@ -16105,7 +16531,8 @@
     "2.7.8",
     "2.6.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0023",
@@ -16140,7 +16567,8 @@
     "2.7.8",
     "2.6.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0022",
@@ -16175,7 +16603,8 @@
     "2.7.8",
     "2.6.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0021",
@@ -16200,7 +16629,8 @@
     "2.9.0",
     "2.8.6"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0020",
@@ -16235,7 +16665,8 @@
     "2.7.8",
     "2.6.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0019",
@@ -16270,7 +16701,8 @@
     "2.7.8",
     "2.6.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0018",
@@ -16305,7 +16737,8 @@
     "2.7.8",
     "2.6.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0017",
@@ -16339,7 +16772,8 @@
     "2.7.6",
     "2.6.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0016",
@@ -16373,7 +16807,8 @@
     "2.7.6",
     "2.6.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0015",
@@ -16407,7 +16842,8 @@
     "2.7.6",
     "2.6.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0014",
@@ -16441,7 +16877,8 @@
     "2.7.6",
     "2.6.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0013",
@@ -16475,7 +16912,8 @@
     "2.7.6",
     "2.6.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0012",
@@ -16509,7 +16947,8 @@
     "2.7.6",
     "2.6.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0011",
@@ -16543,7 +16982,8 @@
     "2.7.6",
     "2.6.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0010",
@@ -16577,7 +17017,8 @@
     "2.7.6",
     "2.6.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0009",
@@ -16607,11 +17048,11 @@
     },
     {
      "from": "2.3.0",
-     "to": "2.3.x"
+     "to": "2.3.0"
     },
     {
      "from": "2.5.0",
-     "to": "2.5.x"
+     "to": "2.5.0"
     }
    ],
    "earlier_unsupported": true,
@@ -16620,7 +17061,8 @@
     "2.7.5",
     "2.6.8"
    ],
-   "parse_status": "partial"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-15-0008",
@@ -16654,7 +17096,8 @@
     "2.7.4",
     "2.6.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0007",
@@ -16688,7 +17131,8 @@
     "2.7.4",
     "2.6.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0006",
@@ -16712,7 +17156,8 @@
    "fixed": [
     "2.8.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0005",
@@ -16746,7 +17191,8 @@
     "2.7.4",
     "2.6.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0004",
@@ -16780,7 +17226,8 @@
     "2.7.4",
     "2.6.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0003",
@@ -16814,7 +17261,8 @@
     "2.7.4",
     "2.6.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0002",
@@ -16848,7 +17296,8 @@
     "2.7.4",
     "2.6.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-15-0001",
@@ -16882,7 +17331,8 @@
     "2.7.4",
     "2.6.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0049",
@@ -16915,7 +17365,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0048",
@@ -16950,7 +17401,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0047",
@@ -16985,7 +17437,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0046",
@@ -17020,7 +17473,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0045",
@@ -17050,7 +17504,8 @@
     "2.7.3",
     "2.6.6"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0044",
@@ -17080,7 +17535,8 @@
     "2.7.3",
     "2.6.6"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0043",
@@ -17110,7 +17566,8 @@
     "2.7.3",
     "2.6.6"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0042",
@@ -17145,7 +17602,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0041",
@@ -17180,7 +17638,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0040",
@@ -17215,7 +17674,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0039",
@@ -17250,7 +17710,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0038",
@@ -17267,7 +17728,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.7.2",
@@ -17279,7 +17740,8 @@
     "2.8.0",
     "2.7.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0037",
@@ -17314,7 +17776,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0036",
@@ -17349,7 +17812,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0035",
@@ -17382,7 +17846,8 @@
     "2.6.6",
     "2.5.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0034",
@@ -17416,7 +17881,8 @@
     "2.6.5",
     "2.5.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0033",
@@ -17450,7 +17916,8 @@
     "2.6.5",
     "2.5.0"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0032",
@@ -17467,7 +17934,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.6.0",
@@ -17489,7 +17956,8 @@
     "2.5.7",
     "2.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0031",
@@ -17506,14 +17974,15 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "2.7.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0030",
@@ -17530,14 +17999,15 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [
     "2.7.1"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0029",
@@ -17554,7 +18024,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.6.0",
@@ -17576,7 +18046,8 @@
     "2.5.7",
     "2.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0028",
@@ -17593,7 +18064,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.6.0",
@@ -17610,7 +18081,8 @@
     "2.6.4",
     "2.5.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0027",
@@ -17627,7 +18099,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.6.0",
@@ -17649,7 +18121,8 @@
     "2.5.7",
     "2.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0026",
@@ -17666,7 +18139,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.6.0",
@@ -17688,7 +18161,8 @@
     "2.5.7",
     "2.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0025",
@@ -17705,7 +18179,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.6.0",
@@ -17727,7 +18201,8 @@
     "2.5.7",
     "2.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0024",
@@ -17744,7 +18219,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.6.0",
@@ -17766,7 +18241,8 @@
     "2.5.7",
     "2.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0023",
@@ -17783,7 +18259,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.6.0",
@@ -17805,7 +18281,8 @@
     "2.5.7",
     "2.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0022",
@@ -17822,7 +18299,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.6.0",
@@ -17844,7 +18321,8 @@
     "2.5.7",
     "2.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0021",
@@ -17861,7 +18339,7 @@
    "affected": [
     {
      "from": "2.7.0",
-     "to": "2.7.x"
+     "to": "2.7.0"
     },
     {
      "from": "2.6.0",
@@ -17883,7 +18361,8 @@
     "2.5.7",
     "2.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0020",
@@ -17912,7 +18391,8 @@
     "2.5.7",
     "2.4.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0019",
@@ -17947,7 +18427,8 @@
     "2.5.6",
     "2.4.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0018",
@@ -17972,7 +18453,8 @@
     "2.7.0",
     "2.6.3"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0017",
@@ -18007,7 +18489,8 @@
     "2.5.6",
     "2.4.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0016",
@@ -18042,7 +18525,8 @@
     "2.5.6",
     "2.4.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0015",
@@ -18077,7 +18561,8 @@
     "2.5.6",
     "2.4.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0014",
@@ -18112,7 +18597,8 @@
     "2.5.6",
     "2.4.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0013",
@@ -18136,7 +18622,8 @@
    "fixed": [
     "2.6.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0012",
@@ -18165,7 +18652,8 @@
     "2.6.2",
     "2.5.5"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0011",
@@ -18199,7 +18687,8 @@
     "2.5.5",
     "2.4.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0010",
@@ -18233,7 +18722,8 @@
     "2.5.5",
     "2.4.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0009",
@@ -18267,7 +18757,8 @@
     "2.5.5",
     "2.4.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0008",
@@ -18301,7 +18792,8 @@
     "2.5.5",
     "2.4.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0007",
@@ -18335,7 +18827,8 @@
     "2.5.5",
     "2.4.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0006",
@@ -18369,7 +18862,8 @@
     "2.5.5",
     "2.4.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0005",
@@ -18403,7 +18897,8 @@
     "2.5.5",
     "2.4.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0004",
@@ -18437,7 +18932,8 @@
     "2.5.5",
     "2.4.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0003",
@@ -18454,7 +18950,7 @@
    "affected": [
     {
      "from": "2.6.0",
-     "to": "2.6.x"
+     "to": "2.6.0"
     },
     {
      "from": "2.5.0",
@@ -18476,7 +18972,8 @@
     "2.4.8",
     "2.3.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0002",
@@ -18493,7 +18990,7 @@
    "affected": [
     {
      "from": "2.6.0",
-     "to": "2.6.x"
+     "to": "2.6.0"
     },
     {
      "from": "2.5.0",
@@ -18515,7 +19012,8 @@
     "2.4.8",
     "2.3.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-14-0001",
@@ -18532,7 +19030,7 @@
    "affected": [
     {
      "from": "2.6.0",
-     "to": "2.6.x"
+     "to": "2.6.0"
     },
     {
      "from": "2.5.0",
@@ -18549,7 +19047,8 @@
     "2.5.4",
     "2.4.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0040",
@@ -18573,7 +19072,8 @@
    "fixed": [
     "2.3.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0039",
@@ -18608,7 +19108,8 @@
     "2.4.7",
     "2.3.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0038",
@@ -18643,7 +19144,8 @@
     "2.4.7",
     "2.3.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0037",
@@ -18678,7 +19180,8 @@
     "2.4.7",
     "2.3.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0036",
@@ -18713,7 +19216,8 @@
     "2.4.7",
     "2.3.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0035",
@@ -18747,7 +19251,8 @@
     "2.4.6",
     "2.3.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0034",
@@ -18771,7 +19276,8 @@
    "fixed": [
     "2.5.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0033",
@@ -18805,7 +19311,8 @@
     "2.4.6",
     "2.3.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0032",
@@ -18839,7 +19346,8 @@
     "2.4.6",
     "2.3.9"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0031",
@@ -18856,7 +19364,7 @@
    "affected": [
     {
      "from": "2.5.0",
-     "to": "2.5.x"
+     "to": "2.5.0"
     },
     {
      "from": "2.4.0",
@@ -18878,7 +19386,8 @@
     "2.3.8",
     "2.2.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0030",
@@ -18895,7 +19404,7 @@
    "affected": [
     {
      "from": "2.5.0",
-     "to": "2.5.x"
+     "to": "2.5.0"
     },
     {
      "from": "2.4.0",
@@ -18917,7 +19426,8 @@
     "2.3.8",
     "2.2.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0029",
@@ -18934,7 +19444,7 @@
    "affected": [
     {
      "from": "2.5.0",
-     "to": "2.5.x"
+     "to": "2.5.0"
     },
     {
      "from": "2.4.0",
@@ -18946,7 +19456,8 @@
     "2.5.1",
     "2.4.5"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0028",
@@ -18963,7 +19474,7 @@
    "affected": [
     {
      "from": "2.5.0",
-     "to": "2.5.x"
+     "to": "2.5.0"
     },
     {
      "from": "2.4.0",
@@ -18980,7 +19491,8 @@
     "2.4.5",
     "2.3.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0027",
@@ -18997,7 +19509,7 @@
    "affected": [
     {
      "from": "2.5.0",
-     "to": "2.5.x"
+     "to": "2.5.0"
     },
     {
      "from": "2.4.0",
@@ -19019,7 +19531,8 @@
     "2.3.8",
     "2.2.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0026",
@@ -19034,7 +19547,7 @@
    "affected": [
     {
      "from": "2.5.0",
-     "to": "2.5.x"
+     "to": "2.5.0"
     },
     {
      "from": "2.4.0",
@@ -19056,7 +19569,8 @@
     "2.3.8",
     "2.2.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0025",
@@ -19071,7 +19585,7 @@
    "affected": [
     {
      "from": "2.5.0",
-     "to": "2.5.x"
+     "to": "2.5.0"
     },
     {
      "from": "2.4.0",
@@ -19093,7 +19607,8 @@
     "2.3.8",
     "2.2.11"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0024",
@@ -19128,7 +19643,8 @@
     "2.3.7",
     "2.2.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0023",
@@ -19163,7 +19679,8 @@
     "2.3.7",
     "2.2.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0022",
@@ -19198,7 +19715,8 @@
     "2.3.7",
     "2.2.10"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0021",
@@ -19228,7 +19746,8 @@
     "2.4.4",
     "2.3.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0020",
@@ -19258,7 +19777,8 @@
     "2.4.4",
     "2.3.7"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0019",
@@ -19295,7 +19815,8 @@
     "2.2.9",
     "2.2.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-13-0018",
@@ -19332,7 +19853,8 @@
     "2.2.9",
     "2.2.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-13-0017",
@@ -19369,7 +19891,8 @@
     "2.2.9",
     "2.2.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-13-0016",
@@ -19406,7 +19929,8 @@
     "2.2.9",
     "2.2.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-13-0015",
@@ -19443,7 +19967,8 @@
     "2.2.9",
     "2.2.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-13-0014",
@@ -19480,7 +20005,8 @@
     "2.2.9",
     "2.2.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-13-0013",
@@ -19517,7 +20043,8 @@
     "2.2.9",
     "2.2.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0012",
@@ -19554,7 +20081,8 @@
     "2.2.9",
     "2.2.8"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0011",
@@ -19579,7 +20107,8 @@
     "2.4.3",
     "2.4.2"
    ],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0010",
@@ -19596,12 +20125,13 @@
    "affected": [
     {
      "from": "2.4.0",
-     "to": "2.4.x"
+     "to": "2.4.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0009",
@@ -19618,7 +20148,7 @@
    "affected": [
     {
      "from": "2.4.0",
-     "to": "2.4.x"
+     "to": "2.4.0"
     },
     {
      "from": "2.3.0",
@@ -19635,7 +20165,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0008",
@@ -19652,7 +20183,7 @@
    "affected": [
     {
      "from": "2.4.0",
-     "to": "2.4.x"
+     "to": "2.4.0"
     },
     {
      "from": "2.3.0",
@@ -19665,7 +20196,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0007",
@@ -19682,7 +20214,7 @@
    "affected": [
     {
      "from": "2.4.0",
-     "to": "2.4.x"
+     "to": "2.4.0"
     },
     {
      "from": "2.3.0",
@@ -19695,7 +20227,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0006",
@@ -19712,7 +20245,7 @@
    "affected": [
     {
      "from": "2.4.0",
-     "to": "2.4.x"
+     "to": "2.4.0"
     },
     {
      "from": "2.3.0",
@@ -19721,7 +20254,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0005",
@@ -19738,7 +20272,7 @@
    "affected": [
     {
      "from": "2.4.0",
-     "to": "2.4.x"
+     "to": "2.4.0"
     },
     {
      "from": "2.3.0",
@@ -19751,7 +20285,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0004",
@@ -19768,7 +20303,7 @@
    "affected": [
     {
      "from": "2.4.0",
-     "to": "2.4.x"
+     "to": "2.4.0"
     },
     {
      "from": "2.3.0",
@@ -19781,7 +20316,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0003",
@@ -19798,7 +20334,7 @@
    "affected": [
     {
      "from": "2.4.0",
-     "to": "2.4.x"
+     "to": "2.4.0"
     },
     {
      "from": "2.3.0",
@@ -19815,7 +20351,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0002",
@@ -19832,7 +20369,7 @@
    "affected": [
     {
      "from": "2.4.0",
-     "to": "2.4.x"
+     "to": "2.4.0"
     },
     {
      "from": "2.3.0",
@@ -19853,7 +20390,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-13-0001",
@@ -19870,7 +20408,7 @@
    "affected": [
     {
      "from": "2.4.0",
-     "to": "2.4.x"
+     "to": "2.4.0"
     },
     {
      "from": "2.3.0",
@@ -19887,7 +20425,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0063",
@@ -19909,7 +20448,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0062",
@@ -19939,7 +20479,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0061",
@@ -19969,7 +20510,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0060",
@@ -20003,7 +20545,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0059",
@@ -20033,7 +20576,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0058",
@@ -20059,7 +20603,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0057",
@@ -20089,7 +20634,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0056",
@@ -20111,7 +20657,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0055",
@@ -20141,7 +20688,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0054",
@@ -20171,7 +20719,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0053",
@@ -20201,7 +20750,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0052",
@@ -20225,7 +20775,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0051",
@@ -20251,7 +20802,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0050",
@@ -20285,7 +20837,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0049",
@@ -20302,7 +20855,7 @@
    "affected": [
     {
      "from": "2.3.0",
-     "to": "2.3.x"
+     "to": "2.3.0"
     },
     {
      "from": "2.2.0",
@@ -20319,7 +20872,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0048",
@@ -20336,7 +20890,7 @@
    "affected": [
     {
      "from": "2.3.0",
-     "to": "2.3.x"
+     "to": "2.3.0"
     },
     {
      "from": "2.2.0",
@@ -20353,7 +20907,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0047",
@@ -20383,7 +20938,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0046",
@@ -20400,7 +20956,7 @@
    "affected": [
     {
      "from": "2.3.0",
-     "to": "2.3.x"
+     "to": "2.3.0"
     },
     {
      "from": "2.2.0",
@@ -20417,7 +20973,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0045",
@@ -20443,7 +21000,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0044",
@@ -20469,7 +21027,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0043",
@@ -20495,7 +21054,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0042",
@@ -20521,7 +21081,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0041",
@@ -20538,7 +21099,7 @@
    "affected": [
     {
      "from": "2.3.0",
-     "to": "2.3.x"
+     "to": "2.3.0"
     },
     {
      "from": "2.2.0",
@@ -20547,7 +21108,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0040",
@@ -20564,7 +21126,7 @@
    "affected": [
     {
      "from": "2.3.0",
-     "to": "2.3.x"
+     "to": "2.3.0"
     },
     {
      "from": "2.2.0",
@@ -20573,7 +21135,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0039",
@@ -20590,12 +21153,13 @@
    "affected": [
     {
      "from": "2.3.0",
-     "to": "2.3.x"
+     "to": "2.3.0"
     }
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0038",
@@ -20629,7 +21193,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0037",
@@ -20655,7 +21220,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0036",
@@ -20685,7 +21251,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0035",
@@ -20715,7 +21282,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0034",
@@ -20737,7 +21305,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0033",
@@ -20759,7 +21328,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0032",
@@ -20789,7 +21359,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0031",
@@ -20819,7 +21390,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0030",
@@ -20849,7 +21421,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0029",
@@ -20879,7 +21452,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0028",
@@ -20905,7 +21479,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0027",
@@ -20931,7 +21506,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0026",
@@ -20957,7 +21533,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0025",
@@ -20983,7 +21560,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0024",
@@ -21009,7 +21587,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0023",
@@ -21031,7 +21610,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0022",
@@ -21055,7 +21635,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0021",
@@ -21081,7 +21662,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0020",
@@ -21107,7 +21689,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0019",
@@ -21133,7 +21716,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0018",
@@ -21159,7 +21743,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0017",
@@ -21189,7 +21774,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0016",
@@ -21219,7 +21805,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0015",
@@ -21249,7 +21836,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0014",
@@ -21279,7 +21867,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0013",
@@ -21313,7 +21902,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0012",
@@ -21328,7 +21918,7 @@
    "affected": [
     {
      "from": "2.2.0",
-     "to": "2.2.x"
+     "to": "2.2.0"
     },
     {
      "from": "2.1.0",
@@ -21337,7 +21927,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0011",
@@ -21352,7 +21943,7 @@
    "affected": [
     {
      "from": "2.2.0",
-     "to": "2.2.x"
+     "to": "2.2.0"
     },
     {
      "from": "2.1.0",
@@ -21365,7 +21956,13 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.0"
+    }
+   ]
   },
   {
    "id": "MSA-12-0010",
@@ -21389,7 +21986,17 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "2.2.0",
+     "to": "2.2.0"
+    },
+    {
+     "from": "1.9.0",
+     "to": "1.9.0"
+    }
+   ]
   },
   {
    "id": "MSA-12-0009",
@@ -21404,7 +22011,7 @@
    "affected": [
     {
      "from": "2.2.0",
-     "to": "2.2.x"
+     "to": "2.2.0"
     },
     {
      "from": "2.1.0",
@@ -21413,7 +22020,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0008",
@@ -21428,7 +22036,7 @@
    "affected": [
     {
      "from": "2.2.0",
-     "to": "2.2.x"
+     "to": "2.2.0"
     },
     {
      "from": "2.1.0",
@@ -21441,7 +22049,13 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.0"
+    }
+   ]
   },
   {
    "id": "MSA-12-0007",
@@ -21456,7 +22070,7 @@
    "affected": [
     {
      "from": "2.2.0",
-     "to": "2.2.x"
+     "to": "2.2.0"
     },
     {
      "from": "2.1.0",
@@ -21473,7 +22087,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0006",
@@ -21488,7 +22103,7 @@
    "affected": [
     {
      "from": "2.2.0",
-     "to": "2.2.x"
+     "to": "2.2.0"
     },
     {
      "from": "2.1.0",
@@ -21505,7 +22120,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0005",
@@ -21520,7 +22136,7 @@
    "affected": [
     {
      "from": "2.2.0",
-     "to": "2.2.x"
+     "to": "2.2.0"
     },
     {
      "from": "2.1.0",
@@ -21537,7 +22153,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0004",
@@ -21552,7 +22169,7 @@
    "affected": [
     {
      "from": "2.2.0",
-     "to": "2.2.x"
+     "to": "2.2.0"
     },
     {
      "from": "2.1.0",
@@ -21569,7 +22186,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0003",
@@ -21584,7 +22202,7 @@
    "affected": [
     {
      "from": "2.2.0",
-     "to": "2.2.x"
+     "to": "2.2.0"
     },
     {
      "from": "2.1.0",
@@ -21601,7 +22219,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-12-0002",
@@ -21621,7 +22240,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-12-0001",
@@ -21636,7 +22256,7 @@
    "affected": [
     {
      "from": "2.2.0",
-     "to": "2.2.x"
+     "to": "2.2.0"
     },
     {
      "from": "2.1.0",
@@ -21653,7 +22273,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0054",
@@ -21681,7 +22302,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0053",
@@ -21705,7 +22327,13 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0052",
@@ -21729,7 +22357,13 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0051",
@@ -21753,7 +22387,13 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0050",
@@ -21777,7 +22417,13 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0049",
@@ -21797,7 +22443,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-11-0048",
@@ -21825,7 +22472,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0047",
@@ -21853,7 +22501,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0046",
@@ -21873,7 +22522,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-11-0045",
@@ -21901,7 +22551,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0044",
@@ -21925,7 +22576,13 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0043",
@@ -21945,7 +22602,17 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "2.0.0",
+     "to": "2.0.x"
+    },
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0042",
@@ -21969,7 +22636,13 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0041",
@@ -21993,7 +22666,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0040",
@@ -22021,7 +22700,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0039",
@@ -22045,7 +22725,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0038",
@@ -22065,7 +22751,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-11-0037",
@@ -22085,7 +22772,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-11-0036",
@@ -22105,7 +22793,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-11-0035",
@@ -22129,7 +22818,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-11-0034",
@@ -22153,7 +22843,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0033",
@@ -22177,7 +22873,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0032",
@@ -22205,7 +22907,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0031",
@@ -22233,7 +22936,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0030",
@@ -22257,7 +22961,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0029",
@@ -22281,7 +22991,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0028",
@@ -22305,7 +23021,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0027",
@@ -22329,7 +23051,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0026",
@@ -22349,7 +23077,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-11-0025",
@@ -22369,7 +23098,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-11-0024",
@@ -22389,7 +23119,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-11-0023",
@@ -22413,7 +23144,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0022",
@@ -22437,7 +23174,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0021",
@@ -22461,7 +23204,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0020",
@@ -22489,7 +23238,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0019",
@@ -22513,7 +23263,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0018",
@@ -22537,7 +23293,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0017",
@@ -22557,7 +23319,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0016",
@@ -22577,7 +23345,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0015",
@@ -22597,7 +23371,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0014",
@@ -22617,7 +23392,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0013",
@@ -22641,7 +23422,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0012",
@@ -22661,7 +23443,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0011",
@@ -22685,7 +23473,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0010",
@@ -22705,7 +23494,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0009",
@@ -22725,7 +23520,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0008",
@@ -22749,7 +23550,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0007",
@@ -22769,7 +23571,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0006",
@@ -22789,7 +23597,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0005",
@@ -22809,7 +23623,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0004",
@@ -22829,7 +23649,13 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": [
+    {
+     "from": "1.9.0",
+     "to": "1.9.x"
+    }
+   ]
   },
   {
    "id": "MSA-11-0003",
@@ -22853,7 +23679,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-11-0002",
@@ -22873,7 +23700,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-11-0001",
@@ -22888,7 +23716,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-10-0018",
@@ -22903,7 +23732,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-10-0017",
@@ -22923,7 +23753,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0016",
@@ -22947,7 +23778,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0015",
@@ -22967,7 +23799,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0014",
@@ -22982,7 +23815,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-10-0013",
@@ -23006,7 +23840,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0012",
@@ -23030,7 +23865,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0011",
@@ -23054,7 +23890,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0010",
@@ -23078,7 +23915,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0009",
@@ -23102,7 +23940,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0008",
@@ -23126,7 +23965,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0007",
@@ -23150,7 +23990,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0006",
@@ -23174,7 +24015,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0005",
@@ -23198,7 +24040,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0004",
@@ -23222,7 +24065,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0003",
@@ -23246,7 +24090,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0002",
@@ -23270,7 +24115,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-10-0001",
@@ -23294,7 +24140,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0031",
@@ -23318,7 +24165,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0030",
@@ -23338,7 +24186,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0029",
@@ -23362,7 +24211,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0028",
@@ -23386,7 +24236,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0027",
@@ -23410,7 +24261,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0026",
@@ -23434,7 +24286,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0025",
@@ -23458,7 +24311,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0024",
@@ -23482,7 +24336,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0023",
@@ -23506,7 +24361,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0022",
@@ -23530,7 +24386,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0021",
@@ -23550,7 +24407,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0020",
@@ -23570,7 +24428,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0019",
@@ -23598,7 +24457,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0018",
@@ -23622,7 +24482,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0017",
@@ -23642,7 +24503,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0016",
@@ -23662,7 +24524,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0015",
@@ -23677,7 +24540,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-09-0014",
@@ -23692,7 +24556,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-09-0013",
@@ -23707,7 +24572,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-09-0012",
@@ -23727,7 +24593,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0011",
@@ -23759,7 +24626,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0010",
@@ -23791,7 +24659,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0009",
@@ -23823,7 +24692,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0008",
@@ -23851,7 +24721,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0007",
@@ -23883,7 +24754,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0006",
@@ -23907,7 +24779,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0005",
@@ -23939,7 +24812,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0004",
@@ -23971,7 +24845,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0003",
@@ -24003,7 +24878,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0002",
@@ -24027,7 +24903,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-09-0001",
@@ -24051,7 +24928,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0028",
@@ -24066,7 +24944,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-08-0027",
@@ -24081,7 +24960,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-08-0026",
@@ -24109,7 +24989,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0025",
@@ -24137,7 +25018,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0024",
@@ -24161,7 +25043,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0023",
@@ -24193,7 +25076,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0022",
@@ -24225,7 +25109,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0021",
@@ -24257,7 +25142,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0020",
@@ -24285,7 +25171,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0019",
@@ -24300,7 +25187,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-08-0018",
@@ -24315,7 +25203,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-08-0017",
@@ -24330,7 +25219,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-08-0016",
@@ -24354,7 +25244,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0015",
@@ -24386,7 +25277,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0014",
@@ -24410,7 +25302,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0013",
@@ -24434,7 +25327,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0012",
@@ -24458,7 +25352,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0011",
@@ -24473,7 +25368,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-08-0010",
@@ -24505,7 +25401,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0009",
@@ -24529,7 +25426,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0008",
@@ -24557,7 +25455,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0007",
@@ -24572,7 +25471,8 @@
    "affected": [],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-08-0006",
@@ -24592,7 +25492,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0005",
@@ -24606,13 +25507,18 @@
    "fixed_text": "",
    "affected": [
     {
+     "from": "0.0.0",
+     "to": "1.6.x"
+    },
+    {
      "from": "1.8.0",
      "to": "1.8.3"
     }
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "partial"
+   "parse_status": "partial",
+   "excluded": []
   },
   {
    "id": "MSA-08-0004",
@@ -24644,7 +25550,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0003",
@@ -24664,7 +25571,8 @@
    ],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   },
   {
    "id": "MSA-08-0002",
@@ -24679,7 +25587,8 @@
    "affected": [],
    "earlier_unsupported": false,
    "fixed": [],
-   "parse_status": "unparsed"
+   "parse_status": "unparsed",
+   "excluded": []
   },
   {
    "id": "MSA-08-0001",
@@ -24707,7 +25616,8 @@
    ],
    "earlier_unsupported": true,
    "fixed": [],
-   "parse_status": "ok"
+   "parse_status": "ok",
+   "excluded": []
   }
  ]
 }

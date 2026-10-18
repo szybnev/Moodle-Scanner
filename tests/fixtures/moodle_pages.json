@@ -21,6 +21,11 @@
       "headers": {"Content-Type": "application/json; charset=utf-8"},
       "body": "{\"error\":\"Web services must be enabled in Advanced features.\",\"errorcode\":\"enablewsdescription\",\"stacktrace\":null,\"debuginfo\":null,\"reproductionlink\":null}"
     },
+    "/login/token.php?appsitecheck=1": {
+      "status": 200,
+      "headers": {"Content-Type": "application/json"},
+      "body": "{\"errorcode\":\"enablewsdescription\",\"error\":\"Web services must be enabled\"}"
+    },
     "/course/view.php?id=-1": {
       "status": 404,
       "headers": {"Content-Type": "text/html; charset=utf-8"},

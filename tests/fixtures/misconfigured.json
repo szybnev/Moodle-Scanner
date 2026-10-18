@@ -16,6 +16,11 @@
       "headers": {"Content-Type": "application/json; charset=utf-8"},
       "body": "{\"error\":\"A required parameter (username) was missing\",\"errorcode\":\"missingparam\",\"stacktrace\":\"* line 497 of /lib/setuplib.php: moodle_exception thrown\",\"debuginfo\":null,\"reproductionlink\":null}"
     },
+    "/login/token.php?appsitecheck=1": {
+      "status": 200,
+      "headers": {"Content-Type": "application/json"},
+      "body": "{\"appsitecheck\":\"ok\"}"
+    },
     "/course/view.php?id=-1": {
       "status": 404,
       "headers": {"Content-Type": "text/html; charset=utf-8"},
@@ -36,6 +41,7 @@
     "/composer.json": {"status": 200, "headers": {"Content-Type": "application/json"}, "body": "{\"name\": \"moodle/moodle\"}"},
     "/admin/environment.xml": {"status": 200, "headers": {"Content-Type": "application/xml"}, "body": "<?xml version=\"1.0\"?><COMPATIBILITY_MATRIX></COMPATIBILITY_MATRIX>"},
     "/local/zz00/version.php": {"status": 404, "headers": {}, "body": "<html>Not Found</html>"},
-    "/mod/customcert/version.php": {"status": 200, "headers": {"Content-Type": "text/html; charset=UTF-8"}, "body": "Direct access to this script is forbidden."}
+    "/mod/customcert/version.php": {"status": 200, "headers": {"Content-Type": "text/html; charset=UTF-8"}, "body": "Direct access to this script is forbidden."},
+    "/mod/customcert/README.md": {"status": 200, "headers": {"Content-Type": "text/plain"}, "body": "# mod_customcert\n"}
   }
 }

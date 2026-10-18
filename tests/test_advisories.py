@@ -30,7 +30,7 @@ def test_parse_5x_and_single_versions():
 def test_parse_parenthetical_notes_do_not_mark_earlier_versions():
     parsed = parse_affected("2.2, 2.1 to 2.1.3+ (earlier versions unaffected)")
     assert not parsed.earlier_unsupported
-    assert [str(r) for r in parsed.ranges] == ["2.2.0 to 2.2.x", "2.1.0 to 2.1.3"]
+    assert [str(r) for r in parsed.ranges] == ["2.2.0", "2.1.0 to 2.1.3"]
 
 
 def test_parse_missing_comma_and_other_unsupported():
@@ -61,10 +61,10 @@ def test_cve_2025_32044_range(version, affected):
     assert (assess(CVE_2025_32044, V(version)) is not None) == affected
 
 
-def test_regression_earlier_unsupported_versions_are_affected():
-    # Upstream dropped "earlier unsupported versions" and missed 3.x/4.0 sites.
+def test_earlier_unsupported_versions_remain_unverified_candidates():
+    # A broad unsupported-version clause cannot prove which old branches contain the bug.
     hit = assess(EARLIER, V("3.9.0"))
-    assert hit is not None and hit.status == "affected" and "earlier unsupported" in hit.reason
+    assert hit is not None and hit.status == "possibly_affected"
     assert assess(EARLIER, V("4.0.10")) is not None
     assert assess(EARLIER, V("4.1.14")) is None  # fixed
     assert assess(EARLIER, V("4.5.0")) is None  # newer branch, not listed

@@ -39,6 +39,7 @@ def test_advisory_data_stores_facts_not_prose():
         "affected_text",
         "fixed_text",
         "affected",
+        "excluded",
         "earlier_unsupported",
         "fixed",
         "parse_status",

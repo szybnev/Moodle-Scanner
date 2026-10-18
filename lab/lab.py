@@ -302,6 +302,8 @@ def cmd_matrix(args) -> None:
     out = ROOT / "docs" / "validation-matrix.md"
     out.write_text(text)
     print(f"wrote {out}")
+    if "Validation: **FAIL**" in text:
+        raise SystemExit("lab validation failed; inspect docs/validation-matrix.md")
 
 
 def cmd_down(args) -> None:

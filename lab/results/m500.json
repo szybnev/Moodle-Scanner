@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "scanner": {
     "name": "moodle-scanner",
-    "version": "2.0.0"
+    "version": "3.0.0"
   },
   "target": {
     "url": "http://127.0.0.1:8500/",
@@ -15,7 +15,7 @@
       "moodle-keywords-meta"
     ]
   },
-  "started_at": "2026-10-18T19:10:20+00:00",
+  "started_at": "2026-10-18T19:43:06+00:00",
   "data": {
     "fingerprints_latest_tag": "v5.3.0",
     "fingerprint_tags": 590,
@@ -78,7 +78,9 @@
         "branch": "5.0"
       }
     ],
-    "notes": []
+    "notes": [
+      "even exact/high identifies a match to bundled release fingerprints, not proof of installed server code; backported fixes and newer builds with identical public assets cannot be ruled out"
+    ]
   },
   "advisories": [
     {
@@ -99,13 +101,15 @@
         "4.5.0 to 4.5.6",
         "4.4.0 to 4.4.10"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "5.0.3",
         "4.5.7",
         "4.4.11"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.2 (fixed in 5.0.3)"
     },
     {
@@ -127,6 +131,7 @@
         "4.4.0 to 4.4.10",
         "4.1.0 to 4.1.20"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.3",
@@ -134,7 +139,8 @@
         "4.4.11",
         "4.1.21"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.2 (fixed in 5.0.3)"
     },
     {
@@ -151,12 +157,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471305",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -165,7 +172,8 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -182,12 +190,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471301",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -196,7 +205,8 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -213,12 +223,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471300",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -227,7 +238,8 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -244,17 +256,19 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471299",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "5.1.1",
         "5.0.4",
         "4.5.8"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -271,12 +285,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471298",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -285,7 +300,8 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -302,12 +318,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471297",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -316,7 +333,8 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -337,13 +355,15 @@
         "5.0.0 to 5.0.4",
         "4.5.0 to 4.5.8"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.2",
         "5.0.5",
         "4.5.9"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.4 (fixed in 5.0.5)"
     },
     {
@@ -365,13 +385,15 @@
         "5.0.0 to 5.0.4",
         "4.5.0 to 4.5.8"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.2",
         "5.0.5",
         "4.5.9"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.4 (fixed in 5.0.5)"
     },
     {
@@ -392,13 +414,15 @@
         "5.0.0 to 5.0.4",
         "4.5.0 to 4.5.8"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.2",
         "5.0.5",
         "4.5.9"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.4 (fixed in 5.0.5)"
     },
     {
@@ -419,13 +443,15 @@
         "5.0.0 to 5.0.6",
         "4.5.0 to 4.5.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.4",
         "5.0.7",
         "4.5.11"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.6 (fixed in 5.0.7)"
     },
     {
@@ -446,13 +472,15 @@
         "5.0.0 to 5.0.6",
         "4.5.0 to 4.5.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.4",
         "5.0.7",
         "4.5.11"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.6 (fixed in 5.0.7)"
     },
     {
@@ -469,11 +497,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481830",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -481,7 +510,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -498,11 +528,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481827",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -510,7 +541,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -527,11 +559,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481826",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -539,7 +572,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -556,11 +590,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481821",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -568,7 +603,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -585,11 +621,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481817",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.3",
         "5.0.0 to 5.0.6",
         "4.5.0 to 4.5.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -597,7 +634,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.6 (fixed in 5.0.8)"
     },
     {
@@ -614,11 +652,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481813",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -626,7 +665,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -643,11 +683,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481812",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -655,7 +696,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -672,11 +714,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481811",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -684,7 +727,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -701,11 +745,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481810",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -713,7 +758,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -733,6 +779,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -740,7 +787,8 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -760,6 +808,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -767,7 +816,8 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -787,6 +837,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -794,7 +845,8 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -814,6 +866,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -821,7 +874,8 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -841,6 +895,7 @@
         "5.0.0 to 5.0.9",
         "4.5.0 to 4.5.13"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.3",
@@ -848,7 +903,8 @@
         "5.0.10",
         "4.5.14"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.9 (fixed in 5.0.10)"
     },
     {
@@ -868,6 +924,7 @@
         "5.0.0 to 5.0.10",
         "4.5.0 to 4.5.14"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.4",
@@ -875,7 +932,8 @@
         "5.0.11",
         "4.5.15"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.10 (fixed in 5.0.11)"
     },
     {
@@ -897,6 +955,7 @@
         "4.4.0 to 4.4.10",
         "4.1.0 to 4.1.20"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.3",
@@ -904,7 +963,8 @@
         "4.4.11",
         "4.1.21"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.2 (fixed in 5.0.3)"
     },
     {
@@ -926,6 +986,7 @@
         "4.4.0 to 4.4.10",
         "4.1.0 to 4.1.20"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.3",
@@ -933,7 +994,8 @@
         "4.4.11",
         "4.1.21"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.2 (fixed in 5.0.3)"
     },
     {
@@ -955,6 +1017,7 @@
         "4.4.0 to 4.4.10",
         "4.1.0 to 4.1.20"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.3",
@@ -962,7 +1025,8 @@
         "4.4.11",
         "4.1.21"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.2 (fixed in 5.0.3)"
     },
     {
@@ -981,11 +1045,13 @@
       "affected": [
         "5.0.0 to 5.0.2"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "5.0.3"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.2 (fixed in 5.0.3)"
     },
     {
@@ -1005,12 +1071,14 @@
         "5.0.0 to 5.0.2",
         "4.5.0 to 4.5.6"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "5.0.3",
         "4.5.7"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.2 (fixed in 5.0.3)"
     },
     {
@@ -1032,6 +1100,7 @@
         "4.4.0 to 4.4.10",
         "4.1.0 to 4.1.20"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.3",
@@ -1039,7 +1108,8 @@
         "4.4.11",
         "4.1.21"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.2 (fixed in 5.0.3)"
     },
     {
@@ -1059,12 +1129,14 @@
         "5.0.0 to 5.0.2",
         "4.5.0 to 4.5.6"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "5.0.3",
         "4.5.7"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.2 (fixed in 5.0.3)"
     },
     {
@@ -1083,11 +1155,13 @@
       "affected": [
         "5.0.0 to 5.0.2"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "5.0.3"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.2 (fixed in 5.0.3)"
     },
     {
@@ -1104,12 +1178,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471307",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -1118,7 +1193,8 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -1135,12 +1211,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471306",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -1149,7 +1226,8 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -1166,12 +1244,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471304",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -1180,7 +1259,8 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -1197,12 +1277,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471303",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -1211,7 +1292,8 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -1228,12 +1310,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471302",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -1242,7 +1325,8 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.3 (fixed in 5.0.4)"
     },
     {
@@ -1263,13 +1347,15 @@
         "5.0.0 to 5.0.6",
         "4.5.0 to 4.5.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.4",
         "5.0.7",
         "4.5.11"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.6 (fixed in 5.0.7)"
     },
     {
@@ -1290,13 +1376,15 @@
         "5.0.0 to 5.0.6",
         "4.5.0 to 4.5.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.4",
         "5.0.7",
         "4.5.11"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.6 (fixed in 5.0.7)"
     },
     {
@@ -1316,12 +1404,14 @@
         "5.1.0 to 5.1.3",
         "5.0.0 to 5.0.6"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "5.1.4",
         "5.0.7"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.6 (fixed in 5.0.7)"
     },
     {
@@ -1342,13 +1432,15 @@
         "5.0.0 to 5.0.6",
         "4.5.0 to 4.5.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.4",
         "5.0.7",
         "4.5.11"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.6 (fixed in 5.0.7)"
     },
     {
@@ -1365,11 +1457,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481831",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -1377,7 +1470,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -1394,11 +1488,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481829",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -1406,7 +1501,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -1423,11 +1519,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481825",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -1435,7 +1532,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -1452,11 +1550,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481824",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -1464,7 +1563,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -1481,11 +1581,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481823",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -1493,7 +1594,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -1510,11 +1612,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481820",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -1522,7 +1625,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -1539,11 +1643,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481819",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -1551,7 +1656,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -1568,11 +1674,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481818",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -1580,7 +1687,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -1597,11 +1705,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481814",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -1609,7 +1718,8 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.7 (fixed in 5.0.8)"
     },
     {
@@ -1629,6 +1739,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -1636,7 +1747,8 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -1656,6 +1768,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -1663,7 +1776,8 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -1682,13 +1796,15 @@
         "5.1.0 to 5.1.5",
         "5.0.0 to 5.0.8"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "5.2.2",
         "5.1.6",
         "5.0.9"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -1708,6 +1824,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -1715,7 +1832,8 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -1735,6 +1853,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -1742,7 +1861,8 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -1762,6 +1882,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -1769,7 +1890,8 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -1789,6 +1911,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -1796,7 +1919,8 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.8 (fixed in 5.0.9)"
     },
     {
@@ -1816,6 +1940,7 @@
         "5.0.0 to 5.0.9",
         "4.5.0 to 4.5.13"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.3",
@@ -1823,56 +1948,29 @@
         "5.0.10",
         "4.5.14"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "5.0.2 is within affected range 5.0.0 to 5.0.9 (fixed in 5.0.10)"
     }
   ],
   "misconfigurations": [
     {
-      "id": "self_registration",
-      "title": "Email-based self-registration is enabled",
-      "severity": "medium",
-      "status": "not_detected",
-      "evidence": [],
-      "recommendation": "Disable self-registration (Site administration > Plugins > Authentication > Self registration) unless required."
-    },
-    {
-      "id": "guest_login",
-      "title": "Guest login button is shown",
-      "severity": "low",
-      "status": "detected",
-      "evidence": [
-        {
-          "url": "http://127.0.0.1:8500/login/index.php",
-          "status": 200,
-          "detail": "login page offers 'Log in as a guest'"
-        }
-      ],
-      "recommendation": "Hide the guest login button (guestloginbutton) and disable guest access unless content is meant to be public."
-    },
-    {
-      "id": "web_services",
-      "title": "Web services token endpoint is enabled",
-      "severity": "low",
-      "status": "not_detected",
-      "evidence": [],
-      "recommendation": "Enable web services and the mobile service only if used; enforce strong passwords and rate limiting on /login/token.php."
-    },
-    {
       "id": "debug_display",
-      "title": "Debug messages are displayed to visitors",
+      "title": "Developer stack traces are displayed to visitors",
       "severity": "medium",
       "status": "not_detected",
       "evidence": [],
-      "recommendation": "Set debug to NONE/MINIMAL and disable debugdisplay on production sites."
+      "recommendation": "Disable debugdisplay on production sites and review the server-side error.",
+      "kind": "finding"
     },
     {
       "id": "dataroot_exposed",
-      "title": "Moodle data directory (dataroot) is reachable over HTTP",
+      "title": "Moodle data directory marker is reachable over HTTP",
       "severity": "high",
       "status": "not_detected",
       "evidence": [],
-      "recommendation": "Move the dataroot outside the web root; it holds uploaded files, sessions and caches."
+      "recommendation": "Move dataroot outside the web root and verify uploaded files, sessions and caches are not public.",
+      "kind": "finding"
     },
     {
       "id": "vcs_exposed",
@@ -1880,97 +1978,127 @@
       "severity": "high",
       "status": "not_detected",
       "evidence": [],
-      "recommendation": "Deny access to dot directories (.git, .svn, .hg) in the web server configuration."
+      "recommendation": "Deny access to dot directories (.git, .svn, .hg) in the web server configuration.",
+      "kind": "finding"
     },
     {
       "id": "config_backup_exposed",
       "title": "Backup or editor copy of config.php is downloadable",
-      "severity": "critical",
+      "severity": "high",
       "status": "not_detected",
       "evidence": [],
-      "recommendation": "Delete the file, rotate the database password and salts it contains, and deny backup extensions in the web server."
+      "recommendation": "Remove exposed configuration copies, deny backup extensions, and rotate any live credentials they contain.",
+      "kind": "finding"
+    },
+    {
+      "id": "install_upgrade_exposed",
+      "title": "Installer or upgrade confirmation form is publicly reachable",
+      "severity": "high",
+      "status": "inconclusive",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8500/install.php",
+          "status": 302,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8500/admin/index.php",
+          "status": 303,
+          "detail": "response blocked or redirected"
+        }
+      ],
+      "recommendation": "Complete installation/upgrade, configure an upgrade key and restrict administrative setup endpoints.",
+      "kind": "finding"
+    }
+  ],
+  "observations": [
+    {
+      "id": "self_registration",
+      "title": "Account self-registration form is offered",
+      "severity": "info",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Review whether public account registration is intended; form visibility alone is not a vulnerability.",
+      "kind": "observation"
+    },
+    {
+      "id": "guest_login",
+      "title": "Guest login option is offered",
+      "severity": "info",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8500/login/index.php",
+          "status": 200,
+          "detail": "login form offers a guest account; no guest session was created"
+        }
+      ],
+      "recommendation": "Review guest access policy; a guest button does not establish access to private course content.",
+      "kind": "observation"
+    },
+    {
+      "id": "web_services",
+      "title": "Web services availability check succeeds",
+      "severity": "info",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Review whether web services are intended; availability alone does not establish an authentication weakness.",
+      "kind": "observation"
     },
     {
       "id": "dev_files_exposed",
-      "title": "Developer, test or upgrade-notes files are downloadable",
-      "severity": "low",
+      "title": "Public development manifests or upgrade notes",
+      "severity": "info",
       "status": "detected",
       "evidence": [
         {
           "url": "http://127.0.0.1:8500/composer.json",
           "status": 200,
-          "detail": "developer file is downloadable"
+          "detail": "Moodle Composer manifest is public"
         },
         {
           "url": "http://127.0.0.1:8500/composer.lock",
           "status": 200,
-          "detail": "developer file is downloadable"
-        },
-        {
-          "url": "http://127.0.0.1:8500/package.json",
-          "status": 200,
-          "detail": "developer file is downloadable"
-        },
-        {
-          "url": "http://127.0.0.1:8500/Gruntfile.js",
-          "status": 200,
-          "detail": "developer file is downloadable"
+          "detail": "Composer dependency lockfile is public"
         },
         {
           "url": "http://127.0.0.1:8500/phpunit.xml.dist",
           "status": 200,
-          "detail": "developer file is downloadable"
+          "detail": "PHPUnit configuration template is public"
         },
         {
           "url": "http://127.0.0.1:8500/behat.yml.dist",
           "status": 200,
-          "detail": "developer file is downloadable"
-        },
-        {
-          "url": "http://127.0.0.1:8500/lib/upgrade.txt",
-          "status": 200,
-          "detail": "developer file is downloadable (leaks version 4.4)"
+          "detail": "Behat configuration template is public"
         },
         {
           "url": "http://127.0.0.1:8500/UPGRADING.md",
           "status": 200,
-          "detail": "developer file is downloadable"
+          "detail": "Moodle upgrade notes are public"
         },
         {
           "url": "http://127.0.0.1:8500/admin/environment.xml",
           "status": 200,
-          "detail": "developer file is downloadable"
+          "detail": "environment compatibility manifest is public"
         },
         {
           "url": "http://127.0.0.1:8500/README.md",
           "status": 200,
-          "detail": "developer file is downloadable"
-        },
-        {
-          "url": "http://127.0.0.1:8500/lib/tests/fixtures/empty.txt",
-          "status": 200,
-          "detail": "developer file is downloadable"
+          "detail": "Moodle readme is public"
         }
       ],
-      "recommendation": "Deny access to composer/npm manifests, upgrade notes, tests and fixtures as recommended by the Moodle security docs (or serve only the public/ directory on Moodle 5.1+)."
-    },
-    {
-      "id": "install_upgrade_exposed",
-      "title": "Installer or upgrade page is reachable",
-      "severity": "critical",
-      "status": "not_detected",
-      "evidence": [],
-      "recommendation": "Complete the installation/upgrade, set $CFG->upgradekey, and block install.php once installed."
+      "recommendation": "Review deployment policy for public development files; their availability alone is not a vulnerability.",
+      "kind": "observation"
     }
   ],
   "plugins": {
     "enabled": true,
-    "probed": 3086,
+    "probed": 3094,
     "found": [
       {
         "component": "mod_attendance",
         "path": "/mod/attendance/",
-        "evidence": "http://127.0.0.1:8500/mod/attendance/version.php"
+        "evidence": "http://127.0.0.1:8500/mod/attendance/composer.json"
       }
     ],
     "notes": [
@@ -1979,15 +2107,17 @@
       "unknown plugin type for lifecycletrigger_customfieldsemester",
       "unknown plugin type for customcertelement_textreplace",
       "unknown plugin type for lifecyclestep_adminapprove",
-      "plugin advisories are not matched: no structured, redistributable plugin advisory source is bundled"
+      "plugin advisories are not matched: no structured, redistributable plugin advisory source is bundled",
+      "coverage is limited to plugins with public component-specific artifacts; absence from found does not prove absence"
     ]
   },
   "errors": [],
   "limitations": [
+    "advisories are version-only correlations, not verified vulnerabilities: authentication, enabled components, configuration and backported fixes were not checked",
     "15 advisories (pre-2017, Moodle <= 3.0 era) have no machine-readable version range"
   ],
-  "finished_at": "2026-10-18T19:10:25+00:00",
-  "duration_seconds": 5.86,
-  "requests": 3133,
+  "finished_at": "2026-10-18T19:43:10+00:00",
+  "duration_seconds": 4.531,
+  "requests": 3144,
   "exit_code": 0
 }

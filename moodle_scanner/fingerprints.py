@@ -4,8 +4,8 @@ The fingerprint DB maps URL paths to ``git blob id -> tag indices``. Detection
 is adaptive: at each step it fetches the pool file that best splits the
 remaining candidate tags, so a typical scan needs 10-20 requests. Files that
 are missing (404), blocked, or locally modified carry no information and are
-simply skipped; contradictory matches (weekly builds, patched files) are kept
-as evidence and resolved by majority instead of crashing.
+simply skipped. Contradictory matches are retained as ambiguous evidence,
+never resolved by assuming that the most frequently matched release is installed.
 """
 
 from __future__ import annotations
@@ -25,6 +25,22 @@ _BLOCKED_NAME_RE = re.compile(
     r"|/(?:tests|fixtures|behat|vendor|node_modules)/"
     r"|\.(?:feature|md)$"
 )
+
+_GENERIC_PATH_RE = re.compile(
+    r"/(?:vendor|node_modules|fixtures)/"
+    r"|/lib/(?:adodb|pear|zend|jquery|requirejs|h5p|flowplayer|simplepie|mustache|yuilib)(?:/|_)"
+    r"|/lib/editor/tinymce/tiny_mce/"
+    r"|/(?:licen[sc]e|copying|notice)(?:\.[^/]*)?$"
+    r"|\.(?:svg|png|gif|jpe?g|ico|woff2?|ttf)$",
+    re.I,
+)
+
+
+def _independent_file(path: str) -> str:
+    """Do not count source/minified/map variants of one asset as independent."""
+    path = re.sub(r"/amd/(?:src|build)/", "/amd/", path)
+    return re.sub(r"(?:\.min|-min|-debug)?\.js(?:\.map)?$", ".js", path)
+
 
 DEFAULT_MAX_REQUESTS = 40
 CONFIRMATIONS = 2
@@ -62,7 +78,7 @@ class FingerprintDB:
 class FileEvidence:
     path: str
     status: int | None
-    outcome: str  # match | unknown_hash | not_found | error | conflict
+    outcome: str  # match | low_specificity | unknown_hash | not_found | error | conflict
     sha1: str | None = None
     matched: list[str] = field(default_factory=list)
     error: str | None = None
@@ -140,6 +156,14 @@ class Detector:
             return FileEvidence(path, resp.status, "not_found"), None
         sha = git_blob_sha1(resp.body)
         matched = self.db.files[path].get(sha)
+        if resp.body.strip() in (b"", b"{}", b"[]", b"null") or _GENERIC_PATH_RE.search(path):
+            return FileEvidence(
+                path,
+                resp.status,
+                "low_specificity",
+                sha1=sha,
+                matched=self._tag_names(matched) if matched else [],
+            ), None
         if not matched:
             return FileEvidence(path, resp.status, "unknown_hash", sha1=sha), None
         return FileEvidence(path, resp.status, "match", sha1=sha, matched=self._tag_names(matched)), matched
@@ -150,7 +174,7 @@ class Detector:
         evidence: list[FileEvidence] = []
         matches: list[frozenset[int]] = []
         requests = 0
-        while requests < self.max_requests and len(candidates) > 1 and not self.client.budget_exhausted:
+        while requests < self.max_requests and not self.client.budget_exhausted:
             best_path, best_score = None, 0.0
             for path, groups in self.db.files.items():
                 if path in tried:
@@ -159,7 +183,13 @@ class Detector:
                 if score > best_score:  # files iterate in sorted path order: ties keep the first path
                     best_path, best_score = path, score
             if best_path is None or best_score == 0:
-                break
+                # Identical files still provide corroboration for an ambiguous
+                # release pair, including rc/final twins and single-tag databases.
+                if len(matches) >= CONFIRMATIONS:
+                    break
+                best_path = next((p for p in self.db.files if p not in tried and self.db.present(p) & candidates), None)
+                if best_path is None:
+                    break
             tried.add(best_path)
             requests += 1
             ev, matched = self._probe(best_path)
@@ -173,6 +203,8 @@ class Detector:
             else:
                 ev.outcome = "conflict"
                 matches.append(matched)
+            if len(candidates) == 1 and matches:
+                break
         if len(candidates) == 1 and matches and not self.client.budget_exhausted:
             (only,) = candidates
             extra = sorted(
@@ -181,7 +213,11 @@ class Detector:
             )
             confirmed = 0
             for path in extra:
-                if confirmed >= CONFIRMATIONS or requests >= self.max_requests + CONFIRMATIONS * 2:
+                if (
+                    confirmed >= CONFIRMATIONS
+                    or requests >= self.max_requests + CONFIRMATIONS * 2
+                    or self.client.budget_exhausted
+                ):
                     break
                 tried.add(path)
                 requests += 1
@@ -201,22 +237,17 @@ class Detector:
     ) -> VersionResult:
         if not matches:
             return VersionResult(status="unknown", confidence="none", method="none", evidence=evidence)
-        conflicts = [e for e in evidence if e.outcome == "conflict"]
+        consistent = frozenset.intersection(*matches)
+        conflicts = not consistent
         notes = []
         if conflicts:
-            # Majority vote across every matched file: weekly builds and local
-            # patches produce a minority of files from a neighbouring release.
-            support: dict[int, int] = {}
-            for m in matches:
-                for i in m:
-                    support[i] = support.get(i, 0) + 1
-            top = max(support.values())
-            chosen = frozenset(i for i, n in support.items() if n == top)
+            candidates = frozenset.union(*matches)
             notes.append(
-                f"{len(conflicts)} file(s) matched other releases (weekly build, partial upgrade or local patch); "
-                f"version chosen by majority of {len(matches)} matching files"
+                "matched files disagree; no release satisfies all observed hashes "
+                "(partial upgrade, local modifications or an unindexed build)"
             )
-            candidates = chosen
+        else:
+            candidates = consistent
         names = self._tag_names(candidates)
         versions = [MoodleVersion.parse(n) for n in names]
         branches = {v.branch_str for v in versions}
@@ -228,25 +259,32 @@ class Detector:
                 + ", ".join(unknown[:5])
             )
         version = None
-        if len(names) == 1:
-            agreeing = sum(1 for m in matches if candidates <= m)
-            confidence = "high" if agreeing >= 2 and not conflicts else "medium"
+        matching = [e for e in evidence if e.outcome in ("match", "conflict")]
+        independent = min(
+            len({_independent_file(e.path) for e in matching}),
+            len({e.sha1 for e in matching if e.sha1}),
+        )
+        if len(names) == 1 and independent >= CONFIRMATIONS and not conflicts and not unknown:
+            confidence = "high"
             status = "exact"
             version = names[0]
-        elif len({v.release for v in versions}) == 1 and not versions[-1].is_prerelease:
-            # Typically x.y.z-rcN vs x.y.z: the final release only bumps
-            # version.php, which is never served. Production sites run finals.
-            status = "exact"
-            confidence = "medium"
-            version = names[-1]
-            notes.append(
-                f"{version} is indistinguishable from its pre-release(s) {', '.join(names[:-1])} by public files; "
-                "reporting the final release"
-            )
         else:
-            confidence = "medium" if branch else "low"
+            confidence = (
+                "medium" if branch and independent >= CONFIRMATIONS and not conflicts and not unknown else "low"
+            )
             status = "ambiguous"
-            notes.append(f"{len(names)} releases share identical public files: {_summarize(names)}")
+            if conflicts:
+                notes.append("candidate releases are alternatives, not an exhaustive set of possible installed builds")
+            elif len(names) == 1:
+                notes.append(
+                    "one indexed release matches, but corroboration is incomplete or other assets are unindexed"
+                )
+            else:
+                notes.append(f"{len(names)} releases share the observed public files: {_summarize(names)}")
+        notes.append(
+            "even exact/high identifies a match to bundled release fingerprints, not proof of installed server code; "
+            "backported fixes and newer builds with identical public assets cannot be ruled out"
+        )
         return VersionResult(
             status=status,
             confidence=confidence,
@@ -270,7 +308,6 @@ def branch_signals(client: HttpClient, pages: list[Response]) -> list[dict]:
     for resp in pages:
         for m in _DOCS_LINK_RE.finditer(resp.text):
             signals.append({"source": resp.url, "kind": "docs-link", "branch": f"{m.group(1)}.{int(m.group(2))}"})
-            break
     for path, regex, kind in (
         ("/lib/upgrade.txt", _UPGRADE_TXT_RE, "upgrade-notes"),
         ("/UPGRADING.md", _UPGRADING_MD_RE, "upgrade-notes"),
@@ -286,12 +323,14 @@ def apply_signals(result: VersionResult, signals: list[dict]) -> VersionResult:
     if result.status != "unknown" or not signals:
         return result
     branches = sorted({s["branch"] for s in signals}, key=lambda b: tuple(int(x) for x in b.split(".")))
-    newest = branches[-1]
-    result.status = "branch"
     result.method = "public-signals"
-    result.branch = newest
-    result.confidence = "low"
     result.candidates = []
     if len(branches) > 1:
-        result.notes.append("public signals disagree: " + ", ".join(branches))
+        result.confidence = "none"
+        result.notes.append("public signals disagree; no branch selected: " + ", ".join(branches))
+        return result
+    result.status = "branch"
+    result.branch = branches[0]
+    result.confidence = "low"
+    result.notes.append("public branch hints do not identify a release or bound it to the bundled tag list")
     return result

@@ -7,10 +7,10 @@
   "additionalProperties": false,
   "required": [
     "schema_version", "scanner", "target", "started_at", "finished_at", "duration_seconds", "data",
-    "version", "advisories", "misconfigurations", "plugins", "requests", "errors", "limitations", "exit_code"
+    "version", "advisories", "misconfigurations", "observations", "plugins", "requests", "errors", "limitations", "exit_code"
   ],
   "properties": {
-    "schema_version": {"const": "1.0"},
+    "schema_version": {"const": "2.0"},
     "scanner": {
       "type": "object",
       "additionalProperties": false,
@@ -50,7 +50,8 @@
     },
     "version": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/version"}]},
     "advisories": {"type": "array", "items": {"$ref": "#/$defs/advisory"}},
-    "misconfigurations": {"type": "array", "items": {"$ref": "#/$defs/check"}},
+    "misconfigurations": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/check"}, {"properties": {"kind": {"const": "finding"}}}]}},
+    "observations": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/check"}, {"properties": {"kind": {"const": "observation"}, "severity": {"const": "info"}}}]}, "description": "Configuration/inventory observations, not vulnerability findings."},
     "plugins": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/plugins"}]},
     "requests": {"type": "integer", "minimum": 0},
     "errors": {
@@ -98,7 +99,7 @@
             "properties": {
               "path": {"type": "string"},
               "status": {"type": ["integer", "null"]},
-              "outcome": {"enum": ["match", "unknown_hash", "not_found", "error", "conflict"]},
+              "outcome": {"enum": ["match", "unknown_hash", "not_found", "error", "conflict", "low_specificity"]},
               "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
               "matched_versions": {"type": "string"},
               "error": {"type": "string"}
@@ -126,7 +127,7 @@
       "additionalProperties": false,
       "required": [
         "id", "title", "published", "severity", "severity_level", "cves", "trackers", "url", "affected",
-        "earlier_unsupported", "fixed", "match", "reason"
+        "excluded", "earlier_unsupported", "fixed", "match", "evidence_level", "reason"
       ],
       "properties": {
         "id": {"type": "string", "pattern": "^MSA-\\d{2}-\\d{4}$"},
@@ -138,16 +139,18 @@
         "trackers": {"type": "array", "items": {"type": "string", "pattern": "^MDL-\\d+$"}},
         "url": {"type": "string", "format": "uri"},
         "affected": {"type": "array", "items": {"type": "string"}},
+        "excluded": {"type": "array", "items": {"type": "string"}},
         "earlier_unsupported": {"type": "boolean"},
         "fixed": {"type": "array", "items": {"$ref": "#/$defs/moodleVersion"}},
-        "match": {"enum": ["affected", "possibly_affected"]},
+        "match": {"enum": ["version_match", "possible_version_match"]},
+        "evidence_level": {"const": "version_only", "description": "Version correlation only; target prerequisites and exploitation have not been verified."},
         "reason": {"type": "string"}
       }
     },
     "check": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "title", "severity", "status", "evidence", "recommendation"],
+      "required": ["id", "title", "severity", "status", "kind", "evidence", "recommendation"],
       "properties": {
         "id": {
           "enum": [
@@ -158,6 +161,7 @@
         "title": {"type": "string"},
         "severity": {"enum": ["critical", "high", "medium", "low", "info"]},
         "status": {"enum": ["detected", "not_detected", "inconclusive"]},
+        "kind": {"enum": ["finding", "observation"]},
         "evidence": {
           "type": "array",
           "items": {

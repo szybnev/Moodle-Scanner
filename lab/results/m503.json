@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "scanner": {
     "name": "moodle-scanner",
-    "version": "2.0.0"
+    "version": "3.0.0"
   },
   "target": {
     "url": "http://127.0.0.1:8503/",
@@ -15,7 +15,7 @@
       "moodle-keywords-meta"
     ]
   },
-  "started_at": "2026-10-18T19:10:26+00:00",
+  "started_at": "2026-10-18T19:43:10+00:00",
   "data": {
     "fingerprints_latest_tag": "v5.3.0",
     "fingerprint_tags": 590,
@@ -24,8 +24,8 @@
     "advisories_latest_published": "2026-10-15"
   },
   "version": {
-    "status": "exact",
-    "version": "5.3.0",
+    "status": "ambiguous",
+    "version": null,
     "candidates": [
       "5.3.0-rc2",
       "5.3.0"
@@ -70,82 +70,223 @@
     ],
     "signals": [],
     "notes": [
-      "5.3.0 is indistinguishable from its pre-release(s) 5.3.0-rc2 by public files; reporting the final release"
+      "2 releases share the observed public files: 5.3.0-rc2, 5.3.0",
+      "even exact/high identifies a match to bundled release fingerprints, not proof of installed server code; backported fixes and newer builds with identical public assets cannot be ruled out"
     ]
   },
   "advisories": [],
   "misconfigurations": [
     {
-      "id": "self_registration",
-      "title": "Email-based self-registration is enabled",
-      "severity": "medium",
-      "status": "not_detected",
-      "evidence": [],
-      "recommendation": "Disable self-registration (Site administration > Plugins > Authentication > Self registration) unless required."
-    },
-    {
-      "id": "guest_login",
-      "title": "Guest login button is shown",
-      "severity": "low",
-      "status": "not_detected",
-      "evidence": [],
-      "recommendation": "Hide the guest login button (guestloginbutton) and disable guest access unless content is meant to be public."
-    },
-    {
-      "id": "web_services",
-      "title": "Web services token endpoint is enabled",
-      "severity": "low",
-      "status": "not_detected",
-      "evidence": [],
-      "recommendation": "Enable web services and the mobile service only if used; enforce strong passwords and rate limiting on /login/token.php."
-    },
-    {
       "id": "debug_display",
-      "title": "Debug messages are displayed to visitors",
+      "title": "Developer stack traces are displayed to visitors",
       "severity": "medium",
       "status": "not_detected",
       "evidence": [],
-      "recommendation": "Set debug to NONE/MINIMAL and disable debugdisplay on production sites."
+      "recommendation": "Disable debugdisplay on production sites and review the server-side error.",
+      "kind": "finding"
     },
     {
       "id": "dataroot_exposed",
-      "title": "Moodle data directory (dataroot) is reachable over HTTP",
+      "title": "Moodle data directory marker is reachable over HTTP",
       "severity": "high",
       "status": "not_detected",
       "evidence": [],
-      "recommendation": "Move the dataroot outside the web root; it holds uploaded files, sessions and caches."
+      "recommendation": "Move dataroot outside the web root and verify uploaded files, sessions and caches are not public.",
+      "kind": "finding"
     },
     {
       "id": "vcs_exposed",
       "title": "Version control metadata is exposed",
       "severity": "high",
-      "status": "not_detected",
-      "evidence": [],
-      "recommendation": "Deny access to dot directories (.git, .svn, .hg) in the web server configuration."
+      "status": "inconclusive",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8503/.git/HEAD",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/.git/config",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/.svn/wc.db",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/.hg/requires",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        }
+      ],
+      "recommendation": "Deny access to dot directories (.git, .svn, .hg) in the web server configuration.",
+      "kind": "finding"
     },
     {
       "id": "config_backup_exposed",
       "title": "Backup or editor copy of config.php is downloadable",
-      "severity": "critical",
-      "status": "not_detected",
-      "evidence": [],
-      "recommendation": "Delete the file, rotate the database password and salts it contains, and deny backup extensions in the web server."
-    },
-    {
-      "id": "dev_files_exposed",
-      "title": "Developer, test or upgrade-notes files are downloadable",
-      "severity": "low",
-      "status": "not_detected",
-      "evidence": [],
-      "recommendation": "Deny access to composer/npm manifests, upgrade notes, tests and fixtures as recommended by the Moodle security docs (or serve only the public/ directory on Moodle 5.1+)."
+      "severity": "high",
+      "status": "inconclusive",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8503/config.php.bak",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/config.php~",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/config.php.old",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/config.php.orig",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/config.php.save",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/config.php.swp",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/.config.php.swp",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/config.bak",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/config.old",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        }
+      ],
+      "recommendation": "Remove exposed configuration copies, deny backup extensions, and rotate any live credentials they contain.",
+      "kind": "finding"
     },
     {
       "id": "install_upgrade_exposed",
-      "title": "Installer or upgrade page is reachable",
-      "severity": "critical",
+      "title": "Installer or upgrade confirmation form is publicly reachable",
+      "severity": "high",
+      "status": "inconclusive",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8503/install.php",
+          "status": 302,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/admin/index.php",
+          "status": 303,
+          "detail": "response blocked or redirected"
+        }
+      ],
+      "recommendation": "Complete installation/upgrade, configure an upgrade key and restrict administrative setup endpoints.",
+      "kind": "finding"
+    }
+  ],
+  "observations": [
+    {
+      "id": "self_registration",
+      "title": "Account self-registration form is offered",
+      "severity": "info",
       "status": "not_detected",
       "evidence": [],
-      "recommendation": "Complete the installation/upgrade, set $CFG->upgradekey, and block install.php once installed."
+      "recommendation": "Review whether public account registration is intended; form visibility alone is not a vulnerability.",
+      "kind": "observation"
+    },
+    {
+      "id": "guest_login",
+      "title": "Guest login option is offered",
+      "severity": "info",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Review guest access policy; a guest button does not establish access to private course content.",
+      "kind": "observation"
+    },
+    {
+      "id": "web_services",
+      "title": "Web services availability check succeeds",
+      "severity": "info",
+      "status": "not_detected",
+      "evidence": [],
+      "recommendation": "Review whether web services are intended; availability alone does not establish an authentication weakness.",
+      "kind": "observation"
+    },
+    {
+      "id": "dev_files_exposed",
+      "title": "Public development manifests or upgrade notes",
+      "severity": "info",
+      "status": "inconclusive",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8503/composer.json",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/composer.lock",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/package.json",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/Gruntfile.js",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/phpunit.xml.dist",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/behat.yml.dist",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/lib/upgrade.txt",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/UPGRADING.md",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/admin/environment.xml",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8503/README.md",
+          "status": 403,
+          "detail": "response blocked or redirected"
+        }
+      ],
+      "recommendation": "Review deployment policy for public development files; their availability alone is not a vulnerability.",
+      "kind": "observation"
     }
   ],
   "plugins": {
@@ -158,7 +299,8 @@
       "unknown plugin type for lifecycletrigger_customfieldsemester",
       "unknown plugin type for customcertelement_textreplace",
       "unknown plugin type for lifecyclestep_adminapprove",
-      "plugin advisories are not matched: no structured, redistributable plugin advisory source is bundled"
+      "plugin advisories are not matched: no structured, redistributable plugin advisory source is bundled",
+      "coverage is limited to plugins with public component-specific artifacts; absence from found does not prove absence"
     ]
   },
   "errors": [],
@@ -166,8 +308,8 @@
     "15 advisories (pre-2017, Moodle <= 3.0 era) have no machine-readable version range",
     "detected version is at or beyond the newest release in the bundled data (5.3.0); advisories published after the data refresh are not known"
   ],
-  "finished_at": "2026-10-18T19:10:30+00:00",
-  "duration_seconds": 4.536,
-  "requests": 3132,
+  "finished_at": "2026-10-18T19:43:15+00:00",
+  "duration_seconds": 4.559,
+  "requests": 3130,
   "exit_code": 0
 }

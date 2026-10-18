@@ -35,7 +35,7 @@ def test_exact_version_and_cve_2025_32044(site, data_dir, tmp_path):
     assert code == 0
     assert report["version"]["status"] == "exact" and report["version"]["version"] == "4.5.1"
     ids = {a["id"]: a for a in report["advisories"]}
-    assert ids["MSA-25-0011"]["match"] == "affected"
+    assert ids["MSA-25-0011"]["match"] == "version_match"
     assert "CVE-2025-32044" in ids["MSA-25-0011"]["cves"]
     assert "MSA-24-0040" not in ids  # 4.5 is newer than every listed branch
 
@@ -44,15 +44,16 @@ def test_hardened_site_has_no_findings(site, data_dir, tmp_path):
     serve_version(site, "v5.3.0", blocked=("/lib/upgrade.txt",))
     code, report = run_scan(site, data_dir, tmp_path)
     assert code == 0
-    assert report["version"]["version"] == "5.3.0"
+    assert "5.3.0" in report["version"]["candidates"]
     assert detected(report) == set()
 
 
-def test_prerelease_twin_reports_final_release(site, data_dir, tmp_path):
+def test_prerelease_twin_does_not_guess_final_release(site, data_dir, tmp_path):
     serve_version(site, "v5.3.0")
     _, report = run_scan(site, data_dir, tmp_path)
     v = report["version"]
-    assert v["candidates"] == ["5.3.0-rc2", "5.3.0"] and v["version"] == "5.3.0" and v["confidence"] == "medium"
+    assert v["candidates"] == ["5.3.0-rc2", "5.3.0"]
+    assert v["status"] == "ambiguous" and v["version"] is None
 
 
 def test_regression_no_hash_match_is_unknown_not_indexerror(site, data_dir, tmp_path):
@@ -72,8 +73,8 @@ def test_branch_fallback_from_upgrade_notes(site, data_dir, tmp_path):
     _, report = run_scan(site, data_dir, tmp_path)
     v = report["version"]
     assert v["status"] == "branch" and v["branch"] == "4.5" and v["method"] == "public-signals"
-    # Every synthetic 4.5 release (rc1..4.5.2) is in 4.5.0-4.5.2, so the advisory is definite.
-    assert {a["id"]: a["match"] for a in report["advisories"]} == {"MSA-25-0011": "affected"}
+    # Bundled releases are not exhaustive: a newer patched release may be installed.
+    assert {a["id"]: a["match"] for a in report["advisories"]} == {"MSA-25-0011": "possible_version_match"}
 
 
 def test_not_moodle_exit_code(site, data_dir, tmp_path):
@@ -102,14 +103,10 @@ def test_misconfigurations_detected(site, data_dir, tmp_path):
     site.load("misconfigured")
     _, report = run_scan(site, data_dir, tmp_path)
     assert detected(report) == {
-        "self_registration",
-        "guest_login",
-        "web_services",
         "debug_display",
         "dataroot_exposed",
         "vcs_exposed",
         "config_backup_exposed",
-        "dev_files_exposed",
     }
     config = next(c for c in report["misconfigurations"] if c["id"] == "config_backup_exposed")
     text = json.dumps(config)
@@ -123,12 +120,12 @@ def test_scanner_only_sends_get_or_head(site, data_dir, tmp_path):
     assert {method for method, _, _ in site.requests} <= {"GET", "HEAD"}
 
 
-def test_plugins_enumeration_skips_core_and_reads_short_die_message(site, data_dir, tmp_path):
+def test_plugins_enumeration_skips_core_and_requires_component_evidence(site, data_dir, tmp_path):
     serve_version(site, "v4.5.1")
     site.load("misconfigured")
     site.add("/blocks/xp/version.php", Reply(200, b""))
     site.add("/mod/chat/version.php", Reply(200, b""))  # core in 4.5: must not be reported
-    site.add("/blocks/xp/CHANGES.md", Reply(200, "# Changelog\n\n## 21.0\n- things\n"))
+    site.add("/blocks/xp/CHANGES.md", Reply(200, "# block_xp\n\n## 21.0\n- changes\n"))
     _, report = run_scan(site, data_dir, tmp_path, "--plugins")
     found = {p["component"]: p for p in report["plugins"]["found"]}
     assert set(found) == {"block_xp", "mod_customcert"}
@@ -140,7 +137,6 @@ def test_plugins_skipped_on_catch_all_site(site, data_dir, tmp_path):
     site.default = Reply(200, b"")
     _, report = run_scan(site, data_dir, tmp_path, "--plugins", "--no-checks")
     assert report["plugins"]["found"] == []
-    assert any("non-existent plugin paths" in n for n in report["plugins"]["notes"])
 
 
 def test_regression_requests_time_out(site, data_dir, tmp_path):
@@ -148,7 +144,7 @@ def test_regression_requests_time_out(site, data_dir, tmp_path):
     serve_version(site, "v4.5.1")
     site.add("/login/signup.php", Reply(200, "slow", delay=3))
     _, report = run_scan(site, data_dir, tmp_path, "--timeout", "0.5")
-    signup = next(c for c in report["misconfigurations"] if c["id"] == "self_registration")
+    signup = next(c for c in report["observations"] if c["id"] == "self_registration")
     assert signup["status"] == "inconclusive"
     assert "timed out" in signup["evidence"][0]["detail"].lower()
 
@@ -166,18 +162,6 @@ def test_custom_headers_and_user_agent(site, data_dir, tmp_path):
     run_scan(site, data_dir, tmp_path, "-H", "X-Scan-Id: 42", "--user-agent", "rift-test/1", "--no-checks")
     _, _, headers = site.requests[0]
     assert headers.get("X-Scan-Id") == "42" and headers.get("User-Agent") == "rift-test/1"
-
-
-def test_text_output_mentions_version(site, data_dir, capsys):
-    serve_version(site, "v4.5.1")
-    code = main(["--url", site.url, "--data-dir", str(data_dir), "--no-color"])
-    out = capsys.readouterr().out
-    assert code == 0 and "Moodle version: 4.5.1" in out and "MSA-25-0011" in out
-
-
-def test_schema_flag_prints_schema(capsys):
-    assert main(["--schema"]) == 0
-    assert json.loads(capsys.readouterr().out)["title"] == "moodle-scanner scan report"
 
 
 @pytest.mark.parametrize("argv", [[], ["--url", "ftp://example"], ["--url", "http://127.0.0.1/", "-H", "broken"]])

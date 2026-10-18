@@ -38,6 +38,7 @@ def advisory_record(raw: msa_scrape.RawAdvisory) -> dict:
         "affected_text": affected_text,
         "fixed_text": fixed_text,
         "affected": [r.to_json() for r in parsed.ranges],
+        "excluded": [r.to_json() for r in parsed.excluded],
         "earlier_unsupported": parsed.earlier_unsupported,
         "fixed": parse_fixed(fixed_text),
         "parse_status": status,
@@ -63,11 +64,24 @@ def write_db(path: Path, records: dict[str, dict]) -> None:
     tmp.replace(path)
 
 
+def reparse_record(record: dict) -> dict:
+    """Rebuild derived ranges from source facts after a parser correction."""
+    parsed = parse_affected(record["affected_text"])
+    return {
+        **record,
+        "affected": [r.to_json() for r in parsed.ranges],
+        "excluded": [r.to_json() for r in parsed.excluded],
+        "earlier_unsupported": parsed.earlier_unsupported,
+        "fixed": parse_fixed(record["fixed_text"]),
+        "parse_status": "unparsed" if not parsed.ranges else "partial" if parsed.unparsed else "ok",
+    }
+
+
 def load_existing(path: Path) -> dict[str, dict]:
     if not path.exists():
         return {}
     data = json.loads(path.read_text(encoding="utf-8"))
-    return {item["id"]: item for item in data.get("advisories", [])}
+    return {item["id"]: reparse_record(item) for item in data.get("advisories", [])}
 
 
 def update_advisories(

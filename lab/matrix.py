@@ -1,42 +1,22 @@
-"""Expected-vs-actual validation matrix for the lab scans.
+"""Validate reports against seeded exposure and independently documented cases.
 
-Ground truth per instance comes from ``lab/results/<name>.truth.json`` (git tag
-and Moodle settings read back with ``admin/cli/cfg.php`` after seeding).
-
-Advisory expectations use an oracle that is deliberately independent of the
-scanner's range matcher: it reads the raw "Versions fixed" text and the raw
-"Versions affected" text of every advisory and decides from the fix list
-(a version is affected when a fix for its branch exists and is newer, or when
-its branch received no fix, is older than the newest fixed branch and the
-advisory says "earlier/other unsupported versions"). Disagreements are listed
-for manual review instead of being silently counted.
+Do not derive an advisory oracle from the same bundled version lists as the
+scanner: agreement between two parsers does not establish exploitability.
 """
 
 from __future__ import annotations
 
 import json
-import re
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
+OBSERVATION_IDS = {"self_registration", "guest_login", "web_services", "dev_files_exposed"}
 
-from moodle_scanner.versions import MoodleVersion  # noqa: E402
-
-CHECK_IDS = [
-    "self_registration",
-    "guest_login",
-    "web_services",
-    "debug_display",
-    "dataroot_exposed",
-    "vcs_exposed",
-    "config_backup_exposed",
-    "dev_files_exposed",
-    "install_upgrade_exposed",
-]
-_VER_RE = re.compile(r"\d+\.\d+(?:\.\d+)?")
-_RANGE_RE = re.compile(r"(\d+\.\d+(?:\.\d+)?)\+?\s*(?:to|-)\s*(\d+\.\d+(?:\.\d+)?)")
+# Manually reviewed CNA source, NOT derived from the scanner database:
+# https://cveawg.mitre.org/api/cve/CVE-2025-32044
+# 4.5.0..4.5.2 is the affected RELEASE range. The target is not affected when
+# zend.exception_ignore_args=1, so even a range match is not vulnerability proof.
+REST_RANGE_EXPECTED = {"m311": False, "m401": False, "m405": True, "m500": False, "m503": False}
 
 
 def expected_checks(truth: dict) -> dict[str, bool]:
@@ -54,152 +34,120 @@ def expected_checks(truth: dict) -> dict[str, bool]:
     }
 
 
-def oracle_affected(adv: dict, version: MoodleVersion) -> bool | None:
-    """Independent reading of one advisory; None when the text has no versions.
-
-    Lower bounds: "X.Y to X.Y.Z" starts at X.Y.0; a lone "X.Y.Z" means the
-    issue was introduced in that release (regressions such as MSA-25-0037).
-    """
-    affected_text = re.sub(r"\([^)]*\)", " ", adv["affected_text"].lower())
-    fixed = [MoodleVersion.parse(v) for v in _VER_RE.findall(adv["fixed_text"])]
-    listed = [MoodleVersion.parse(v) for v in _VER_RE.findall(affected_text)]
-    if not listed:
-        return None
-    lower_bounds = [MoodleVersion.parse(lo) for lo, _ in _RANGE_RE.findall(affected_text)]
-    singles_text = _RANGE_RE.sub(" ", affected_text)
-    lower_bounds += [MoodleVersion.parse(v) for v in re.findall(r"\d+\.\d+\.\d+", singles_text)]
-    branch_lower = [lb for lb in lower_bounds if lb.branch == version.branch]
-    if branch_lower and version.release < min(branch_lower).release:
-        return False
-    same_branch_fix = [f for f in fixed if f.branch == version.branch]
-    if same_branch_fix:
-        if version.release >= min(same_branch_fix).release:
-            return False
-        return any(v.branch == version.branch for v in listed)
-    if any(v.branch == version.branch for v in listed):
-        # Branch listed but no fix for it (e.g. "2.4" with fix 2.4.1 missing).
-        return True
-    if "unsupported" in affected_text or "earlier" in affected_text:
-        newest = max(v.branch for v in listed + fixed)
-        return version.branch < newest
-    return False
-
-
-def _mark(ok: bool) -> str:
-    return "yes" if ok else "**NO**"
-
-
 def _validate_schema(report: dict) -> str:
-    try:
-        import jsonschema  # noqa: PLC0415 - dev dependency
-    except ImportError:
-        return "not checked (jsonschema not installed)"
-    schema = json.loads((ROOT / "moodle_scanner" / "schema" / "scan-result.schema.json").read_text())
-    validator = jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker())
-    errors = sorted(validator.iter_errors(report), key=lambda e: list(e.path))
-    if not errors:
-        return "valid"
-    return "INVALID: " + "; ".join(f"{list(e.path)}: {e.message}" for e in errors[:3])
+    import jsonschema
+
+    schema = json.loads((ROOT / "moodle_scanner/schema/scan-result.schema.json").read_text())
+    errors = list(
+        jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker()).iter_errors(report)
+    )
+    return "valid" if not errors else "INVALID: " + "; ".join(e.message for e in errors[:3])
 
 
 def build_matrix(instances: list[dict], results: Path) -> str:
-    advisories = json.loads((ROOT / "moodle_scanner" / "data" / "advisories.json").read_text())["advisories"]
-    summary = []
-    sections = []
+    summary, sections, failures = [], [], []
     for inst in instances:
         name = inst["name"]
-        report_path = results / f"{name}.json"
-        truth_path = results / f"{name}.truth.json"
+        report_path, truth_path = results / f"{name}.json", results / f"{name}.truth.json"
         if not report_path.exists() or not truth_path.exists():
-            summary.append(f"| {name} | {inst['tag']} | not scanned | | | | | |")
+            failures.append(f"{name}: report or ground truth missing")
             continue
         report = json.loads(report_path.read_text())
         truth = json.loads(truth_path.read_text())
-        exit_code = (results / f"{name}.exit").read_text().strip() if (results / f"{name}.exit").exists() else "?"
-        expected_version = MoodleVersion.parse(truth["tag"])
-        v = report["version"] or {}
-        version_ok = v.get("version") == str(expected_version)
-        schema = _validate_schema(report)
-
-        reported = {a["id"]: a for a in report["advisories"]}
-        oracle = {}
-        for adv in advisories:
-            verdict = oracle_affected(adv, expected_version)
-            if verdict:
-                oracle[adv["id"]] = adv
-        missing = sorted(set(oracle) - set(reported))
-        extra = sorted(set(reported) - set(oracle))
-        possible = sorted(i for i, a in reported.items() if a["match"] != "affected")
-
-        checks = {c["id"]: c for c in report["misconfigurations"]}
-        expected = expected_checks(truth)
-        check_rows = []
-        check_ok = 0
-        for cid in CHECK_IDS:
-            got = checks.get(cid, {}).get("status")
-            exp = expected[cid]
-            ok = (got == "detected") == exp
-            check_ok += ok
-            check_rows.append(f"| {cid} | {'detected' if exp else 'absent'} | {got} | {_mark(ok)} |")
-
-        plugin_expected = set(truth.get("plugins", []))
-        found = {p["component"] for p in (report.get("plugins") or {}).get("found", [])}
-        plugins_missing = sorted(plugin_expected - found)
-        plugins_extra = sorted(found - plugin_expected)
-
-        summary.append(
-            f"| {name} | {truth['tag']} | {v.get('version')} ({v.get('confidence')}) {_mark(version_ok)} "
-            f"| {len(reported)} / {len(oracle)} | {len(missing)} / {len(extra)} "
-            f"| {check_ok}/{len(CHECK_IDS)} | {len(found & plugin_expected)}/{len(plugin_expected)}, FP {len(plugins_extra)} "
-            f"| {schema.split(':')[0]} | {exit_code} |"
+        expected_version = truth["tag"].removeprefix("v")
+        version = report["version"] or {}
+        candidates = version.get("candidates", [])
+        version_ok = (
+            version.get("version") == expected_version
+            if version.get("status") == "exact"
+            else version.get("status") == "ambiguous" and expected_version in candidates
         )
-        lines = [
-            f"### {name} — Moodle {truth['tag']}" + (" (hardened negative control)" if truth["hardened"] else ""),
-            "",
-            f"- Seeds: {', '.join(truth['seeds']) or 'none (Moodle defaults)'}; settings read back: "
-            + ", ".join(
-                f"{k}={truth[k]!r}"
-                for k in (
-                    "auth",
-                    "registerauth",
-                    "guestloginbutton",
-                    "enablewebservices",
-                    "enablemobilewebservice",
-                    "debug",
-                    "debugdisplay",
+        if not version_ok:
+            failures.append(f"{name}: expected release {expected_version} not represented correctly")
+        schema = _validate_schema(report)
+        if schema != "valid" or report["exit_code"] != 0:
+            failures.append(f"{name}: schema={schema}, exit={report['exit_code']}")
+        advisories = report["advisories"]
+        if any(
+            a.get("evidence_level") != "version_only" or a["match"] not in {"version_match", "possible_version_match"}
+            for a in advisories
+        ):
+            failures.append(f"{name}: advisory presented without version-only evidence qualification")
+        rest_matches = [a for a in advisories if "CVE-2025-32044" in a["cves"]]
+        rest_ok = bool(rest_matches) == REST_RANGE_EXPECTED[name]
+        if not rest_ok:
+            failures.append(f"{name}: CVE-2025-32044 release-range match incorrect")
+        checks = {c["id"]: c for c in report["misconfigurations"] + report["observations"]}
+        expected = expected_checks(truth)
+        check_rows, correct, inconclusive = [], 0, 0
+        for cid, present in expected.items():
+            result = checks.get(cid, {})
+            expected_kind = "observation" if cid in OBSERVATION_IDS else "finding"
+            kind_ok = result.get("kind") == expected_kind
+            status_ok = result.get("status") == ("detected" if present else "not_detected")
+            ok = kind_ok and status_ok
+            correct += ok
+            unknown = kind_ok and result.get("status") == "inconclusive"
+            inconclusive += unknown
+            if not ok and not (unknown and not present):
+                failures.append(
+                    f"{name}: {cid} expected {expected_kind}/{present}, got {result.get('kind')}/{result.get('status')}"
                 )
-            ),
-            f"- Version: expected `{expected_version}`, reported `{v.get('version')}` status `{v.get('status')}` "
-            f"candidates `{', '.join(v.get('candidates', []))}` confidence `{v.get('confidence')}` -> {_mark(version_ok)}",
-            f"- Requests: {report['requests']}; duration {report['duration_seconds']} s; exit code {exit_code}; JSON schema: {schema}",
-            f"- Advisories: reported {len(reported)} ({len(possible)} possibly-affected), oracle {len(oracle)}; "
-            f"missing {missing or 'none'}; extra {extra or 'none'}",
-            f"- Spot check CVE-2025-32044 (MSA-25-0011, affects 4.5.0 to 4.5.2): expected "
-            f"{'reported' if (4, 5, 0) <= expected_version.release <= (4, 5, 2) else 'not reported'}, actual "
-            f"{'reported' if any('CVE-2025-32044' in a['cves'] for a in reported.values()) else 'not reported'}",
-            f"- Plugins: expected {sorted(plugin_expected) or 'none'}; found {sorted(found) or 'none'}; "
-            f"missing {plugins_missing or 'none'}; false positives {plugins_extra or 'none'}",
+            verdict = "yes" if ok else "coverage gap" if unknown and not present else "**NO**"
+            check_rows.append(
+                f"| {cid} | {expected_kind} | {'present' if present else 'absent'} | {result.get('status')} | {verdict} |"
+            )
+        findings = [c for c in report["misconfigurations"] if c["status"] == "detected"]
+        if truth["hardened"] and findings:
+            failures.append(f"{name}: finding on hardened control")
+        plugins_expected = set(truth.get("plugins", []))
+        found = {p["component"] for p in (report.get("plugins") or {}).get("found", [])}
+        extra, missed = found - plugins_expected, plugins_expected - found
+        if extra:
+            failures.append(f"{name}: false-positive plugins {sorted(extra)}")
+        # Missing plugin corroboration is an explicit coverage gap, not a reason
+        # to restore the old empty-200 presence heuristic.
+        summary.append(
+            f"| {name} | {expected_version} | {version.get('status')}: {version.get('version') or ', '.join(candidates)} "
+            f"| {len(advisories)} | {len(findings)} | {correct}/{len(expected)}, inconclusive {inconclusive} "
+            f"| {len(found & plugins_expected)}/{len(plugins_expected)}, FP {len(extra)} | {schema} |"
+        )
+        sections += [
+            f"### {name}",
             "",
-            "| check | expected | reported | correct |",
-            "|---|---|---|---|",
+            f"- Release identity: {'accepted' if version_ok else '**FAIL**'}; confidence {version.get('confidence')}.",
+            f"- CVE-2025-32044 release-range case: {'pass' if rest_ok else '**FAIL**'}; target exploitation **not tested**.",
+            f"- {len(advisories)} version-only advisory candidates; not a count of confirmed vulnerabilities.",
+            f"- Requests: {report['requests']}; duration: {report['duration_seconds']} s; exit: {report['exit_code']}.",
+            f"- Installed plugins: {sorted(plugins_expected)}; corroborated: {sorted(found)}; coverage gaps: {sorted(missed)}.",
+            "",
+            "| Check | Classification | Ground truth | Result | Correct |",
+            "|---|---|---|---|---|",
             *check_rows,
             "",
         ]
-        sections.append("\n".join(lines))
-    header = [
-        "# Lab validation matrix",
-        "",
-        "Generated by `uv run python lab/lab.py matrix` from the JSON reports in `lab/results/`.",
-        "Do not edit by hand; rerun the lab instead (see [lab.md](lab.md)).",
-        "",
-        "Advisory columns: `reported / oracle` counts, then `missing / extra` relative to the oracle described in",
-        "`lab/matrix.py` (an independent reading of the moodle.org fixed-version lists).",
-        "",
-        "| instance | tag | detected version | advisories reported / oracle | missing / extra | misconfig checks correct | plugins found, FP | schema | exit |",
-        "|---|---|---|---|---|---|---|---|---|",
-        *summary,
-        "",
-        "## Per instance",
-        "",
-    ]
-    return "\n".join(header + sections)
+    return (
+        "\n".join(
+            [
+                "# Lab validation matrix",
+                "",
+                "Generated by `uv run python lab/lab.py matrix`; reports are in `lab/results/`.",
+                "The previous count-based advisory oracle was withdrawn: it reused the same source facts and unsupported-version assumptions as the scanner.",
+                "This matrix checks seeded HTTP exposure and observations separately. Advisory counts are NOT an FP metric or proof of exploitability.",
+                "CVE-2025-32044 is a manually reviewed release-range control using the [CNA record](https://cveawg.mitre.org/api/cve/CVE-2025-32044); PHP configuration can prevent the vulnerability on a matching release.",
+                "Public static files may not distinguish an rc from a final release; preserving both candidates is correct, selecting one is not.",
+                "Plugin coverage gaps are reported rather than inferring installation from an empty HTTP 200 response.",
+                "",
+                "An inconclusive negative control is a coverage gap, not a verified absence or a false positive. Missing a seeded positive remains a validation failure.",
+                "Validation: " + ("**FAIL**" if failures else "PASS (only the cases documented below)"),
+                *[f"- {f}" for f in failures],
+                "",
+                "| Instance | Installed | Reported candidates | Advisory hypotheses | Exposure findings | Checks correct | Plugins / installed, FP | Schema |",
+                "|---|---|---|---:|---:|---|---|---|",
+                *summary,
+                "",
+                *sections,
+            ]
+        )
+        + "\n"
+    )

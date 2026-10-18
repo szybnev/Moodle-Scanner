@@ -10,7 +10,7 @@ Defined in [`lab/instances.json`](../lab/instances.json) (single source of truth
 
 | name | Moodle tag | PHP | PostgreSQL | port | layout | seeded state |
 |---|---|---|---|---|---|---|
-| m311 | v3.11.8 | 7.4 | 13 | 8311 | classic | every misconfiguration + plugin `mod_customcert` |
+| m311 | v3.11.8 | 7.4 | 13 | 8311 | classic | seeded exposures + optional features, plugin `mod_customcert` |
 | m401 | v4.1.2 (early 4.1 LTS) | 8.0 | 16 | 8401 | classic | self-registration, debug display, exposed `.git` |
 | m405 | v4.5.1 (CVE-2025-32044 range) | 8.2 | 16 | 8405 | classic | guest login, web services + mobile, `config.php.bak`, reachable dataroot, plugins `local_staticpage`, `block_xp` |
 | m500 | v5.0.2 | 8.3 | 16 | 8500 | classic | Moodle defaults + plugin `mod_attendance` |
@@ -21,7 +21,7 @@ requirements. Images: `moodlehq/moodle-php-apache:<php>` and `postgres:<major>`.
 Moodle code is the exact git tag tarball from github.com/moodle/moodle; plugins
 are pinned GitHub refs.
 
-Seeds (applied with `admin/cli/cfg.php` or files in the web root):
+Seeds include real exposures and ordinary configuration observations (not all are vulnerabilities):
 
 | seed | how |
 |---|---|
@@ -60,11 +60,24 @@ enumeration is validated too.
 
 ## Validation
 
-[`validation-matrix.md`](validation-matrix.md) is generated, never edited by
-hand. It reports per instance: exact version, advisories reported versus an
-independent oracle (`lab/matrix.py`, which reads the raw moodle.org fixed
-version lists), each misconfiguration check against the read-back truth,
-plugins found versus installed, JSON Schema validity and exit code.
+[Validation matrix](validation-matrix.md) is generated, never edited by hand.
+It separates exposure findings from configuration observations, preserves ambiguous
+release candidates and checks reports against the JSON Schema. Known installed
+plugins without corroborating public artifacts are coverage gaps, not proof of absence.
+
+The earlier advisory-count oracle was withdrawn: it repeated assumptions from
+the scanner's own source data and could not establish target exploitability.
+The current release-range control is CVE-2025-32044, reviewed against the
+[CNA record](https://cveawg.mitre.org/api/cve/CVE-2025-32044). Its range is
+4.5.0–4.5.2, but sites with `zend.exception_ignore_args=1` are not affected.
+The matrix checks version correlation, **not exploitation**. Advisory counts
+are reported as hypotheses and are never labelled confirmed vulnerabilities.
+
+An `inconclusive` result on an absent/blocked endpoint is recorded as a coverage
+gap, not a verified negative. Missing a seeded positive remains a validation
+failure. `matrix` exits nonzero on incorrect assertions or invalid reports.
+Deterministic CLI/HTTP regressions additionally cover soft-404 HTML, empty 200,
+login redirects, catch-all marker bodies and unrelated assets.
 
 Ports in use, a stuck install, or a failed download: `down --purge` and `up`
 again. Container logs: `docker compose -p moodle-scanner-lab -f lab/.work/compose.yaml logs <name>`

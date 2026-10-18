@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "scanner": {
     "name": "moodle-scanner",
-    "version": "2.0.0"
+    "version": "3.0.0"
   },
   "target": {
     "url": "http://127.0.0.1:8311/",
@@ -15,7 +15,7 @@
       "moodle-keywords-meta"
     ]
   },
-  "started_at": "2026-10-18T19:10:09+00:00",
+  "started_at": "2026-10-18T19:42:57+00:00",
   "data": {
     "fingerprints_latest_tag": "v5.3.0",
     "fingerprint_tags": 590,
@@ -94,7 +94,9 @@
         "branch": "3.11"
       }
     ],
-    "notes": []
+    "notes": [
+      "even exact/high identifies a match to bundled release fingerprints, not proof of installed server code; backported fixes and newer builds with identical public assets cannot be ruled out"
+    ]
   },
   "advisories": [
     {
@@ -115,13 +117,15 @@
         "3.11.0 to 3.11.8",
         "3.9.0 to 3.9.15"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.0.3",
         "3.11.9",
         "3.9.16"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.8 (fixed in 3.11.9)"
     },
     {
@@ -142,13 +146,15 @@
         "3.11.0 to 3.11.9",
         "3.9.0 to 3.9.16"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.0.4",
         "3.11.10",
         "3.9.17"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.9 (fixed in 3.11.10)"
     },
     {
@@ -169,13 +175,15 @@
         "3.11.0 to 3.11.9",
         "3.9.0 to 3.9.16"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.0.4",
         "3.11.10",
         "3.9.17"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.9 (fixed in 3.11.10)"
     },
     {
@@ -196,13 +204,15 @@
         "3.11.0 to 3.11.10",
         "3.9.0 to 3.9.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.0.5",
         "3.11.11",
         "3.9.18"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.10 (fixed in 3.11.11)"
     },
     {
@@ -222,12 +232,14 @@
         "4.0.0 to 4.0.4",
         "3.11.0 to 3.11.10"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "4.0.5",
         "3.11.11"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.10 (fixed in 3.11.11)"
     },
     {
@@ -248,13 +260,15 @@
         "3.11.0 to 3.11.10",
         "3.9.0 to 3.9.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.0.5",
         "3.11.11",
         "3.9.18"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.10 (fixed in 3.11.11)"
     },
     {
@@ -274,12 +288,14 @@
         "3.11.0 to 3.11.10",
         "3.9.0 to 3.9.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "3.11.11",
         "3.9.18"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.10 (fixed in 3.11.11)"
     },
     {
@@ -296,11 +312,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=443272",
       "affected": [
-        "4.1.0 to 4.1.x",
+        "4.1.0",
         "4.0.0 to 4.0.5",
         "3.11.0 to 3.11.11",
         "3.9.0 to 3.9.18"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.1.1",
@@ -308,7 +325,8 @@
         "3.11.12",
         "3.9.19"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.11 (fixed in 3.11.12)"
     },
     {
@@ -330,6 +348,7 @@
         "3.11.0 to 3.11.12",
         "3.9.0 to 3.9.19"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.1.2",
@@ -337,7 +356,8 @@
         "3.11.13",
         "3.9.20"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
     },
     {
@@ -359,6 +379,7 @@
         "3.11.0 to 3.11.12",
         "3.9.0 to 3.9.19"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.1.2",
@@ -366,7 +387,8 @@
         "3.11.13",
         "3.9.20"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
     },
     {
@@ -388,6 +410,7 @@
         "3.11.0 to 3.11.12",
         "3.9.0 to 3.9.19"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.1.2",
@@ -395,7 +418,8 @@
         "3.11.13",
         "3.9.20"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
     },
     {
@@ -412,12 +436,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=447831",
       "affected": [
-        "4.2.0 to 4.2.x",
+        "4.2.0",
         "4.1.0 to 4.1.3",
         "4.0.0 to 4.0.8",
         "3.11.0 to 3.11.14",
         "3.9.0 to 3.9.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.1",
@@ -426,7 +451,8 @@
         "3.11.15",
         "3.9.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.14 (fixed in 3.11.15)"
     },
     {
@@ -447,13 +473,15 @@
         "3.11.0 to 3.11.15",
         "3.9.0 to 3.9.22"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.0.10",
         "3.11.16",
         "3.9.23"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
     },
     {
@@ -476,6 +504,7 @@
         "3.11.0 to 3.11.15",
         "3.9.0 to 3.9.22"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.2",
@@ -484,7 +513,8 @@
         "3.11.16",
         "3.9.23"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
     },
     {
@@ -507,6 +537,7 @@
         "3.11.0 to 3.11.15",
         "3.9.0 to 3.9.22"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.2",
@@ -515,7 +546,8 @@
         "3.11.16",
         "3.9.23"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
     },
     {
@@ -538,6 +570,7 @@
         "3.11.0 to 3.11.15",
         "3.9.0 to 3.9.22"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.2",
@@ -546,7 +579,8 @@
         "3.11.16",
         "3.9.23"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
     },
     {
@@ -569,6 +603,7 @@
         "3.11.0 to 3.11.16",
         "3.9.0 to 3.9.23"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.3",
@@ -577,7 +612,8 @@
         "3.11.17",
         "3.9.24"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
     },
     {
@@ -600,6 +636,7 @@
         "3.11.0 to 3.11.16",
         "3.9.0 to 3.9.23"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.3",
@@ -608,7 +645,8 @@
         "3.11.17",
         "3.9.24"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
     },
     {
@@ -631,6 +669,7 @@
         "3.11.0 to 3.11.16",
         "3.9.0 to 3.9.23"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.3",
@@ -639,7 +678,8 @@
         "3.11.17",
         "3.9.24"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
     },
     {
@@ -662,6 +702,7 @@
         "3.11.0 to 3.11.16",
         "3.9.0 to 3.9.23"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.3",
@@ -670,7 +711,8 @@
         "3.11.17",
         "3.9.24"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
     },
     {
@@ -687,13 +729,14 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=453760",
       "affected": [
-        "4.3.0 to 4.3.x",
+        "4.3.0",
         "4.2.0 to 4.2.3",
         "4.1.0 to 4.1.6",
         "4.0.0 to 4.0.11",
         "3.11.0 to 3.11.17",
         "3.9.0 to 3.9.24"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.1",
@@ -703,7 +746,8 @@
         "3.11.18",
         "3.9.25"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
     },
     {
@@ -720,13 +764,14 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=453759",
       "affected": [
-        "4.3.0 to 4.3.x",
+        "4.3.0",
         "4.2.0 to 4.2.3",
         "4.1.0 to 4.1.6",
         "4.0.0 to 4.0.11",
         "3.11.0 to 3.11.17",
         "3.9.0 to 3.9.24"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.1",
@@ -736,7 +781,8 @@
         "3.11.18",
         "3.9.25"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
     },
     {
@@ -753,13 +799,14 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=453758",
       "affected": [
-        "4.3.0 to 4.3.x",
+        "4.3.0",
         "4.2.0 to 4.2.3",
         "4.1.0 to 4.1.6",
         "4.0.0 to 4.0.11",
         "3.11.0 to 3.11.17",
         "3.9.0 to 3.9.24"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.1",
@@ -769,1580 +816,9 @@
         "3.11.18",
         "3.9.25"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
-    },
-    {
-      "id": "MSA-24-0001",
-      "title": "Denial of service risk in file picker unzip functionality",
-      "published": "2024-02-19",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-25978"
-      ],
-      "trackers": [
-        "MDL-74641"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=455634",
-      "affected": [
-        "4.3.0 to 4.3.2",
-        "4.2.0 to 4.2.5",
-        "4.1.0 to 4.1.8"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.3.3",
-        "4.2.6",
-        "4.1.9"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0016",
-      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_data backup",
-      "published": "2024-05-13",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-34005"
-      ],
-      "trackers": [
-        "MDL-81267"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=458394",
-      "affected": [
-        "4.0.0 to 4.3.3",
-        "4.2.0 to 4.2.6",
-        "4.1.0 to 4.1.9"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.3.4",
-        "4.2.7",
-        "4.1.10"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0015",
-      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_wiki backup",
-      "published": "2024-05-13",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-34004"
-      ],
-      "trackers": [
-        "MDL-81284"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=458393",
-      "affected": [
-        "4.0.0 to 4.3.3",
-        "4.2.0 to 4.2.6",
-        "4.1.0 to 4.1.9"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.3.4",
-        "4.2.7",
-        "4.1.10"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0014",
-      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_workshop backup",
-      "published": "2024-05-13",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-34003"
-      ],
-      "trackers": [
-        "MDL-80712"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=458391",
-      "affected": [
-        "4.0.0 to 4.3.3",
-        "4.2.0 to 4.2.6",
-        "4.1.0 to 4.1.9"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.3.4",
-        "4.2.7",
-        "4.1.10"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0013",
-      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_feedback backup",
-      "published": "2024-05-13",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-34002"
-      ],
-      "trackers": [
-        "MDL-81135"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=458390",
-      "affected": [
-        "4.0.0 to 4.3.3",
-        "4.2.0 to 4.2.6",
-        "4.1.0 to 4.1.9"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.3.4",
-        "4.2.7",
-        "4.1.10"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0007",
-      "title": "Broken access control when setting calendar event type",
-      "published": "2024-05-13",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-33996"
-      ],
-      "trackers": [
-        "MDL-81247"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=458384",
-      "affected": [
-        "4.0.0 to 4.3.3",
-        "4.2.0 to 4.2.6",
-        "4.1.0 to 4.1.9"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.3.4",
-        "4.2.7",
-        "4.1.10"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0024",
-      "title": "CSRF risks due to misuse of confirm_sesskey",
-      "published": "2024-06-19",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-38276"
-      ],
-      "trackers": [
-        "MDL-81890"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=459501",
-      "affected": [
-        "4.4.0 to 4.4.x",
-        "4.3.0 to 4.3.4",
-        "4.2.0 to 4.2.7",
-        "4.1.0 to 4.1.10"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.4.1",
-        "4.3.5",
-        "4.2.8",
-        "4.1.11"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0041",
-      "title": "LFI vulnerability when restoring malformed block backups",
-      "published": "2024-08-19",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-43440"
-      ],
-      "trackers": [
-        "MDL-82392"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=461210",
-      "affected": [
-        "4.4.0 to 4.4.1",
-        "4.3.0 to 4.3.5",
-        "4.2.0 to 4.2.8",
-        "4.1.0 to 4.1.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.4.2",
-        "4.3.6",
-        "4.2.9",
-        "4.1.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0040",
-      "title": "Reflected XSS via H5P error message",
-      "published": "2024-08-19",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-43439"
-      ],
-      "trackers": [
-        "MDL-82558"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=461209",
-      "affected": [
-        "4.4.0 to 4.4.1",
-        "4.3.0 to 4.3.5",
-        "4.2.0 to 4.2.8",
-        "4.1.0 to 4.1.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.4.2",
-        "4.3.6",
-        "4.2.9",
-        "4.1.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0037",
-      "title": "Site administration SQL injection via XMLDB editor",
-      "published": "2024-08-19",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-43436"
-      ],
-      "trackers": [
-        "MDL-82395"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=461206",
-      "affected": [
-        "4.4.0 to 4.4.1",
-        "4.3.0 to 4.3.5",
-        "4.2.0 to 4.2.8",
-        "4.1.0 to 4.1.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.4.2",
-        "4.3.6",
-        "4.2.9",
-        "4.1.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0035",
-      "title": "CSRF risk in Feedback non-respondents report",
-      "published": "2024-08-19",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-43434"
-      ],
-      "trackers": [
-        "MDL-82262"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=461203",
-      "affected": [
-        "4.4.0 to 4.4.1",
-        "4.3.0 to 4.3.5",
-        "4.2.0 to 4.2.8",
-        "4.1.0 to 4.1.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.4.2",
-        "4.3.6",
-        "4.2.9",
-        "4.1.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0032",
-      "title": "IDOR in badges allows deletion of arbitrary badges",
-      "published": "2024-08-19",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-43431"
-      ],
-      "trackers": [
-        "MDL-82390"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=461199",
-      "affected": [
-        "4.4.0 to 4.4.1",
-        "4.3.0 to 4.3.5",
-        "4.2.0 to 4.2.8",
-        "4.1.0 to 4.1.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.4.2",
-        "4.3.6",
-        "4.2.9",
-        "4.1.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0029",
-      "title": "Cache poisoning via injection into storage",
-      "published": "2024-08-19",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-43428"
-      ],
-      "trackers": [
-        "MDL-81718"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=461196",
-      "affected": [
-        "4.4.0 to 4.4.1",
-        "4.3.0 to 4.3.5",
-        "4.2.0 to 4.2.8",
-        "4.1.0 to 4.1.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.4.2",
-        "4.3.6",
-        "4.2.9",
-        "4.1.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0027",
-      "title": "Arbitrary file read risk through pdfTeX",
-      "published": "2024-08-19",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-43426"
-      ],
-      "trackers": [
-        "MDL-82745"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=461194",
-      "affected": [
-        "4.4.0 to 4.4.1",
-        "4.3.0 to 4.3.5",
-        "4.2.0 to 4.2.8",
-        "4.1.0 to 4.1.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.4.2",
-        "4.3.6",
-        "4.2.9",
-        "4.1.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0026",
-      "title": "Remote code execution via calculated question types",
-      "published": "2024-08-19",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-43425"
-      ],
-      "trackers": [
-        "MDL-82576"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=461193",
-      "affected": [
-        "4.4.0 to 4.4.1",
-        "4.3.0 to 4.3.5",
-        "4.2.0 to 4.2.8",
-        "4.1.0 to 4.1.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.4.2",
-        "4.3.6",
-        "4.2.9",
-        "4.1.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0042",
-      "title": "Unprotected access to sensitive information via dynamic tables",
-      "published": "2024-09-10",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-45689"
-      ],
-      "trackers": [
-        "MDL-82567"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=461894",
-      "affected": [
-        "4.4.0 to 4.4.2",
-        "4.3.0 to 4.3.6",
-        "4.2.0 to 4.2.9",
-        "4.1.0 to 4.1.12"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.4.3",
-        "4.3.7",
-        "4.2.10",
-        "4.1.13"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0056",
-      "title": "Potential denial of service risk due to guest sessions' longer timeout period",
-      "published": "2024-12-17",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-55648"
-      ],
-      "trackers": [
-        "MDL-61316"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=464559",
-      "affected": [
-        "4.5.0 to 4.5.x",
-        "4.4.0 to 4.4.4",
-        "4.3.0 to 4.3.8",
-        "4.1.0 to 4.1.14"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.5.1",
-        "4.4.5",
-        "4.3.9",
-        "4.1.15"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-24-0051",
-      "title": "Unprotected access to sensitive information via learning plan web service",
-      "published": "2024-12-17",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-55643"
-      ],
-      "trackers": [
-        "MDL-83921"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=464554",
-      "affected": [
-        "4.5.0 to 4.5.x",
-        "4.4.0 to 4.4.4",
-        "4.3.0 to 4.3.8",
-        "4.1.0 to 4.1.14"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.5.1",
-        "4.4.5",
-        "4.3.9",
-        "4.1.15"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0010",
-      "title": "SQL injection risk in course search module list filter",
-      "published": "2025-02-18",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-26533"
-      ],
-      "trackers": [
-        "MDL-84271"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=466150",
-      "affected": [
-        "4.5.0 to 4.5.1",
-        "4.4.0 to 4.4.5",
-        "4.3.0 to 4.3.9",
-        "4.1.0 to 4.1.15"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.5.2",
-        "4.4.6",
-        "4.3.10",
-        "4.1.16"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0005",
-      "title": "Stored XSS risk in admin live log",
-      "published": "2025-02-18",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-26529"
-      ],
-      "trackers": [
-        "MDL-84145"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=466145",
-      "affected": [
-        "4.5.0 to 4.5.1",
-        "4.4.0 to 4.4.5",
-        "4.3.0 to 4.3.9",
-        "4.1.0 to 4.1.15"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.5.2",
-        "4.4.6",
-        "4.3.10",
-        "4.1.16"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0001",
-      "title": "Arbitrary file read risk through pdfTeX",
-      "published": "2025-02-18",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-26525"
-      ],
-      "trackers": [
-        "MDL-84136"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=466141",
-      "affected": [
-        "4.5.0 to 4.5.1",
-        "4.4.0 to 4.4.5",
-        "4.3.0 to 4.3.9",
-        "4.1.0 to 4.1.15"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.5.2",
-        "4.4.6",
-        "4.3.10",
-        "4.1.16"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0025",
-      "title": "Reflected XSS risk in policy tool",
-      "published": "2025-04-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-3643"
-      ],
-      "trackers": [
-        "MDL-85104"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=467604",
-      "affected": [
-        "4.5.0 to 4.5.3",
-        "4.4.0 to 4.4.7",
-        "4.3.0 to 4.3.11",
-        "4.1.0 to 4.1.17"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.5.4",
-        "4.4.8",
-        "4.3.12",
-        "4.1.18"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0024",
-      "title": "Authenticated remote code execution risk in the Moodle LMS EQUELLA repository",
-      "published": "2025-04-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-3642"
-      ],
-      "trackers": [
-        "MDL-84473"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=467603",
-      "affected": [
-        "4.5.0 to 4.5.3",
-        "4.4.0 to 4.4.7",
-        "4.3.0 to 4.3.11",
-        "4.1.0 to 4.1.17"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.5.4",
-        "4.4.8",
-        "4.3.12",
-        "4.1.18"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0023",
-      "title": "Authenticated remote code execution risk in the Moodle LMS Dropbox repository",
-      "published": "2025-04-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-3641"
-      ],
-      "trackers": [
-        "MDL-84475"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=467602",
-      "affected": [
-        "4.5.0 to 4.5.3",
-        "4.4.0 to 4.4.7",
-        "4.3.0 to 4.3.11",
-        "4.1.0 to 4.1.17"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.5.4",
-        "4.4.8",
-        "4.3.12",
-        "4.1.18"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0013",
-      "title": "Remote code execution risk via MimeTeX command (upstream)",
-      "published": "2025-04-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2024-40446"
-      ],
-      "trackers": [
-        "MDL-85152"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=467592",
-      "affected": [
-        "4.5.0 to 4.5.3",
-        "4.4.0 to 4.4.7",
-        "4.3.0 to 4.3.11",
-        "4.1.0 to 4.1.17"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "4.5.4",
-        "4.4.8",
-        "4.3.12",
-        "4.1.18"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0035",
-      "title": "Missing authorisation checks in BigBlueButton view page",
-      "published": "2025-06-17",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-49517"
-      ],
-      "trackers": [
-        "MDL-84706"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=468506",
-      "affected": [
-        "5.0.0 to 5.0.x",
-        "4.5.0 to 4.5.4",
-        "4.4.0 to 4.4.8",
-        "4.1.0 to 4.1.18"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.0.1",
-        "4.5.5",
-        "4.4.9",
-        "4.1.19"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0033",
-      "title": "Course visibility not honoured consistently",
-      "published": "2025-06-17",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-49515"
-      ],
-      "trackers": [
-        "MDL-84518"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=468504",
-      "affected": [
-        "5.0.0 to 5.0.x",
-        "4.5.0 to 4.5.4",
-        "4.4.0 to 4.4.8",
-        "4.1.0 to 4.1.18"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.0.1",
-        "4.5.5",
-        "4.4.9",
-        "4.1.19"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0032",
-      "title": "SSRF risk via DNS rebind",
-      "published": "2025-06-17",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-49514"
-      ],
-      "trackers": [
-        "MDL-83762"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=468503",
-      "affected": [
-        "5.0.0 to 5.0.x",
-        "4.5.0 to 4.5.4",
-        "4.4.0 to 4.4.8",
-        "4.1.0 to 4.1.18"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.0.1",
-        "4.5.5",
-        "4.4.9",
-        "4.1.19"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0031",
-      "title": "Upgrade ADOdb including security fix (upstream)",
-      "published": "2025-06-17",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-46337"
-      ],
-      "trackers": [
-        "MDL-85375"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=468502",
-      "affected": [
-        "5.0.0 to 5.0.x",
-        "4.5.0 to 4.5.4",
-        "4.4.0 to 4.4.8",
-        "4.1.0 to 4.1.18"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.0.1",
-        "4.5.5",
-        "4.4.9",
-        "4.1.19"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0042",
-      "title": "Upgrade FPDI including security fix (upstream)",
-      "published": "2025-10-14",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-54869"
-      ],
-      "trackers": [
-        "MDL-86353"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=470382",
-      "affected": [
-        "5.0.0 to 5.0.2",
-        "4.5.0 to 4.5.6",
-        "4.4.0 to 4.4.10",
-        "4.1.0 to 4.1.20"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.0.3",
-        "4.5.7",
-        "4.4.11",
-        "4.1.21"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0059",
-      "title": "Reflected XSS risk in policy tool",
-      "published": "2025-12-15",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-67855"
-      ],
-      "trackers": [
-        "MDL-86544"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=471305",
-      "affected": [
-        "5.1.0 to 5.1.x",
-        "5.0.0 to 5.0.3",
-        "4.5.0 to 4.5.7",
-        "4.4.0 to 4.4.11",
-        "4.1.0 to 4.1.21"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.1.1",
-        "5.0.4",
-        "4.5.8",
-        "4.4.12",
-        "4.1.22"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0055",
-      "title": "Formula injection risk when exporting data to CSV / Excel",
-      "published": "2025-12-15",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-67851"
-      ],
-      "trackers": [
-        "MDL-72744"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=471301",
-      "affected": [
-        "5.1.0 to 5.1.x",
-        "5.0.0 to 5.0.3",
-        "4.5.0 to 4.5.7",
-        "4.4.0 to 4.4.11",
-        "4.1.0 to 4.1.21"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.1.1",
-        "5.0.4",
-        "4.5.8",
-        "4.4.12",
-        "4.1.22"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0054",
-      "title": "XSS risk in formula editor",
-      "published": "2025-12-15",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-67850"
-      ],
-      "trackers": [
-        "MDL-85557"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=471300",
-      "affected": [
-        "5.1.0 to 5.1.x",
-        "5.0.0 to 5.0.3",
-        "4.5.0 to 4.5.7",
-        "4.4.0 to 4.4.11",
-        "4.1.0 to 4.1.21"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.1.1",
-        "5.0.4",
-        "4.5.8",
-        "4.4.12",
-        "4.1.22"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0052",
-      "title": "Authentication via LTI Provider available to suspended users",
-      "published": "2025-12-15",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-67848"
-      ],
-      "trackers": [
-        "MDL-87286"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=471298",
-      "affected": [
-        "5.1.0 to 5.1.x",
-        "5.0.0 to 5.0.3",
-        "4.5.0 to 4.5.7",
-        "4.4.0 to 4.4.11",
-        "4.1.0 to 4.1.21"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.1.1",
-        "5.0.4",
-        "4.5.8",
-        "4.4.12",
-        "4.1.22"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-25-0051",
-      "title": "Remote code execution risk via file restore",
-      "published": "2025-12-15",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2025-67847"
-      ],
-      "trackers": [
-        "MDL-87353"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=471297",
-      "affected": [
-        "5.1.0 to 5.1.x",
-        "5.0.0 to 5.0.3",
-        "4.5.0 to 4.5.7",
-        "4.4.0 to 4.4.11",
-        "4.1.0 to 4.1.21"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.1.1",
-        "5.0.4",
-        "4.5.8",
-        "4.4.12",
-        "4.1.22"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0003",
-      "title": "Denial of service risk in TeX formula editor",
-      "published": "2026-02-17",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-26047"
-      ],
-      "trackers": [
-        "MDL-86785"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=473316",
-      "affected": [
-        "5.1.0 to 5.1.1",
-        "5.0.0 to 5.0.4",
-        "4.5.0 to 4.5.8"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.1.2",
-        "5.0.5",
-        "4.5.9"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0002",
-      "title": "Remote code execution risk in TeX filter admin setting",
-      "published": "2026-02-17",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-26046"
-      ],
-      "trackers": [
-        "MDL-87843",
-        "MDL-87870"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=473315",
-      "affected": [
-        "5.1.0 to 5.1.1",
-        "5.0.0 to 5.0.4",
-        "4.5.0 to 4.5.8"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.1.2",
-        "5.0.5",
-        "4.5.9"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0001",
-      "title": "Remote code execution risk via file restore",
-      "published": "2026-02-17",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-26045"
-      ],
-      "trackers": [
-        "MDL-87612"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=473314",
-      "affected": [
-        "5.1.0 to 5.1.1",
-        "5.0.0 to 5.0.4",
-        "4.5.0 to 4.5.8"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.1.2",
-        "5.0.5",
-        "4.5.9"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0006",
-      "title": "RCE risk via Moodle's Google Drive repository plugin",
-      "published": "2026-04-29",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-7275"
-      ],
-      "trackers": [
-        "MDL-88423"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=474064",
-      "affected": [
-        "5.1.0 to 5.1.3",
-        "5.0.0 to 5.0.6",
-        "4.5.0 to 4.5.10"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.1.4",
-        "5.0.7",
-        "4.5.11"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0005",
-      "title": "SQL injection risk in external database authentication plugin",
-      "published": "2026-04-29",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-7274"
-      ],
-      "trackers": [
-        "MDL-88138"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=474063",
-      "affected": [
-        "5.1.0 to 5.1.3",
-        "5.0.0 to 5.0.6",
-        "4.5.0 to 4.5.10"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.1.4",
-        "5.0.7",
-        "4.5.11"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0028",
-      "title": "DoS risk via user profile description",
-      "published": "2026-06-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-58347"
-      ],
-      "trackers": [
-        "MDL-87898"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=481830",
-      "affected": [
-        "5.2.0 to 5.2.x",
-        "5.1.0 to 5.1.4",
-        "5.0.0 to 5.0.7",
-        "4.5.0 to 4.5.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.1",
-        "5.1.5",
-        "5.0.8",
-        "4.5.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0026",
-      "title": "Missing capability check in Assignment marker allocation",
-      "published": "2026-06-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-58345"
-      ],
-      "trackers": [
-        "MDL-88529"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=481827",
-      "affected": [
-        "5.2.0 to 5.2.x",
-        "5.1.0 to 5.1.4",
-        "5.0.0 to 5.0.7",
-        "4.5.0 to 4.5.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.1",
-        "5.1.5",
-        "5.0.8",
-        "4.5.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0025",
-      "title": "CSRF risk in quiz attempt regrading",
-      "published": "2026-06-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-58344"
-      ],
-      "trackers": [
-        "MDL-88531"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=481826",
-      "affected": [
-        "5.2.0 to 5.2.x",
-        "5.1.0 to 5.1.4",
-        "5.0.0 to 5.0.7",
-        "4.5.0 to 4.5.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.1",
-        "5.1.5",
-        "5.0.8",
-        "4.5.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0021",
-      "title": "CSRF and XSS in grade item idnumber editing",
-      "published": "2026-06-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-58340"
-      ],
-      "trackers": [
-        "MDL-88542"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=481821",
-      "affected": [
-        "5.2.0 to 5.2.x",
-        "5.1.0 to 5.1.4",
-        "5.0.0 to 5.0.7",
-        "4.5.0 to 4.5.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.1",
-        "5.1.5",
-        "5.0.8",
-        "4.5.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0017",
-      "title": "IDOR allows arbitrary comment deletion",
-      "published": "2026-06-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-58336"
-      ],
-      "trackers": [
-        "MDL-88619"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=481817",
-      "affected": [
-        "5.2.0 to 5.2.x",
-        "5.1.0 to 5.1.3",
-        "5.0.0 to 5.0.6",
-        "4.5.0 to 4.5.10"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.1",
-        "5.1.5",
-        "5.0.8",
-        "4.5.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0015",
-      "title": "RCE risk via admin presets import",
-      "published": "2026-06-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-58334"
-      ],
-      "trackers": [
-        "MDL-88735"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=481813",
-      "affected": [
-        "5.2.0 to 5.2.x",
-        "5.1.0 to 5.1.4",
-        "5.0.0 to 5.0.7",
-        "4.5.0 to 4.5.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.1",
-        "5.1.5",
-        "5.0.8",
-        "4.5.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0014",
-      "title": "Arbitrary file read risk in backup restore",
-      "published": "2026-06-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-58333"
-      ],
-      "trackers": [
-        "MDL-88736"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=481812",
-      "affected": [
-        "5.2.0 to 5.2.x",
-        "5.1.0 to 5.1.4",
-        "5.0.0 to 5.0.7",
-        "4.5.0 to 4.5.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.1",
-        "5.1.5",
-        "5.0.8",
-        "4.5.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0013",
-      "title": "Email-based MFA bypass",
-      "published": "2026-06-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-58332"
-      ],
-      "trackers": [
-        "MDL-88767"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=481811",
-      "affected": [
-        "5.2.0 to 5.2.x",
-        "5.1.0 to 5.1.4",
-        "5.0.0 to 5.0.7",
-        "4.5.0 to 4.5.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.1",
-        "5.1.5",
-        "5.0.8",
-        "4.5.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0012",
-      "title": "Arbitrary file read risk in Database activity module",
-      "published": "2026-06-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [
-        "CVE-2026-58331"
-      ],
-      "trackers": [
-        "MDL-88595"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=481810",
-      "affected": [
-        "5.2.0 to 5.2.x",
-        "5.1.0 to 5.1.4",
-        "5.0.0 to 5.0.7",
-        "4.5.0 to 4.5.11"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.1",
-        "5.1.5",
-        "5.0.8",
-        "4.5.12"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0041",
-      "title": "CSRF risk in XML grade imports",
-      "published": "2026-09-09",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [],
-      "trackers": [
-        "MDL-84545"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=482507",
-      "affected": [
-        "5.2.0 to 5.2.1",
-        "5.1.0 to 5.1.5",
-        "5.0.0 to 5.0.8",
-        "4.5.0 to 4.5.12"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.2",
-        "5.1.6",
-        "5.0.9",
-        "4.5.13"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0032",
-      "title": "User profile information disclosure via grade web service",
-      "published": "2026-09-09",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [],
-      "trackers": [
-        "MDL-89381"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=482497",
-      "affected": [
-        "5.2.0 to 5.2.1",
-        "5.1.0 to 5.1.5",
-        "5.0.0 to 5.0.8",
-        "4.5.0 to 4.5.12"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.2",
-        "5.1.6",
-        "5.0.9",
-        "4.5.13"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0031",
-      "title": "SQL injection risk in question bank web service",
-      "published": "2026-09-09",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [],
-      "trackers": [
-        "MDL-89383"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=482496",
-      "affected": [
-        "5.2.0 to 5.2.1",
-        "5.1.0 to 5.1.5",
-        "5.0.0 to 5.0.8",
-        "4.5.0 to 4.5.12"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.2",
-        "5.1.6",
-        "5.0.9",
-        "4.5.13"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0030",
-      "title": "SSRF risk in URL downloader (bypass some blocked hosts)",
-      "published": "2026-09-09",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [],
-      "trackers": [
-        "MDL-88779"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=482495",
-      "affected": [
-        "5.2.0 to 5.2.1",
-        "5.1.0 to 5.1.5",
-        "5.0.0 to 5.0.8",
-        "4.5.0 to 4.5.12"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.2",
-        "5.1.6",
-        "5.0.9",
-        "4.5.13"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0042",
-      "title": "Blind SQL injection risk in profile availability condition check",
-      "published": "2026-09-22",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [],
-      "trackers": [
-        "MDL-89484"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=482607",
-      "affected": [
-        "5.2.0 to 5.2.2",
-        "5.1.0 to 5.1.6",
-        "5.0.0 to 5.0.9",
-        "4.5.0 to 4.5.13"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.3",
-        "5.1.7",
-        "5.0.10",
-        "4.5.14"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
-    },
-    {
-      "id": "MSA-26-0044",
-      "title": "Missing access checks on H5P content files",
-      "published": "2026-10-15",
-      "severity": "Serious",
-      "severity_level": "high",
-      "cves": [],
-      "trackers": [
-        "MDL-89547"
-      ],
-      "url": "https://moodle.org/mod/forum/discuss.php?d=482830",
-      "affected": [
-        "5.2.0 to 5.2.3",
-        "5.1.0 to 5.1.7",
-        "5.0.0 to 5.0.10",
-        "4.5.0 to 4.5.14"
-      ],
-      "earlier_unsupported": true,
-      "fixed": [
-        "5.2.4",
-        "5.1.8",
-        "5.0.11",
-        "4.5.15"
-      ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
     },
     {
       "id": "MSA-22-0022",
@@ -2361,12 +837,14 @@
         "4.0.0 to 4.0.2",
         "3.11.0 to 3.11.8"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "4.0.3",
         "3.11.9"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.8 (fixed in 3.11.9)"
     },
     {
@@ -2388,13 +866,15 @@
         "3.11.0 to 3.11.9",
         "3.9.0 to 3.9.16"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.0.4",
         "3.11.10",
         "3.9.17"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.9 (fixed in 3.11.10)"
     },
     {
@@ -2415,13 +895,15 @@
         "3.11.0 to 3.11.9",
         "3.9.0 to 3.9.16"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.0.4",
         "3.11.10",
         "3.9.17"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.9 (fixed in 3.11.10)"
     },
     {
@@ -2442,13 +924,15 @@
         "3.11.0 to 3.11.8",
         "3.9.0 to 3.9.15"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.0.3",
         "3.11.9",
         "3.9.16"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.8 (fixed in 3.11.9)"
     },
     {
@@ -2469,13 +953,15 @@
         "3.11.0 to 3.11.10",
         "3.9.0 to 3.9.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.0.5",
         "3.11.11",
         "3.9.18"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.10 (fixed in 3.11.11)"
     },
     {
@@ -2492,11 +978,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=443274",
       "affected": [
-        "4.1.0 to 4.1.x",
+        "4.1.0",
         "4.0.0 to 4.0.5",
         "3.11.0 to 3.11.11",
         "3.9.0 to 3.9.18"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.1.1",
@@ -2504,7 +991,8 @@
         "3.11.12",
         "3.9.19"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.11 (fixed in 3.11.12)"
     },
     {
@@ -2526,6 +1014,7 @@
         "3.11.0 to 3.11.12",
         "3.9.0 to 3.9.19"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.1.2",
@@ -2533,7 +1022,8 @@
         "3.11.13",
         "3.9.20"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
     },
     {
@@ -2555,6 +1045,7 @@
         "3.11.0 to 3.11.12",
         "3.9.0 to 3.9.19"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.1.2",
@@ -2562,7 +1053,8 @@
         "3.11.13",
         "3.9.20"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
     },
     {
@@ -2584,6 +1076,7 @@
         "3.11.0 to 3.11.12",
         "3.9.0 to 3.9.19"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.1.2",
@@ -2591,7 +1084,8 @@
         "3.11.13",
         "3.9.20"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
     },
     {
@@ -2613,6 +1107,7 @@
         "3.11.0 to 3.11.12",
         "3.9.0 to 3.9.19"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.1.2",
@@ -2620,7 +1115,8 @@
         "3.11.13",
         "3.9.20"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.12 (fixed in 3.11.13)"
     },
     {
@@ -2642,6 +1138,7 @@
         "3.11.0 to 3.11.13",
         "3.9.0 to 3.9.20"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.1.3",
@@ -2649,7 +1146,8 @@
         "3.11.14",
         "3.9.21"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.13 (fixed in 3.11.14)"
     },
     {
@@ -2666,12 +1164,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=447830",
       "affected": [
-        "4.2.0 to 4.2.x",
+        "4.2.0",
         "4.1.0 to 4.1.3",
         "4.0.0 to 4.0.8",
         "3.11.0 to 3.11.14",
         "3.9.0 to 3.9.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.1",
@@ -2680,7 +1179,8 @@
         "3.11.15",
         "3.9.22"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.14 (fixed in 3.11.15)"
     },
     {
@@ -2697,11 +1197,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=447829",
       "affected": [
-        "4.2.0 to 4.2.x",
+        "4.2.0",
         "4.1.0 to 4.1.3",
         "4.0.0 to 4.0.8",
         "3.11.0 to 3.11.14"
       ],
+      "excluded": [],
       "earlier_unsupported": false,
       "fixed": [
         "4.2.1",
@@ -2709,7 +1210,8 @@
         "4.0.9",
         "3.11.15"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.14 (fixed in 3.11.15)"
     },
     {
@@ -2732,6 +1234,7 @@
         "3.11.0 to 3.11.15",
         "3.9.0 to 3.9.22"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.2",
@@ -2740,7 +1243,8 @@
         "3.11.16",
         "3.9.23"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
     },
     {
@@ -2763,6 +1267,7 @@
         "3.11.0 to 3.11.15",
         "3.9.0 to 3.9.22"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.2",
@@ -2771,7 +1276,8 @@
         "3.11.16",
         "3.9.23"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
     },
     {
@@ -2794,6 +1300,7 @@
         "3.11.0 to 3.11.15",
         "3.9.0 to 3.9.22"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.2",
@@ -2802,7 +1309,8 @@
         "3.11.16",
         "3.9.23"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
     },
     {
@@ -2825,12 +1333,14 @@
         "3.11.0 to 3.11.15",
         "3.9.0 to 3.9.22"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "3.11.16",
         "3.9.23"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
     },
     {
@@ -2853,6 +1363,7 @@
         "3.11.0 to 3.11.15",
         "3.9.0 to 3.9.22"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.2",
@@ -2861,7 +1372,8 @@
         "3.11.16",
         "3.9.23"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
     },
     {
@@ -2884,6 +1396,7 @@
         "3.11.0 to 3.11.15",
         "3.9.0 to 3.9.22"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.2",
@@ -2892,7 +1405,8 @@
         "3.11.16",
         "3.9.23"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.15 (fixed in 3.11.16)"
     },
     {
@@ -2915,6 +1429,7 @@
         "3.11.0 to 3.11.16",
         "3.9.0 to 3.9.23"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.3",
@@ -2923,7 +1438,8 @@
         "3.11.17",
         "3.9.24"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
     },
     {
@@ -2946,6 +1462,7 @@
         "3.11.0 to 3.11.16",
         "3.9.0 to 3.9.23"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.3",
@@ -2954,7 +1471,8 @@
         "3.11.17",
         "3.9.24"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
     },
     {
@@ -2977,6 +1495,7 @@
         "3.11.0 to 3.11.16",
         "3.9.0 to 3.9.23"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.3",
@@ -2985,7 +1504,8 @@
         "3.11.17",
         "3.9.24"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
     },
     {
@@ -3008,6 +1528,7 @@
         "3.11.0 to 3.11.16",
         "3.9.0 to 3.9.23"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.3",
@@ -3016,7 +1537,8 @@
         "3.11.17",
         "3.9.24"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
     },
     {
@@ -3039,6 +1561,7 @@
         "3.11.0 to 3.11.16",
         "3.9.0 to 3.9.23"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.3",
@@ -3047,7 +1570,8 @@
         "3.11.17",
         "3.9.24"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
     },
     {
@@ -3070,6 +1594,7 @@
         "3.11.0 to 3.11.16",
         "3.9.0 to 3.9.23"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.2.3",
@@ -3078,7 +1603,8 @@
         "3.11.17",
         "3.9.24"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.16 (fixed in 3.11.17)"
     },
     {
@@ -3095,13 +1621,14 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=453766",
       "affected": [
-        "4.3.0 to 4.3.x",
+        "4.3.0",
         "4.2.0 to 4.2.3",
         "4.1.0 to 4.1.6",
         "4.0.0 to 4.0.11",
         "3.11.0 to 3.11.17",
         "3.9.0 to 3.9.24"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.1",
@@ -3111,7 +1638,8 @@
         "3.11.18",
         "3.9.25"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
     },
     {
@@ -3128,13 +1656,14 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=453765",
       "affected": [
-        "4.3.0 to 4.3.x",
+        "4.3.0",
         "4.2.0 to 4.2.3",
         "4.1.0 to 4.1.6",
         "4.0.0 to 4.0.11",
         "3.11.0 to 3.11.17",
         "3.9.0 to 3.9.24"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.1",
@@ -3144,7 +1673,8 @@
         "3.11.18",
         "3.9.25"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
     },
     {
@@ -3161,13 +1691,14 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=453764",
       "affected": [
-        "4.3.0 to 4.3.x",
+        "4.3.0",
         "4.2.0 to 4.2.3",
         "4.1.0 to 4.1.6",
         "4.0.0 to 4.0.11",
         "3.11.0 to 3.11.17",
         "3.9.0 to 3.9.24"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.1",
@@ -3177,7 +1708,8 @@
         "3.11.18",
         "3.9.25"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
     },
     {
@@ -3194,13 +1726,14 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=453761",
       "affected": [
-        "4.3.0 to 4.3.x",
+        "4.3.0",
         "4.2.0 to 4.2.3",
         "4.1.0 to 4.1.6",
         "4.0.0 to 4.0.11",
         "3.11.0 to 3.11.17",
         "3.9.0 to 3.9.24"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.1",
@@ -3210,8 +1743,1691 @@
         "3.11.18",
         "3.9.25"
       ],
-      "match": "affected",
+      "match": "version_match",
+      "evidence_level": "version_only",
       "reason": "3.11.8 is within affected range 3.11.0 to 3.11.17 (fixed in 3.11.18)"
+    },
+    {
+      "id": "MSA-24-0001",
+      "title": "Denial of service risk in file picker unzip functionality",
+      "published": "2024-02-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-25978"
+      ],
+      "trackers": [
+        "MDL-74641"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=455634",
+      "affected": [
+        "4.3.0 to 4.3.2",
+        "4.2.0 to 4.2.5",
+        "4.1.0 to 4.1.8"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.3",
+        "4.2.6",
+        "4.1.9"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0016",
+      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_data backup",
+      "published": "2024-05-13",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-34005"
+      ],
+      "trackers": [
+        "MDL-81267"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458394",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0015",
+      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_wiki backup",
+      "published": "2024-05-13",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-34004"
+      ],
+      "trackers": [
+        "MDL-81284"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458393",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0014",
+      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_workshop backup",
+      "published": "2024-05-13",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-34003"
+      ],
+      "trackers": [
+        "MDL-80712"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458391",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0013",
+      "title": "Authenticated LFI risk in some misconfigured shared hosting environments via modified mod_feedback backup",
+      "published": "2024-05-13",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-34002"
+      ],
+      "trackers": [
+        "MDL-81135"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458390",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0007",
+      "title": "Broken access control when setting calendar event type",
+      "published": "2024-05-13",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-33996"
+      ],
+      "trackers": [
+        "MDL-81247"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458384",
+      "affected": [
+        "4.0.0 to 4.3.3",
+        "4.2.0 to 4.2.6",
+        "4.1.0 to 4.1.9"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.3.4",
+        "4.2.7",
+        "4.1.10"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0024",
+      "title": "CSRF risks due to misuse of confirm_sesskey",
+      "published": "2024-06-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-38276"
+      ],
+      "trackers": [
+        "MDL-81890"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=459501",
+      "affected": [
+        "4.4.0",
+        "4.3.0 to 4.3.4",
+        "4.2.0 to 4.2.7",
+        "4.1.0 to 4.1.10"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.1",
+        "4.3.5",
+        "4.2.8",
+        "4.1.11"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0041",
+      "title": "LFI vulnerability when restoring malformed block backups",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43440"
+      ],
+      "trackers": [
+        "MDL-82392"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461210",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0040",
+      "title": "Reflected XSS via H5P error message",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43439"
+      ],
+      "trackers": [
+        "MDL-82558"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461209",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0037",
+      "title": "Site administration SQL injection via XMLDB editor",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43436"
+      ],
+      "trackers": [
+        "MDL-82395"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461206",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0035",
+      "title": "CSRF risk in Feedback non-respondents report",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43434"
+      ],
+      "trackers": [
+        "MDL-82262"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461203",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0032",
+      "title": "IDOR in badges allows deletion of arbitrary badges",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43431"
+      ],
+      "trackers": [
+        "MDL-82390"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461199",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0029",
+      "title": "Cache poisoning via injection into storage",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43428"
+      ],
+      "trackers": [
+        "MDL-81718"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461196",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0027",
+      "title": "Arbitrary file read risk through pdfTeX",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43426"
+      ],
+      "trackers": [
+        "MDL-82745"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461194",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0026",
+      "title": "Remote code execution via calculated question types",
+      "published": "2024-08-19",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-43425"
+      ],
+      "trackers": [
+        "MDL-82576"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461193",
+      "affected": [
+        "4.4.0 to 4.4.1",
+        "4.3.0 to 4.3.5",
+        "4.2.0 to 4.2.8",
+        "4.1.0 to 4.1.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.2",
+        "4.3.6",
+        "4.2.9",
+        "4.1.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0042",
+      "title": "Unprotected access to sensitive information via dynamic tables",
+      "published": "2024-09-10",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-45689"
+      ],
+      "trackers": [
+        "MDL-82567"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461894",
+      "affected": [
+        "4.4.0 to 4.4.2",
+        "4.3.0 to 4.3.6",
+        "4.2.0 to 4.2.9",
+        "4.1.0 to 4.1.12"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.4.3",
+        "4.3.7",
+        "4.2.10",
+        "4.1.13"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0056",
+      "title": "Potential denial of service risk due to guest sessions' longer timeout period",
+      "published": "2024-12-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-55648"
+      ],
+      "trackers": [
+        "MDL-61316"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=464559",
+      "affected": [
+        "4.5.0",
+        "4.4.0 to 4.4.4",
+        "4.3.0 to 4.3.8",
+        "4.1.0 to 4.1.14"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.1",
+        "4.4.5",
+        "4.3.9",
+        "4.1.15"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-24-0051",
+      "title": "Unprotected access to sensitive information via learning plan web service",
+      "published": "2024-12-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-55643"
+      ],
+      "trackers": [
+        "MDL-83921"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=464554",
+      "affected": [
+        "4.5.0",
+        "4.4.0 to 4.4.4",
+        "4.3.0 to 4.3.8",
+        "4.1.0 to 4.1.14"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.1",
+        "4.4.5",
+        "4.3.9",
+        "4.1.15"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0010",
+      "title": "SQL injection risk in course search module list filter",
+      "published": "2025-02-18",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-26533"
+      ],
+      "trackers": [
+        "MDL-84271"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466150",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0005",
+      "title": "Stored XSS risk in admin live log",
+      "published": "2025-02-18",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-26529"
+      ],
+      "trackers": [
+        "MDL-84145"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466145",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0001",
+      "title": "Arbitrary file read risk through pdfTeX",
+      "published": "2025-02-18",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-26525"
+      ],
+      "trackers": [
+        "MDL-84136"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=466141",
+      "affected": [
+        "4.5.0 to 4.5.1",
+        "4.4.0 to 4.4.5",
+        "4.3.0 to 4.3.9",
+        "4.1.0 to 4.1.15"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.2",
+        "4.4.6",
+        "4.3.10",
+        "4.1.16"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0025",
+      "title": "Reflected XSS risk in policy tool",
+      "published": "2025-04-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-3643"
+      ],
+      "trackers": [
+        "MDL-85104"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467604",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0024",
+      "title": "Authenticated remote code execution risk in the Moodle LMS EQUELLA repository",
+      "published": "2025-04-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-3642"
+      ],
+      "trackers": [
+        "MDL-84473"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467603",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0023",
+      "title": "Authenticated remote code execution risk in the Moodle LMS Dropbox repository",
+      "published": "2025-04-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-3641"
+      ],
+      "trackers": [
+        "MDL-84475"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467602",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0013",
+      "title": "Remote code execution risk via MimeTeX command (upstream)",
+      "published": "2025-04-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2024-40446"
+      ],
+      "trackers": [
+        "MDL-85152"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467592",
+      "affected": [
+        "4.5.0 to 4.5.3",
+        "4.4.0 to 4.4.7",
+        "4.3.0 to 4.3.11",
+        "4.1.0 to 4.1.17"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "4.5.4",
+        "4.4.8",
+        "4.3.12",
+        "4.1.18"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0035",
+      "title": "Missing authorisation checks in BigBlueButton view page",
+      "published": "2025-06-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-49517"
+      ],
+      "trackers": [
+        "MDL-84706"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468506",
+      "affected": [
+        "5.0.0",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0033",
+      "title": "Course visibility not honoured consistently",
+      "published": "2025-06-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-49515"
+      ],
+      "trackers": [
+        "MDL-84518"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468504",
+      "affected": [
+        "5.0.0",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0032",
+      "title": "SSRF risk via DNS rebind",
+      "published": "2025-06-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-49514"
+      ],
+      "trackers": [
+        "MDL-83762"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468503",
+      "affected": [
+        "5.0.0",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0031",
+      "title": "Upgrade ADOdb including security fix (upstream)",
+      "published": "2025-06-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-46337"
+      ],
+      "trackers": [
+        "MDL-85375"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=468502",
+      "affected": [
+        "5.0.0",
+        "4.5.0 to 4.5.4",
+        "4.4.0 to 4.4.8",
+        "4.1.0 to 4.1.18"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.1",
+        "4.5.5",
+        "4.4.9",
+        "4.1.19"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0042",
+      "title": "Upgrade FPDI including security fix (upstream)",
+      "published": "2025-10-14",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-54869"
+      ],
+      "trackers": [
+        "MDL-86353"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=470382",
+      "affected": [
+        "5.0.0 to 5.0.2",
+        "4.5.0 to 4.5.6",
+        "4.4.0 to 4.4.10",
+        "4.1.0 to 4.1.20"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.0.3",
+        "4.5.7",
+        "4.4.11",
+        "4.1.21"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0059",
+      "title": "Reflected XSS risk in policy tool",
+      "published": "2025-12-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-67855"
+      ],
+      "trackers": [
+        "MDL-86544"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471305",
+      "affected": [
+        "5.1.0",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0055",
+      "title": "Formula injection risk when exporting data to CSV / Excel",
+      "published": "2025-12-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-67851"
+      ],
+      "trackers": [
+        "MDL-72744"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471301",
+      "affected": [
+        "5.1.0",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0054",
+      "title": "XSS risk in formula editor",
+      "published": "2025-12-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-67850"
+      ],
+      "trackers": [
+        "MDL-85557"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471300",
+      "affected": [
+        "5.1.0",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0052",
+      "title": "Authentication via LTI Provider available to suspended users",
+      "published": "2025-12-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-67848"
+      ],
+      "trackers": [
+        "MDL-87286"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471298",
+      "affected": [
+        "5.1.0",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-25-0051",
+      "title": "Remote code execution risk via file restore",
+      "published": "2025-12-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2025-67847"
+      ],
+      "trackers": [
+        "MDL-87353"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=471297",
+      "affected": [
+        "5.1.0",
+        "5.0.0 to 5.0.3",
+        "4.5.0 to 4.5.7",
+        "4.4.0 to 4.4.11",
+        "4.1.0 to 4.1.21"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.1",
+        "5.0.4",
+        "4.5.8",
+        "4.4.12",
+        "4.1.22"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0003",
+      "title": "Denial of service risk in TeX formula editor",
+      "published": "2026-02-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-26047"
+      ],
+      "trackers": [
+        "MDL-86785"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=473316",
+      "affected": [
+        "5.1.0 to 5.1.1",
+        "5.0.0 to 5.0.4",
+        "4.5.0 to 4.5.8"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.2",
+        "5.0.5",
+        "4.5.9"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0002",
+      "title": "Remote code execution risk in TeX filter admin setting",
+      "published": "2026-02-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-26046"
+      ],
+      "trackers": [
+        "MDL-87843",
+        "MDL-87870"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=473315",
+      "affected": [
+        "5.1.0 to 5.1.1",
+        "5.0.0 to 5.0.4",
+        "4.5.0 to 4.5.8"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.2",
+        "5.0.5",
+        "4.5.9"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0001",
+      "title": "Remote code execution risk via file restore",
+      "published": "2026-02-17",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-26045"
+      ],
+      "trackers": [
+        "MDL-87612"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=473314",
+      "affected": [
+        "5.1.0 to 5.1.1",
+        "5.0.0 to 5.0.4",
+        "4.5.0 to 4.5.8"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.2",
+        "5.0.5",
+        "4.5.9"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0006",
+      "title": "RCE risk via Moodle's Google Drive repository plugin",
+      "published": "2026-04-29",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-7275"
+      ],
+      "trackers": [
+        "MDL-88423"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=474064",
+      "affected": [
+        "5.1.0 to 5.1.3",
+        "5.0.0 to 5.0.6",
+        "4.5.0 to 4.5.10"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.4",
+        "5.0.7",
+        "4.5.11"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0005",
+      "title": "SQL injection risk in external database authentication plugin",
+      "published": "2026-04-29",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-7274"
+      ],
+      "trackers": [
+        "MDL-88138"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=474063",
+      "affected": [
+        "5.1.0 to 5.1.3",
+        "5.0.0 to 5.0.6",
+        "4.5.0 to 4.5.10"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.1.4",
+        "5.0.7",
+        "4.5.11"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0028",
+      "title": "DoS risk via user profile description",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58347"
+      ],
+      "trackers": [
+        "MDL-87898"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481830",
+      "affected": [
+        "5.2.0",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0026",
+      "title": "Missing capability check in Assignment marker allocation",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58345"
+      ],
+      "trackers": [
+        "MDL-88529"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481827",
+      "affected": [
+        "5.2.0",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0025",
+      "title": "CSRF risk in quiz attempt regrading",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58344"
+      ],
+      "trackers": [
+        "MDL-88531"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481826",
+      "affected": [
+        "5.2.0",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0021",
+      "title": "CSRF and XSS in grade item idnumber editing",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58340"
+      ],
+      "trackers": [
+        "MDL-88542"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481821",
+      "affected": [
+        "5.2.0",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0017",
+      "title": "IDOR allows arbitrary comment deletion",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58336"
+      ],
+      "trackers": [
+        "MDL-88619"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481817",
+      "affected": [
+        "5.2.0",
+        "5.1.0 to 5.1.3",
+        "5.0.0 to 5.0.6",
+        "4.5.0 to 4.5.10"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0015",
+      "title": "RCE risk via admin presets import",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58334"
+      ],
+      "trackers": [
+        "MDL-88735"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481813",
+      "affected": [
+        "5.2.0",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0014",
+      "title": "Arbitrary file read risk in backup restore",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58333"
+      ],
+      "trackers": [
+        "MDL-88736"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481812",
+      "affected": [
+        "5.2.0",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0013",
+      "title": "Email-based MFA bypass",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58332"
+      ],
+      "trackers": [
+        "MDL-88767"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481811",
+      "affected": [
+        "5.2.0",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0012",
+      "title": "Arbitrary file read risk in Database activity module",
+      "published": "2026-06-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [
+        "CVE-2026-58331"
+      ],
+      "trackers": [
+        "MDL-88595"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=481810",
+      "affected": [
+        "5.2.0",
+        "5.1.0 to 5.1.4",
+        "5.0.0 to 5.0.7",
+        "4.5.0 to 4.5.11"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.1",
+        "5.1.5",
+        "5.0.8",
+        "4.5.12"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0041",
+      "title": "CSRF risk in XML grade imports",
+      "published": "2026-09-09",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-84545"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482507",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0032",
+      "title": "User profile information disclosure via grade web service",
+      "published": "2026-09-09",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-89381"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482497",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0031",
+      "title": "SQL injection risk in question bank web service",
+      "published": "2026-09-09",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-89383"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482496",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0030",
+      "title": "SSRF risk in URL downloader (bypass some blocked hosts)",
+      "published": "2026-09-09",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-88779"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482495",
+      "affected": [
+        "5.2.0 to 5.2.1",
+        "5.1.0 to 5.1.5",
+        "5.0.0 to 5.0.8",
+        "4.5.0 to 4.5.12"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.2",
+        "5.1.6",
+        "5.0.9",
+        "4.5.13"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0042",
+      "title": "Blind SQL injection risk in profile availability condition check",
+      "published": "2026-09-22",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-89484"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482607",
+      "affected": [
+        "5.2.0 to 5.2.2",
+        "5.1.0 to 5.1.6",
+        "5.0.0 to 5.0.9",
+        "4.5.0 to 4.5.13"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.3",
+        "5.1.7",
+        "5.0.10",
+        "4.5.14"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
+    },
+    {
+      "id": "MSA-26-0044",
+      "title": "Missing access checks on H5P content files",
+      "published": "2026-10-15",
+      "severity": "Serious",
+      "severity_level": "high",
+      "cves": [],
+      "trackers": [
+        "MDL-89547"
+      ],
+      "url": "https://moodle.org/mod/forum/discuss.php?d=482830",
+      "affected": [
+        "5.2.0 to 5.2.3",
+        "5.1.0 to 5.1.7",
+        "5.0.0 to 5.0.10",
+        "4.5.0 to 4.5.14"
+      ],
+      "excluded": [],
+      "earlier_unsupported": true,
+      "fixed": [
+        "5.2.4",
+        "5.1.8",
+        "5.0.11",
+        "4.5.15"
+      ],
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0006",
@@ -3231,14 +3447,16 @@
         "4.2.0 to 4.2.5",
         "4.1.0 to 4.1.8"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.3",
         "4.2.6",
         "4.1.9"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0005",
@@ -3258,14 +3476,16 @@
         "4.2.0 to 4.2.5",
         "4.1.0 to 4.1.8"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.3",
         "4.2.6",
         "4.1.9"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0004",
@@ -3285,14 +3505,16 @@
         "4.2.0 to 4.2.5",
         "4.1.0 to 4.1.8"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.3",
         "4.2.6",
         "4.1.9"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0003",
@@ -3312,14 +3534,16 @@
         "4.2.0 to 4.2.5",
         "4.1.0 to 4.1.8"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.3",
         "4.2.6",
         "4.1.9"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0002",
@@ -3339,14 +3563,16 @@
         "4.2.0 to 4.2.5",
         "4.1.0 to 4.1.8"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.3",
         "4.2.6",
         "4.1.9"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0019",
@@ -3366,14 +3592,16 @@
         "4.2.0 to 4.2.6",
         "4.1.0 to 4.1.9"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.4",
         "4.2.7",
         "4.1.10"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0017",
@@ -3393,14 +3621,16 @@
         "4.2.0 to 4.2.6",
         "4.1.0 to 4.1.9"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.4",
         "4.2.7",
         "4.1.10"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0012",
@@ -3420,14 +3650,16 @@
         "4.2.0 to 4.2.6",
         "4.1.0 to 4.1.9"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.4",
         "4.2.7",
         "4.1.10"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0011",
@@ -3447,14 +3679,16 @@
         "4.2.0 to 4.2.6",
         "4.1.0 to 4.1.9"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.4",
         "4.2.7",
         "4.1.10"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0009",
@@ -3474,14 +3708,16 @@
         "4.2.0 to 4.2.6",
         "4.1.0 to 4.1.9"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.4",
         "4.2.7",
         "4.1.10"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0008",
@@ -3501,14 +3737,16 @@
         "4.2.0 to 4.2.6",
         "4.1.0 to 4.1.9"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.3.4",
         "4.2.7",
         "4.1.10"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.3; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.0; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0025",
@@ -3524,11 +3762,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=459502",
       "affected": [
-        "4.4.0 to 4.4.x",
+        "4.4.0",
         "4.3.0 to 4.3.4",
         "4.2.0 to 4.2.7",
         "4.1.0 to 4.1.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.1",
@@ -3536,8 +3775,9 @@
         "4.2.8",
         "4.1.11"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0023",
@@ -3553,11 +3793,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=459500",
       "affected": [
-        "4.4.0 to 4.4.x",
+        "4.4.0",
         "4.3.0 to 4.3.4",
         "4.2.0 to 4.2.7",
         "4.1.0 to 4.1.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.1",
@@ -3565,8 +3806,9 @@
         "4.2.8",
         "4.1.11"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0022",
@@ -3582,11 +3824,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=459499",
       "affected": [
-        "4.4.0 to 4.4.x",
+        "4.4.0",
         "4.3.0 to 4.3.4",
         "4.2.0 to 4.2.7",
         "4.1.0 to 4.1.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.1",
@@ -3594,8 +3837,9 @@
         "4.2.8",
         "4.1.11"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0021",
@@ -3611,11 +3855,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=459498",
       "affected": [
-        "4.4.0 to 4.4.x",
+        "4.4.0",
         "4.3.0 to 4.3.4",
         "4.2.0 to 4.2.7",
         "4.1.0 to 4.1.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.1",
@@ -3623,8 +3868,9 @@
         "4.2.8",
         "4.1.11"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0039",
@@ -3645,6 +3891,7 @@
         "4.2.0 to 4.2.8",
         "4.1.0 to 4.1.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.2",
@@ -3652,8 +3899,9 @@
         "4.2.9",
         "4.1.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0038",
@@ -3674,6 +3922,7 @@
         "4.2.0 to 4.2.8",
         "4.1.0 to 4.1.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.2",
@@ -3681,8 +3930,9 @@
         "4.2.9",
         "4.1.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0036",
@@ -3703,6 +3953,7 @@
         "4.2.0 to 4.2.8",
         "4.1.0 to 4.1.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.2",
@@ -3710,8 +3961,9 @@
         "4.2.9",
         "4.1.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0033",
@@ -3732,6 +3984,7 @@
         "4.2.0 to 4.2.8",
         "4.1.0 to 4.1.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.2",
@@ -3739,8 +3992,9 @@
         "4.2.9",
         "4.1.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0030",
@@ -3761,6 +4015,7 @@
         "4.2.0 to 4.2.8",
         "4.1.0 to 4.1.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.2",
@@ -3768,8 +4023,9 @@
         "4.2.9",
         "4.1.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0028",
@@ -3790,6 +4046,7 @@
         "4.2.0 to 4.2.8",
         "4.1.0 to 4.1.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.2",
@@ -3797,8 +4054,9 @@
         "4.2.9",
         "4.1.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0044",
@@ -3819,6 +4077,7 @@
         "4.2.0 to 4.2.9",
         "4.1.0 to 4.1.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.3",
@@ -3826,8 +4085,9 @@
         "4.2.10",
         "4.1.13"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0043",
@@ -3848,6 +4108,7 @@
         "4.2.0 to 4.2.9",
         "4.1.0 to 4.1.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.3",
@@ -3855,8 +4116,9 @@
         "4.2.10",
         "4.1.13"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0050",
@@ -3877,6 +4139,7 @@
         "4.2.0 to 4.2.10",
         "4.1.0 to 4.1.13"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.4",
@@ -3884,8 +4147,9 @@
         "4.2.11",
         "4.1.14"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0047",
@@ -3906,6 +4170,7 @@
         "4.2.0 to 4.2.10",
         "4.1.0 to 4.1.13"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.4",
@@ -3913,8 +4178,9 @@
         "4.2.11",
         "4.1.14"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0046",
@@ -3935,6 +4201,7 @@
         "4.2.0 to 4.2.10",
         "4.1.0 to 4.1.13"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.4",
@@ -3942,8 +4209,9 @@
         "4.2.11",
         "4.1.14"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0045",
@@ -3964,6 +4232,7 @@
         "4.2.0 to 4.2.10",
         "4.1.0 to 4.1.13"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.4.4",
@@ -3971,8 +4240,9 @@
         "4.2.11",
         "4.1.14"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.4; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0054",
@@ -3988,11 +4258,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=464557",
       "affected": [
-        "4.5.0 to 4.5.x",
+        "4.5.0",
         "4.4.0 to 4.4.4",
         "4.3.0 to 4.3.8",
         "4.1.0 to 4.1.14"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.1",
@@ -4000,8 +4271,9 @@
         "4.3.9",
         "4.1.15"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0053",
@@ -4017,11 +4289,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=464556",
       "affected": [
-        "4.5.0 to 4.5.x",
+        "4.5.0",
         "4.4.0 to 4.4.4",
         "4.3.0 to 4.3.8",
         "4.1.0 to 4.1.14"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.1",
@@ -4029,8 +4302,9 @@
         "4.3.9",
         "4.1.15"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-24-0052",
@@ -4046,11 +4320,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=464555",
       "affected": [
-        "4.5.0 to 4.5.x",
+        "4.5.0",
         "4.4.0 to 4.4.4",
         "4.3.0 to 4.3.8",
         "4.1.0 to 4.1.14"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.1",
@@ -4058,8 +4333,9 @@
         "4.3.9",
         "4.1.15"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0009",
@@ -4080,6 +4356,7 @@
         "4.3.0 to 4.3.9",
         "4.1.0 to 4.1.15"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.2",
@@ -4087,8 +4364,9 @@
         "4.3.10",
         "4.1.16"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0008",
@@ -4109,6 +4387,7 @@
         "4.3.0 to 4.3.9",
         "4.1.0 to 4.1.15"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.2",
@@ -4116,8 +4395,9 @@
         "4.3.10",
         "4.1.16"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0007",
@@ -4138,6 +4418,7 @@
         "4.3.0 to 4.3.9",
         "4.1.0 to 4.1.15"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.2",
@@ -4145,8 +4426,9 @@
         "4.3.10",
         "4.1.16"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0004",
@@ -4167,6 +4449,7 @@
         "4.3.0 to 4.3.9",
         "4.1.0 to 4.1.15"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.2",
@@ -4174,8 +4457,9 @@
         "4.3.10",
         "4.1.16"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0003",
@@ -4196,6 +4480,7 @@
         "4.3.0 to 4.3.9",
         "4.1.0 to 4.1.15"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.2",
@@ -4203,8 +4488,9 @@
         "4.3.10",
         "4.1.16"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0002",
@@ -4225,6 +4511,7 @@
         "4.3.0 to 4.3.9",
         "4.1.0 to 4.1.15"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.2",
@@ -4232,8 +4519,9 @@
         "4.3.10",
         "4.1.16"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0012",
@@ -4254,6 +4542,7 @@
         "4.3.0 to 4.3.10",
         "4.1.0 to 4.1.16"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.3",
@@ -4261,8 +4550,9 @@
         "4.3.11",
         "4.1.17"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0028",
@@ -4283,6 +4573,7 @@
         "4.3.0 to 4.3.11",
         "4.1.0 to 4.1.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.4",
@@ -4290,8 +4581,9 @@
         "4.3.12",
         "4.1.18"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0027",
@@ -4312,6 +4604,7 @@
         "4.3.0 to 4.3.11",
         "4.1.0 to 4.1.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.4",
@@ -4319,8 +4612,9 @@
         "4.3.12",
         "4.1.18"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0026",
@@ -4341,6 +4635,7 @@
         "4.3.0 to 4.3.11",
         "4.1.0 to 4.1.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.4",
@@ -4348,8 +4643,9 @@
         "4.3.12",
         "4.1.18"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0022",
@@ -4370,6 +4666,7 @@
         "4.3.0 to 4.3.11",
         "4.1.0 to 4.1.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.4",
@@ -4377,8 +4674,9 @@
         "4.3.12",
         "4.1.18"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0021",
@@ -4399,6 +4697,7 @@
         "4.3.0 to 4.3.11",
         "4.1.0 to 4.1.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.4",
@@ -4406,8 +4705,9 @@
         "4.3.12",
         "4.1.18"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0020",
@@ -4428,6 +4728,7 @@
         "4.3.0 to 4.3.11",
         "4.1.0 to 4.1.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.4",
@@ -4435,8 +4736,9 @@
         "4.3.12",
         "4.1.18"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0019",
@@ -4457,6 +4759,7 @@
         "4.3.0 to 4.3.11",
         "4.1.0 to 4.1.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.4",
@@ -4464,8 +4767,9 @@
         "4.3.12",
         "4.1.18"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0018",
@@ -4486,6 +4790,7 @@
         "4.3.0 to 4.3.11",
         "4.1.0 to 4.1.17"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "4.5.4",
@@ -4493,8 +4798,9 @@
         "4.3.12",
         "4.1.18"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 4.5; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0036",
@@ -4510,11 +4816,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=468507",
       "affected": [
-        "5.0.0 to 5.0.x",
+        "5.0.0",
         "4.5.0 to 4.5.4",
         "4.4.0 to 4.4.8",
         "4.1.0 to 4.1.18"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.1",
@@ -4522,8 +4829,9 @@
         "4.4.9",
         "4.1.19"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0034",
@@ -4539,11 +4847,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=468505",
       "affected": [
-        "5.0.0 to 5.0.x",
+        "5.0.0",
         "4.5.0 to 4.5.4",
         "4.4.0 to 4.4.8",
         "4.1.0 to 4.1.18"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.1",
@@ -4551,8 +4860,9 @@
         "4.4.9",
         "4.1.19"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0030",
@@ -4568,11 +4878,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=468501",
       "affected": [
-        "5.0.0 to 5.0.x",
+        "5.0.0",
         "4.5.0 to 4.5.4",
         "4.4.0 to 4.4.8",
         "4.1.0 to 4.1.18"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.1",
@@ -4580,8 +4891,9 @@
         "4.4.9",
         "4.1.19"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0040",
@@ -4602,6 +4914,7 @@
         "4.4.0 to 4.4.9",
         "4.1.0 to 4.1.19"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.2",
@@ -4609,8 +4922,9 @@
         "4.4.10",
         "4.1.20"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0039",
@@ -4631,6 +4945,7 @@
         "4.4.0 to 4.4.9",
         "4.1.0 to 4.1.19"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.2",
@@ -4638,8 +4953,9 @@
         "4.4.10",
         "4.1.20"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0038",
@@ -4660,6 +4976,7 @@
         "4.4.0 to 4.4.9",
         "4.1.0 to 4.1.19"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.2",
@@ -4667,8 +4984,9 @@
         "4.4.10",
         "4.1.20"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0050",
@@ -4689,6 +5007,7 @@
         "4.4.0 to 4.4.10",
         "4.1.0 to 4.1.20"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.3",
@@ -4696,8 +5015,9 @@
         "4.4.11",
         "4.1.21"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0049",
@@ -4718,6 +5038,7 @@
         "4.4.0 to 4.4.10",
         "4.1.0 to 4.1.20"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.3",
@@ -4725,8 +5046,9 @@
         "4.4.11",
         "4.1.21"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0048",
@@ -4747,6 +5069,7 @@
         "4.4.0 to 4.4.10",
         "4.1.0 to 4.1.20"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.3",
@@ -4754,8 +5077,9 @@
         "4.4.11",
         "4.1.21"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0044",
@@ -4776,6 +5100,7 @@
         "4.4.0 to 4.4.10",
         "4.1.0 to 4.1.20"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.0.3",
@@ -4783,8 +5108,9 @@
         "4.4.11",
         "4.1.21"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.0; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0061",
@@ -4800,12 +5126,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471307",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -4814,8 +5141,9 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0060",
@@ -4831,12 +5159,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471306",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -4845,8 +5174,9 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0058",
@@ -4862,12 +5192,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471304",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -4876,8 +5207,9 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0057",
@@ -4893,12 +5225,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471303",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -4907,8 +5240,9 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-25-0056",
@@ -4924,12 +5258,13 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=471302",
       "affected": [
-        "5.1.0 to 5.1.x",
+        "5.1.0",
         "5.0.0 to 5.0.3",
         "4.5.0 to 4.5.7",
         "4.4.0 to 4.4.11",
         "4.1.0 to 4.1.21"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.1",
@@ -4938,8 +5273,9 @@
         "4.4.12",
         "4.1.22"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.1; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0011",
@@ -4959,14 +5295,16 @@
         "5.0.0 to 5.0.6",
         "4.5.0 to 4.5.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.4",
         "5.0.7",
         "4.5.11"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0010",
@@ -4986,14 +5324,16 @@
         "5.0.0 to 5.0.6",
         "4.5.0 to 4.5.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.4",
         "5.0.7",
         "4.5.11"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0007",
@@ -5013,14 +5353,16 @@
         "5.0.0 to 5.0.6",
         "4.5.0 to 4.5.10"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.1.4",
         "5.0.7",
         "4.5.11"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.1; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0029",
@@ -5036,11 +5378,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481831",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -5048,8 +5391,9 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0027",
@@ -5065,11 +5409,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481829",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -5077,8 +5422,9 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0024",
@@ -5094,11 +5440,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481825",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -5106,8 +5453,9 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0023",
@@ -5123,11 +5471,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481824",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -5135,8 +5484,9 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0022",
@@ -5152,11 +5502,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481823",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -5164,8 +5515,9 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0020",
@@ -5181,11 +5533,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481820",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -5193,8 +5546,9 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0019",
@@ -5210,11 +5564,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481819",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -5222,8 +5577,9 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0018",
@@ -5239,11 +5595,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481818",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -5251,8 +5608,9 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0016",
@@ -5268,11 +5626,12 @@
       ],
       "url": "https://moodle.org/mod/forum/discuss.php?d=481814",
       "affected": [
-        "5.2.0 to 5.2.x",
+        "5.2.0",
         "5.1.0 to 5.1.4",
         "5.0.0 to 5.0.7",
         "4.5.0 to 4.5.11"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.1",
@@ -5280,8 +5639,9 @@
         "5.0.8",
         "4.5.12"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0040",
@@ -5300,6 +5660,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -5307,8 +5668,9 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0039",
@@ -5327,6 +5689,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -5334,8 +5697,9 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0036",
@@ -5354,6 +5718,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -5361,8 +5726,9 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0035",
@@ -5381,6 +5747,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -5388,8 +5755,9 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0034",
@@ -5408,6 +5776,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -5415,8 +5784,9 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0033",
@@ -5435,6 +5805,7 @@
         "5.0.0 to 5.0.8",
         "4.5.0 to 4.5.12"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.2",
@@ -5442,8 +5813,9 @@
         "5.0.9",
         "4.5.13"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     },
     {
       "id": "MSA-26-0043",
@@ -5462,6 +5834,7 @@
         "5.0.0 to 5.0.9",
         "4.5.0 to 4.5.13"
       ],
+      "excluded": [],
       "earlier_unsupported": true,
       "fixed": [
         "5.2.3",
@@ -5469,85 +5842,41 @@
         "5.0.10",
         "4.5.14"
       ],
-      "match": "affected",
-      "reason": "branch 3.11 is not listed and older than 5.2; the advisory covers earlier unsupported versions"
+      "match": "possible_version_match",
+      "evidence_level": "version_only",
+      "reason": "1 of 1 candidate versions affected: branch 3.11 predates the oldest explicitly listed branch 4.5; earlier unsupported versions are mentioned without an exact affected lower bound"
     }
   ],
   "misconfigurations": [
     {
-      "id": "self_registration",
-      "title": "Email-based self-registration is enabled",
-      "severity": "medium",
-      "status": "detected",
-      "evidence": [
-        {
-          "url": "http://127.0.0.1:8311/login/signup.php",
-          "status": 200,
-          "detail": "account sign-up form is served to anonymous users"
-        }
-      ],
-      "recommendation": "Disable self-registration (Site administration > Plugins > Authentication > Self registration) unless required."
-    },
-    {
-      "id": "guest_login",
-      "title": "Guest login button is shown",
-      "severity": "low",
-      "status": "detected",
-      "evidence": [
-        {
-          "url": "http://127.0.0.1:8311/login/index.php",
-          "status": 200,
-          "detail": "login page offers 'Log in as a guest'"
-        }
-      ],
-      "recommendation": "Hide the guest login button (guestloginbutton) and disable guest access unless content is meant to be public."
-    },
-    {
-      "id": "web_services",
-      "title": "Web services token endpoint is enabled",
-      "severity": "low",
-      "status": "detected",
-      "evidence": [
-        {
-          "url": "http://127.0.0.1:8311/login/token.php",
-          "status": 200,
-          "detail": "token endpoint is active (errorcode=missingparam); web services are enabled"
-        }
-      ],
-      "recommendation": "Enable web services and the mobile service only if used; enforce strong passwords and rate limiting on /login/token.php."
-    },
-    {
       "id": "debug_display",
-      "title": "Debug messages are displayed to visitors",
+      "title": "Developer stack traces are displayed to visitors",
       "severity": "medium",
       "status": "detected",
       "evidence": [
         {
           "url": "http://127.0.0.1:8311/login/token.php",
           "status": 200,
-          "detail": "JSON error includes stacktrace/debuginfo"
-        },
-        {
-          "url": "http://127.0.0.1:8311/course/view.php?id=-1",
-          "status": 404,
-          "detail": "error page shows developer debugging output (Debug info:)"
+          "detail": "JSON error exposes a PHP stack trace (contents redacted)"
         }
       ],
-      "recommendation": "Set debug to NONE/MINIMAL and disable debugdisplay on production sites."
+      "recommendation": "Disable debugdisplay on production sites and review the server-side error.",
+      "kind": "finding"
     },
     {
       "id": "dataroot_exposed",
-      "title": "Moodle data directory (dataroot) is reachable over HTTP",
+      "title": "Moodle data directory marker is reachable over HTTP",
       "severity": "high",
       "status": "detected",
       "evidence": [
         {
           "url": "http://127.0.0.1:8311/moodledata/filedir/warning.txt",
           "status": 200,
-          "detail": "Moodle dataroot file store marker is downloadable"
+          "detail": "Moodle file store marker is downloadable; individual uploaded files were not requested"
         }
       ],
-      "recommendation": "Move the dataroot outside the web root; it holds uploaded files, sessions and caches."
+      "recommendation": "Move dataroot outside the web root and verify uploaded files, sessions and caches are not public.",
+      "kind": "finding"
     },
     {
       "id": "vcs_exposed",
@@ -5563,96 +5892,138 @@
         {
           "url": "http://127.0.0.1:8311/.git/config",
           "status": 200,
-          "detail": "git config is downloadable"
+          "detail": "git repository configuration is downloadable (values redacted)"
         }
       ],
-      "recommendation": "Deny access to dot directories (.git, .svn, .hg) in the web server configuration."
+      "recommendation": "Deny access to dot directories (.git, .svn, .hg) in the web server configuration.",
+      "kind": "finding"
     },
     {
       "id": "config_backup_exposed",
       "title": "Backup or editor copy of config.php is downloadable",
-      "severity": "critical",
+      "severity": "high",
       "status": "detected",
       "evidence": [
         {
           "url": "http://127.0.0.1:8311/config.php.bak",
           "status": 200,
-          "detail": "Moodle config source exposed; contains settings: dataroot, dbhost, dbname, dbpass, dbtype, dbuser, prefix, wwwroot"
+          "detail": "PHP configuration source exposed; settings (values redacted): dataroot, dbhost, dbname, dbpass, dbtype, dbuser, prefix, wwwroot"
         }
       ],
-      "recommendation": "Delete the file, rotate the database password and salts it contains, and deny backup extensions in the web server."
+      "recommendation": "Remove exposed configuration copies, deny backup extensions, and rotate any live credentials they contain.",
+      "kind": "finding"
+    },
+    {
+      "id": "install_upgrade_exposed",
+      "title": "Installer or upgrade confirmation form is publicly reachable",
+      "severity": "high",
+      "status": "inconclusive",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/install.php",
+          "status": 302,
+          "detail": "response blocked or redirected"
+        },
+        {
+          "url": "http://127.0.0.1:8311/admin/index.php",
+          "status": 303,
+          "detail": "response blocked or redirected"
+        }
+      ],
+      "recommendation": "Complete installation/upgrade, configure an upgrade key and restrict administrative setup endpoints.",
+      "kind": "finding"
+    }
+  ],
+  "observations": [
+    {
+      "id": "self_registration",
+      "title": "Account self-registration form is offered",
+      "severity": "info",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/login/signup.php",
+          "status": 200,
+          "detail": "anonymous account sign-up form is served; account creation was not attempted"
+        }
+      ],
+      "recommendation": "Review whether public account registration is intended; form visibility alone is not a vulnerability.",
+      "kind": "observation"
+    },
+    {
+      "id": "guest_login",
+      "title": "Guest login option is offered",
+      "severity": "info",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/login/index.php",
+          "status": 200,
+          "detail": "login form offers a guest account; no guest session was created"
+        }
+      ],
+      "recommendation": "Review guest access policy; a guest button does not establish access to private course content.",
+      "kind": "observation"
+    },
+    {
+      "id": "web_services",
+      "title": "Web services availability check succeeds",
+      "severity": "info",
+      "status": "detected",
+      "evidence": [
+        {
+          "url": "http://127.0.0.1:8311/login/token.php?appsitecheck=1",
+          "status": 200,
+          "detail": "public appsitecheck reports web services available; authentication was not attempted"
+        }
+      ],
+      "recommendation": "Review whether web services are intended; availability alone does not establish an authentication weakness.",
+      "kind": "observation"
     },
     {
       "id": "dev_files_exposed",
-      "title": "Developer, test or upgrade-notes files are downloadable",
-      "severity": "low",
+      "title": "Public development manifests or upgrade notes",
+      "severity": "info",
       "status": "detected",
       "evidence": [
         {
           "url": "http://127.0.0.1:8311/composer.json",
           "status": 200,
-          "detail": "developer file is downloadable"
+          "detail": "Moodle Composer manifest is public"
         },
         {
           "url": "http://127.0.0.1:8311/composer.lock",
           "status": 200,
-          "detail": "developer file is downloadable"
-        },
-        {
-          "url": "http://127.0.0.1:8311/package.json",
-          "status": 200,
-          "detail": "developer file is downloadable"
-        },
-        {
-          "url": "http://127.0.0.1:8311/Gruntfile.js",
-          "status": 200,
-          "detail": "developer file is downloadable"
+          "detail": "Composer dependency lockfile is public"
         },
         {
           "url": "http://127.0.0.1:8311/phpunit.xml.dist",
           "status": 200,
-          "detail": "developer file is downloadable"
+          "detail": "PHPUnit configuration template is public"
         },
         {
           "url": "http://127.0.0.1:8311/behat.yml.dist",
           "status": 200,
-          "detail": "developer file is downloadable"
-        },
-        {
-          "url": "http://127.0.0.1:8311/lib/upgrade.txt",
-          "status": 200,
-          "detail": "developer file is downloadable (leaks version 3.11.8)"
+          "detail": "Behat configuration template is public"
         },
         {
           "url": "http://127.0.0.1:8311/admin/environment.xml",
           "status": 200,
-          "detail": "developer file is downloadable"
-        },
-        {
-          "url": "http://127.0.0.1:8311/lib/tests/fixtures/empty.txt",
-          "status": 200,
-          "detail": "developer file is downloadable"
+          "detail": "environment compatibility manifest is public"
         }
       ],
-      "recommendation": "Deny access to composer/npm manifests, upgrade notes, tests and fixtures as recommended by the Moodle security docs (or serve only the public/ directory on Moodle 5.1+)."
-    },
-    {
-      "id": "install_upgrade_exposed",
-      "title": "Installer or upgrade page is reachable",
-      "severity": "critical",
-      "status": "not_detected",
-      "evidence": [],
-      "recommendation": "Complete the installation/upgrade, set $CFG->upgradekey, and block install.php once installed."
+      "recommendation": "Review deployment policy for public development files; their availability alone is not a vulnerability.",
+      "kind": "observation"
     }
   ],
   "plugins": {
     "enabled": true,
-    "probed": 3080,
+    "probed": 3088,
     "found": [
       {
         "component": "mod_customcert",
         "path": "/mod/customcert/",
-        "evidence": "http://127.0.0.1:8311/mod/customcert/version.php"
+        "evidence": "http://127.0.0.1:8311/mod/customcert/composer.json"
       }
     ],
     "notes": [
@@ -5661,15 +6032,17 @@
       "unknown plugin type for lifecycletrigger_customfieldsemester",
       "unknown plugin type for customcertelement_textreplace",
       "unknown plugin type for lifecyclestep_adminapprove",
-      "plugin advisories are not matched: no structured, redistributable plugin advisory source is bundled"
+      "plugin advisories are not matched: no structured, redistributable plugin advisory source is bundled",
+      "coverage is limited to plugins with public component-specific artifacts; absence from found does not prove absence"
     ]
   },
   "errors": [],
   "limitations": [
+    "advisories are version-only correlations, not verified vulnerabilities: authentication, enabled components, configuration and backported fixes were not checked",
     "15 advisories (pre-2017, Moodle <= 3.0 era) have no machine-readable version range"
   ],
-  "finished_at": "2026-10-18T19:10:12+00:00",
-  "duration_seconds": 2.81,
-  "requests": 3130,
+  "finished_at": "2026-10-18T19:42:59+00:00",
+  "duration_seconds": 2.195,
+  "requests": 3146,
   "exit_code": 0
 }
