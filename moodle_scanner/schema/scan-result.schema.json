@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/szybnev/Moodle-Scanner/schema/scan-result.schema.json",
+  "title": "moodle-scanner scan report",
+  "description": "Output of `moodle-scanner --json` / `-o FILE`. schema_version follows semver: additive changes bump the minor version.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "scanner", "target", "started_at", "finished_at", "duration_seconds", "data",
+    "version", "advisories", "misconfigurations", "plugins", "requests", "errors", "limitations", "exit_code"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "scanner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {"name": {"const": "moodle-scanner"}, "version": {"type": "string"}}
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "reachable", "is_moodle", "markers"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "reachable": {"type": "boolean"},
+        "is_moodle": {"type": "boolean"},
+        "markers": {
+          "type": "array",
+          "items": {"enum": ["moodle-session-cookie", "m-cfg-script", "moodle-asset-urls", "moodle-keywords-meta"]}
+        }
+      }
+    },
+    "started_at": {"type": "string", "format": "date-time"},
+    "finished_at": {"type": "string", "format": "date-time"},
+    "duration_seconds": {"type": "number", "minimum": 0},
+    "data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fingerprints_latest_tag", "fingerprint_tags", "fingerprint_files", "advisories_count", "advisories_latest_published"
+      ],
+      "properties": {
+        "fingerprints_latest_tag": {"type": "string"},
+        "fingerprint_tags": {"type": "integer", "minimum": 0},
+        "fingerprint_files": {"type": "integer", "minimum": 0},
+        "advisories_count": {"type": ["integer", "null"]},
+        "advisories_latest_published": {"type": ["string", "null"]}
+      }
+    },
+    "version": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/version"}]},
+    "advisories": {"type": "array", "items": {"$ref": "#/$defs/advisory"}},
+    "misconfigurations": {"type": "array", "items": {"$ref": "#/$defs/check"}},
+    "plugins": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/plugins"}]},
+    "requests": {"type": "integer", "minimum": 0},
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["stage", "message"],
+        "properties": {"stage": {"type": "string"}, "message": {"type": "string"}}
+      }
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "exit_code": {"enum": [0, 3, 4, 6]}
+  },
+  "$defs": {
+    "moodleVersion": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+(-(beta|rc)\\d*)?\\+?$"},
+    "version": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "version", "candidates", "range", "branch", "confidence", "method", "evidence", "signals", "notes"],
+      "properties": {
+        "status": {"enum": ["exact", "ambiguous", "branch", "unknown"]},
+        "version": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/moodleVersion"}]},
+        "candidates": {"type": "array", "items": {"$ref": "#/$defs/moodleVersion"}},
+        "range": {
+          "oneOf": [
+            {"type": "null"},
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["min", "max"],
+              "properties": {"min": {"$ref": "#/$defs/moodleVersion"}, "max": {"$ref": "#/$defs/moodleVersion"}}
+            }
+          ]
+        },
+        "branch": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+$"},
+        "confidence": {"enum": ["high", "medium", "low", "none"]},
+        "method": {"enum": ["file-fingerprint", "public-signals", "none"]},
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "status", "outcome"],
+            "properties": {
+              "path": {"type": "string"},
+              "status": {"type": ["integer", "null"]},
+              "outcome": {"enum": ["match", "unknown_hash", "not_found", "error", "conflict"]},
+              "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+              "matched_versions": {"type": "string"},
+              "error": {"type": "string"}
+            }
+          }
+        },
+        "signals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["source", "kind", "branch"],
+            "properties": {
+              "source": {"type": "string"},
+              "kind": {"enum": ["docs-link", "upgrade-notes"]},
+              "branch": {"type": "string", "pattern": "^\\d+\\.\\d+$"}
+            }
+          }
+        },
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "advisory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "title", "published", "severity", "severity_level", "cves", "trackers", "url", "affected",
+        "earlier_unsupported", "fixed", "match", "reason"
+      ],
+      "properties": {
+        "id": {"type": "string", "pattern": "^MSA-\\d{2}-\\d{4}$"},
+        "title": {"type": "string"},
+        "published": {"type": "string"},
+        "severity": {"type": "string", "description": "severity as published on moodle.org"},
+        "severity_level": {"enum": ["critical", "high", "medium", "low", "unknown"]},
+        "cves": {"type": "array", "items": {"type": "string", "pattern": "^CVE-\\d{4}-\\d{4,}$"}},
+        "trackers": {"type": "array", "items": {"type": "string", "pattern": "^MDL-\\d+$"}},
+        "url": {"type": "string", "format": "uri"},
+        "affected": {"type": "array", "items": {"type": "string"}},
+        "earlier_unsupported": {"type": "boolean"},
+        "fixed": {"type": "array", "items": {"$ref": "#/$defs/moodleVersion"}},
+        "match": {"enum": ["affected", "possibly_affected"]},
+        "reason": {"type": "string"}
+      }
+    },
+    "check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "severity", "status", "evidence", "recommendation"],
+      "properties": {
+        "id": {
+          "enum": [
+            "self_registration", "guest_login", "web_services", "debug_display", "dataroot_exposed",
+            "vcs_exposed", "config_backup_exposed", "dev_files_exposed", "install_upgrade_exposed"
+          ]
+        },
+        "title": {"type": "string"},
+        "severity": {"enum": ["critical", "high", "medium", "low", "info"]},
+        "status": {"enum": ["detected", "not_detected", "inconclusive"]},
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["url", "status", "detail"],
+            "properties": {
+              "url": {"type": "string"},
+              "status": {"type": ["integer", "null"]},
+              "detail": {"type": "string"}
+            }
+          }
+        },
+        "recommendation": {"type": "string"}
+      }
+    },
+    "plugins": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "probed", "found", "notes"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "probed": {"type": "integer", "minimum": 0},
+        "found": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["component", "path", "evidence"],
+            "properties": {
+              "component": {"type": "string", "pattern": "^[a-z0-9]+_[a-z0-9_]+$"},
+              "path": {"type": "string"},
+              "evidence": {"type": "string"},
+              "core_in": {"type": "array", "items": {"type": "string"}},
+              "version_hint": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["release", "version", "source"],
+                "properties": {
+                  "release": {"type": "string"},
+                  "version": {"type": "string"},
+                  "source": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}
