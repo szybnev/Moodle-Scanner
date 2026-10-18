@@ -1,0 +1,50 @@
+{
+  "description": "Hardened Moodle (lab m503, 5.3.0): status codes and headers as recorded; bodies are minimal hand-written stand-ins carrying only the markers the scanner looks for.",
+  "responses": {
+    "/": {
+      "status": 303,
+      "headers": {"Location": "/login/index.php", "Set-Cookie": "MoodleSession=0123abcd; path=/; HttpOnly; SameSite=Lax", "Content-Type": "text/html; charset=utf-8"},
+      "body": ""
+    },
+    "/login/index.php": {
+      "status": 200,
+      "headers": {"Set-Cookie": "MoodleSession=0123abcd; path=/; HttpOnly; SameSite=Lax", "Content-Type": "text/html; charset=utf-8"},
+      "body": "<html><head><script>M.cfg = {\"wwwroot\":\"http://127.0.0.1\"};</script></head><body><form id=\"login\" action=\"/login/index.php\" method=\"post\"><input name=\"username\"><input name=\"password\" type=\"password\"></form></body></html>"
+    },
+    "/login/signup.php": {
+      "status": 404,
+      "headers": {"Content-Type": "text/html; charset=utf-8"},
+      "body": "<html><head><title>Error</title></head><body>Error</body></html>"
+    },
+    "/login/token.php": {
+      "status": 200,
+      "headers": {"Content-Type": "application/json; charset=utf-8"},
+      "body": "{\"error\":\"Web services must be enabled in Advanced features.\",\"errorcode\":\"enablewsdescription\",\"stacktrace\":null,\"debuginfo\":null,\"reproductionlink\":null}"
+    },
+    "/course/view.php?id=-1": {
+      "status": 404,
+      "headers": {"Content-Type": "text/html; charset=utf-8"},
+      "body": "<html><head><title>Error</title></head><body><p>Can not find data record in database.</p></body></html>"
+    },
+    "/install.php": {
+      "status": 302,
+      "headers": {"Location": "admin/index.php?lang=en", "Content-Type": "text/html; charset=UTF-8"},
+      "body": ""
+    },
+    "/admin/index.php": {
+      "status": 303,
+      "headers": {"Location": "/admin/index.php?cache=1", "Content-Type": "text/html; charset=utf-8"},
+      "body": ""
+    },
+    "/admin/index.php?cache=1": {
+      "status": 303,
+      "headers": {"Location": "/login/index.php", "Content-Type": "text/html; charset=utf-8"},
+      "body": ""
+    },
+    "/.git/HEAD": {"status": 403, "headers": {"Content-Type": "text/html; charset=iso-8859-1"}, "body": "<html>Forbidden</html>"},
+    "/.git/config": {"status": 403, "headers": {"Content-Type": "text/html; charset=iso-8859-1"}, "body": "<html>Forbidden</html>"},
+    "/config.php.bak": {"status": 403, "headers": {"Content-Type": "text/html; charset=iso-8859-1"}, "body": "<html>Forbidden</html>"},
+    "/composer.json": {"status": 403, "headers": {"Content-Type": "text/html; charset=iso-8859-1"}, "body": "<html>Forbidden</html>"},
+    "/admin/environment.xml": {"status": 403, "headers": {"Content-Type": "text/html; charset=iso-8859-1"}, "body": "<html>Forbidden</html>"}
+  }
+}

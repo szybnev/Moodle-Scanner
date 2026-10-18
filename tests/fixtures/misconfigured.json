@@ -1,0 +1,41 @@
+{
+  "description": "Misconfigured Moodle (lab m311, 3.11.8 with every seed): status codes and headers as recorded; bodies are minimal hand-written stand-ins with the observed markers. Secrets are fake.",
+  "responses": {
+    "/login/index.php": {
+      "status": 200,
+      "headers": {"Set-Cookie": "MoodleSession=feedbeef; path=/", "Content-Type": "text/html; charset=utf-8"},
+      "body": "<html><head><script>M.cfg = {};</script></head><body><a href=\"/login/signup.php\">Create new account</a><form action=\"/login/index.php\" method=\"post\" id=\"guestlogin\"><input type=\"hidden\" name=\"username\" value=\"guest\"></form></body></html>"
+    },
+    "/login/signup.php": {
+      "status": 200,
+      "headers": {"Content-Type": "text/html; charset=utf-8"},
+      "body": "<html><head><title>New account</title></head><body><form autocomplete=\"off\" action=\"/login/signup.php\" method=\"post\"><input name=\"username\"><input name=\"password\" type=\"password\"><input name=\"email\"></form></body></html>"
+    },
+    "/login/token.php": {
+      "status": 200,
+      "headers": {"Content-Type": "application/json; charset=utf-8"},
+      "body": "{\"error\":\"A required parameter (username) was missing\",\"errorcode\":\"missingparam\",\"stacktrace\":\"* line 497 of /lib/setuplib.php: moodle_exception thrown\",\"debuginfo\":null,\"reproductionlink\":null}"
+    },
+    "/course/view.php?id=-1": {
+      "status": 404,
+      "headers": {"Content-Type": "text/html; charset=utf-8"},
+      "body": "<html><body><div class=\"alert\">Can not find data record in database.</div><p>Debug info: SELECT id FROM course</p><p>Stack trace:</p><ul><li>line 33 of /course/view.php: call to moodle_database-&gt;get_record()</li></ul></body></html>"
+    },
+    "/moodledata/filedir/warning.txt": {
+      "status": 200,
+      "headers": {"Content-Type": "text/plain"},
+      "body": "This directory contains the content of uploaded files and is controlled by Moodle code."
+    },
+    "/.git/HEAD": {"status": 200, "headers": {}, "body": "ref: refs/heads/main\n"},
+    "/.git/config": {"status": 200, "headers": {}, "body": "[core]\n\trepositoryformatversion = 0\n"},
+    "/config.php.bak": {
+      "status": 200,
+      "headers": {"Content-Type": "application/x-trash"},
+      "body": "<?php\nunset($CFG);\n$CFG = new stdClass();\n$CFG->dbtype = 'pgsql';\n$CFG->dbhost = 'db';\n$CFG->dbpass = 'not-a-real-secret';\n$CFG->wwwroot = 'http://127.0.0.1';\n"
+    },
+    "/composer.json": {"status": 200, "headers": {"Content-Type": "application/json"}, "body": "{\"name\": \"moodle/moodle\"}"},
+    "/admin/environment.xml": {"status": 200, "headers": {"Content-Type": "application/xml"}, "body": "<?xml version=\"1.0\"?><COMPATIBILITY_MATRIX></COMPATIBILITY_MATRIX>"},
+    "/local/zz00/version.php": {"status": 404, "headers": {}, "body": "<html>Not Found</html>"},
+    "/mod/customcert/version.php": {"status": 200, "headers": {"Content-Type": "text/html; charset=UTF-8"}, "body": "Direct access to this script is forbidden."}
+  }
+}
