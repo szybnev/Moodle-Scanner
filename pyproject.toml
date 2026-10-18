@@ -1,6 +1,6 @@
 [project]
 name = "moodle-scanner"
-version = "3.0.0"
+version = "3.0.1"
 description = "Non-destructive external Moodle version, advisory and misconfiguration scanner"
 readme = "README.md"
 license = "BSD-3-Clause"

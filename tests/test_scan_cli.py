@@ -167,3 +167,27 @@ def test_custom_headers_and_user_agent(site, data_dir, tmp_path):
 @pytest.mark.parametrize("argv", [[], ["--url", "ftp://example"], ["--url", "http://127.0.0.1/", "-H", "broken"]])
 def test_usage_errors(argv, data_dir):
     assert main([*argv, "--data-dir", str(data_dir)]) == 2
+
+
+@pytest.mark.parametrize("prefix", ["", "campus/moodle/"])
+@pytest.mark.parametrize("page", ["login/index.php?loginredirect=1", "index.php?redirect=0"])
+def test_entry_page_url_scans_installation_root(site, data_dir, tmp_path, prefix, page):
+    serve_version(site, "v4.5.1")
+    if prefix:
+        original = dict(site.routes)
+        site.routes.clear()
+        for path, reply in original.items():
+            headers = dict(reply.headers)
+            if headers.get("Location", "").startswith("/"):
+                headers["Location"] = "/" + prefix + headers["Location"].lstrip("/")
+            site.add("/" + prefix + path.lstrip("/"), Reply(reply.status, reply.body, headers))
+    output = tmp_path / "page-report.json"
+    code = main(["--url", site.url + prefix + page, "--data-dir", str(data_dir), "--json", "-o", str(output)])
+    report = json.loads(output.read_text())
+    assert code == 0
+    assert report["target"]["url"] == site.url + prefix
+    assert report["version"]["version"] == "4.5.1"
+    paths = [path for _, path, _ in site.requests]
+    assert "/" + prefix + "login/index.php" in paths
+    assert all(path.startswith("/" + prefix) for path in paths)
+    assert not any(".php/" in path for path in paths)

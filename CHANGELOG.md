@@ -2,6 +2,15 @@
 
 All notable changes to this fork. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [3.0.1] - 2026-10-18
+
+### Fixed
+
+- Home/login page URLs were treated as directories, sending probes below
+  `login/index.php/` and reporting an unknown version. Normalize these entry
+  pages to their installation root while retaining subdirectory and port.
+  Added end-to-end CLI regressions for root and nested installations.
+
 ## [3.0.0] - 2026-10-18
 
 ### Fixed

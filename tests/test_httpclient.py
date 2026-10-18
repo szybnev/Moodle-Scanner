@@ -57,6 +57,9 @@ def test_body_cap_marks_truncation(site):
         ("moodle.example.org", "https://moodle.example.org/"),
         ("http://h/moodle", "http://h/moodle/"),
         ("http://h:8080/m/?x=1", "http://h:8080/m/"),
+        ("https://h:8443/campus%20one/login/index.php/?loginredirect=1#form", "https://h:8443/campus%20one/"),
+        ("https://h/catalog/index.php-files/", "https://h/catalog/index.php-files/"),
+        ("https://h/moodle/login/", "https://h/moodle/login/"),
     ],
 )
 def test_normalize_base_url(raw, expected):

@@ -71,8 +71,12 @@ Common options (full list: `moodle-scanner --help`):
 | `--proxy URL`, `-H 'Name: value'`, `--user-agent UA`, `--insecure` | transport settings |
 | `--scan` | accepted for compatibility with the original CLI; advisories are always matched |
 
-Base URLs with a path (`https://host/moodle/`) are supported. Redirects are
-followed only within the target origin.
+Pass the Moodle installation root, including its subdirectory if any
+(`https://host/moodle/`). Home (`index.php`) and login (`login/index.php`) page
+URLs are also accepted: `https://host/moodle/login/index.php?loginredirect=1`
+becomes `https://host/moodle/`. Query strings and fragments are not part of
+the scan base. For other application pages, pass the installation root instead.
+Redirects are followed only within the target origin.
 
 ## JSON report
 

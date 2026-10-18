@@ -242,6 +242,7 @@ class HttpClient:
 
 
 def normalize_base_url(url: str) -> str:
+    """Normalize an install root or Moodle home/login entry page to a base URL."""
     url = url.strip()
     if "://" not in url:
         url = "https://" + url
@@ -249,6 +250,13 @@ def normalize_base_url(url: str) -> str:
     if parts.scheme not in ("http", "https") or not parts.netloc:
         raise ValueError(f"unsupported target URL: {url!r}")
     path = parts.path
+    # Match the login route before the generic home page, retaining any install
+    # prefix (/campus/moodle/login/index.php -> /campus/moodle/).
+    entry_path = path.rstrip("/")
+    for entrypoint in ("/login/index.php", "/index.php"):
+        if entry_path.endswith(entrypoint):
+            path = entry_path[: -len(entrypoint)] + "/"
+            break
     if not path.endswith("/"):
         path += "/"
     return urllib.parse.urlunsplit((parts.scheme, parts.netloc, path, "", ""))
